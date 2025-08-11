@@ -8,16 +8,16 @@ import SectionHeadingStyle3 from '../SectionHeading/SectionHeadingStyle3';
 import { pageTitle } from '../../helpers/PageTitle';
 
 const locationData =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96652.27317354927!2d-74.33557928194516!3d40.79756494697628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a82f1352d0dd%3A0x81d4f72c4435aab5!2sTroy+Meadows+Wetlands!5e0!3m2!1sen!2sbd!4v1563075599994!5m2!1sen!2sbd';
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.5!2d67.0822!3d24.8607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1563075599994!5m2!1sen!2s';
 
 export default function ContactPage() {
-  pageTitle('Contact');
+  pageTitle('Contact - Karachi Law Firms');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
-      <Breadcrumb title="Contact" bgUrl="/images/page_header_1.jpeg" />
+      <Breadcrumb title="Contact Us" bgUrl="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&h=400&fit=crop" />
       <Section pt="133" ptLg="75" pb="133" pbLg="75">
         <div className="container">
           <div className="row">
@@ -32,14 +32,14 @@ export default function ContactPage() {
               <div className="cs_pl_60 cs_pl_lg_0 cs_pt_lg_60">
                 <SectionHeadingStyle3
                   sectionTitleUp="Contact With Us"
-                  sectionTitle="Let’s work together"
-                  sectionSubTitle="Providing legal advice, contract drafting, compliance assistance, intellectual property protection, and other legal support for businesses."
+                  sectionTitle="Let's work together"
+                  sectionSubTitle="Get in touch with our legal experts for professional advice, consultation, and comprehensive legal services tailored to your needs."
                   className="cs_mb_40"
                 />
                 <div className="cs_iconbox_wrapper cs_style1">
                   <IconboxStyle2
                     imgUrl="/images/icons/contact_icon_1.svg"
-                    title="+ 070 4531 9507"
+                    title="(123) 45678"
                     titleUp="Have Any Question?"
                   />
                   <IconboxStyle2
@@ -49,8 +49,8 @@ export default function ContactPage() {
                   />
                   <IconboxStyle2
                     imgUrl="/images/icons/contact_icon_3.svg"
-                    title="Yewtree Cottage, Kings Pyon"
-                    titleUp="Address"
+                    title="Karachi, Pakistan"
+                    titleUp="Our Location"
                   />
                 </div>
               </div>

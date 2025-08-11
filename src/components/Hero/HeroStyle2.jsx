@@ -1,5 +1,4 @@
 import Button from '../Button';
-import parse from 'html-react-parser';
 import WaterWave from 'react-water-wave';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -43,14 +42,31 @@ export default function HeroStyle2({ titleUp, title, btnText, btnUrl, bgUrl }) {
               >
                 {titleUp}
               </motion.h2>
-              <motion.h1 
-                className="text-white cs_mb_45 cs_fs_60 cs_fs_lg_46 text-uppercase fw-bold"
+              
+              {/* Main Title - Side by Side Layout */}
+              <motion.div 
+                className="hero-title-container cs_mb_45"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                {parse(title)}
-              </motion.h1>
+                <div className="hero-title-row">
+                  <span className="hero-title-part text-white cs_fs_60 cs_fs_lg_46 text-uppercase fw-bold">
+                    JUSTICE,
+                  </span>
+                  <span className="hero-title-part text-white cs_fs_60 cs_fs_lg_46 text-uppercase fw-bold">
+                    DIGITALIZED.
+                  </span>
+                </div>
+                <div className="hero-title-row">
+                  <span className="hero-title-part text-white cs_fs_60 cs_fs_lg_46 text-uppercase fw-bold">
+                    EXCELLENCE,
+                  </span>
+                  <span className="hero-title-part text-white cs_fs_60 cs_fs_lg_46 text-uppercase fw-bold">
+                    HUMANIZED.
+                  </span>
+                </div>
+              </motion.div>
               
               {/* Scrolling Tagline */}
               <motion.div 

@@ -33,55 +33,65 @@ export default function Team({ imgUrl, name, designation, experience, srcUrl }) 
         />
         
         {/* Overlay with social links */}
-        <motion.div 
-          className="cs_social_btns d-flex flex-wrap cs_column_gap_15 cs_row_gap_15 cs_transition_5 cs_fs_20 cs_fs_lg_18 position-absolute"
+        <div 
+          className="position-absolute d-flex flex-wrap align-items-center justify-content-center"
           style={{
             opacity: isHovered ? 1 : 0,
-            transform: isHovered ? 'translateY(0)' : 'translateY(20px)',
-            transition: 'all 0.3s ease',
             top: '50%',
             left: '50%',
-            transform: isHovered ? 'translate(-50%, -50%)' : 'translate(-50%, -30%)',
-            zIndex: 3,
+            transform: 'translate(-50%, -50%)',
+            zIndex: 10,
+            transition: 'all 0.3s ease',
+            gap: '15px',
+            pointerEvents: isHovered ? 'auto' : 'none',
           }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 20 }}
-          transition={{ duration: 0.3 }}
         >
           <Link
             to="/"
-            className="d-flex align-items-center justify-content-center cs_height_45 cs_width_45 border-0 text-white rounded-circle"
+            className="d-flex align-items-center justify-content-center border-0 text-white rounded-circle"
             style={{
               background: 'rgba(255,255,255,0.2)',
               backdropFilter: 'blur(10px)',
               border: '1px solid rgba(255,255,255,0.3)',
+              width: '45px',
+              height: '45px',
+              fontSize: '18px',
+              textDecoration: 'none',
             }}
           >
             <Icon icon="fa:linkedin" />
           </Link>
           <Link
             to="/"
-            className="d-flex align-items-center justify-content-center cs_height_45 cs_width_45 border-0 text-white rounded-circle"
+            className="d-flex align-items-center justify-content-center border-0 text-white rounded-circle"
             style={{
               background: 'rgba(255,255,255,0.2)',
               backdropFilter: 'blur(10px)',
               border: '1px solid rgba(255,255,255,0.3)',
+              width: '45px',
+              height: '45px',
+              fontSize: '18px',
+              textDecoration: 'none',
             }}
           >
             <Icon icon="fa:twitter" />
           </Link>
           <Link
             to="/"
-            className="d-flex align-items-center justify-content-center cs_height_45 cs_width_45 border-0 text-white rounded-circle"
+            className="d-flex align-items-center justify-content-center border-0 text-white rounded-circle"
             style={{
               background: 'rgba(255,255,255,0.2)',
               backdropFilter: 'blur(10px)',
               border: '1px solid rgba(255,255,255,0.3)',
+              width: '45px',
+              height: '45px',
+              fontSize: '18px',
+              textDecoration: 'none',
             }}
           >
             <Icon icon="fa:envelope" />
           </Link>
-        </motion.div>
+        </div>
         
         {/* Gradient overlay */}
         <div 

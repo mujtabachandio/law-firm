@@ -12,7 +12,13 @@ export default function Breadcrumb({ bgUrl, title }) {
   return (
     <section
       className="cs_page_header position-relative background-filled d-flex align-items-center justify-content-between"
-      style={{ backgroundImage: `url(${bgUrl})` }}
+      style={{ 
+        backgroundImage: `url(${bgUrl})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '300px'
+      }}
     >
       <div className="container position-relative z-index-1">
         <nav aria-label="breadcrumb">

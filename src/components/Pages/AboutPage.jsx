@@ -12,51 +12,51 @@ const serviceData = [
     iconUrl: '/images/icons/service_icon_1.svg',
     title: 'Constitutional Advocacy',
     subTitle:
-      'We stand where it matters most — defending civil liberties, minority rights, and democratic principles. Our team specializes in high-impact constitutional litigation.',
-    imgUrl: '/images/service_1.jpeg',
+      'We stand where it matters most — defending civil liberties, minority rights, and democratic principles.',
+    imgUrl: '/images/about1.jpg',
     href: '/service/constitutional-advocacy',
   },
   {
     iconUrl: '/images/icons/service_icon_2.svg',
     title: 'Digital Case Management',
     subTitle:
-      'Track your legal case in real time, securely share documents, and get consistent updates — all from your phone or computer.',
-    imgUrl: '/images/service_2.jpeg',
+      'Track your legal case in real time, securely share documents, and get consistent updates.',
+    imgUrl: '/images/about2.jpg',
     href: '/service/digital-case-management',
   },
   {
     iconUrl: '/images/icons/service_icon_3.svg',
     title: 'Lawcademics Division',
     subTitle:
-      'Where legal practice meets legal theory. Our research-backed legal arguments and academic publications support our court strategy.',
-    imgUrl: '/images/service_3.jpeg',
+      'Where legal practice meets legal theory. Our research-backed legal arguments support our court strategy.',
+    imgUrl: '/images/about1.jpg',
     href: '/service/lawcademics',
   },
   {
     iconUrl: '/images/icons/service_icon_4.svg',
     title: 'Corporate Legal Support',
     subTitle:
-      "From compliance to contract negotiation, our business law services are tailored for Pakistan's modern economy — especially startups and tech-enabled enterprises.",
-    imgUrl: '/images/service_4.jpeg',
+      "From compliance to contract negotiation, our business law services are tailored for Pakistan's modern economy.",
+    imgUrl: '/images/about2.jpg',
     href: '/service/corporate-legal-support',
   },
 ];
 
 const teamData = [
   {
-    imgUrl: '/images/team_member_1.jpeg',
+    imgUrl: '/images/attorney1.jpg',
     name: 'Sabahat Syed',
     designation: 'Senior Constitutional Litigator',
     srcUrl: '/team/sabahat-syed',
   },
   {
-    imgUrl: '/images/team_member_2.jpeg',
+    imgUrl: '/images/attorney2.JPG',
     name: 'Raza Hyder',
     designation: 'Corporate Law & Digital Regulations',
     srcUrl: '/team/raza-hyder',
   },
   {
-    imgUrl: '/images/team_member_3.jpeg',
+    imgUrl: '/images/attorney3.jpg',
     name: 'Fatima Jilani',
     designation: 'Senior Legal Researcher',
     srcUrl: '/team/fatima-jilani',
@@ -65,35 +65,30 @@ const teamData = [
 
 const testimonialData = [
   {
-    imgUrl: '/images/avatar_1.png',
     rating: '5',
     desc: "I always thought the legal system was a black box. KLF changed that. I knew what was happening with my case at every stage.",
     name: 'Hamza R.',
     designation: 'Client in Civil Rights Case',
   },
   {
-    imgUrl: '/images/avatar_2.png',
     rating: '5',
     desc: "Their research division gave us not just a lawyer, but a strategic advantage in court.",
     name: 'Adeel M.',
     designation: 'CEO of fintech startup',
   },
   {
-    imgUrl: '/images/avatar_3.png',
     rating: '5',
     desc: "The constitutional advocacy team fought for our rights when no one else would. They're truly committed to justice.",
     name: 'Fatima S.',
     designation: 'Human Rights Activist',
   },
   {
-    imgUrl: '/images/avatar_4.png',
     rating: '5',
     desc: "Their digital case management system made the entire legal process transparent and accessible.",
     name: 'Ahmed K.',
     designation: 'Business Owner',
   },
   {
-    imgUrl: '/images/avatar_3.png',
     rating: '5',
     desc: "The transparency and research-backed approach gave me confidence in my legal strategy.",
     name: 'Sara Z.',
@@ -108,7 +103,7 @@ export default function AboutPage() {
   }, []);
   return (
     <>
-      <Breadcrumb title="About Karachi Law Firms" bgUrl="/images/page_header_1.jpeg" />
+      <Breadcrumb title="About Karachi Law Firms" bgUrl="/images/about1.jpg" />
 
       <Section
         pt="135"
@@ -118,8 +113,8 @@ export default function AboutPage() {
         className="position-relative"
       >
         <AboutUsSection
-          thumbUrl="/images/experience_img.jpeg"
-          experienceBgUrl="/images/experience_bg.jpeg"
+          thumbUrl="/images/about2.jpg"
+          experienceBgUrl=""
           experienceIconUrl="/images/experience_icon.svg"
           experienceNumber="25"
           experienceTitle="Years of Legal Excellence"

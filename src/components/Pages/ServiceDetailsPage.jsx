@@ -1,58 +1,527 @@
 import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import Breadcrumb from '../Breadcrumb';
 import Section from '../Section';
 import SectionHeadingStyle2 from '../SectionHeading/SectionHeadingStyle2';
 import Accordion from '../Accordion';
 import IconboxStyle5 from '../Iconbox/IconboxStyle5';
 import { NavLink } from 'react-router-dom';
-import FormStyle5 from '../Form/FormStyle5';
-import { Icon } from '@iconify/react';
 import FormStyle6 from '../Form/FormStyle6';
 import Button from '../Button';
 import { pageTitle } from '../../helpers/PageTitle';
 
-const serviceList = [
-  { title: 'Accounting and Bookkeeping', href: '/service/services-details' },
-  {
-    title: 'Marketing and Advertising',
-    href: '/service/marketing-and-advertising',
+// Comprehensive service data with unique content for each service
+const serviceData = {
+  'constitutional-advocacy': {
+    title: 'Constitutional Advocacy',
+    subtitle: 'Defending Civil Liberties & Democratic Principles',
+    description: 'We stand where it matters most — defending civil liberties, minority rights, and democratic principles. Our team specializes in high-impact constitutional litigation.',
+    imageUrl: '/images/Constitutional-Advocacy.JPG',
+    features: [
+      'Civil Rights Litigation',
+      'Constitutional Challenges',
+      'Human Rights Advocacy',
+      'Public Interest Law',
+      'Judicial Review Cases',
+      'Constitutional Interpretation'
+    ],
+    process: [
+      'Initial Case Assessment',
+      'Constitutional Analysis',
+      'Legal Strategy Development',
+      'Court Representation',
+      'Appellate Advocacy',
+      'Public Interest Campaigns'
+    ],
+    faq: [
+      {
+        title: 'What types of constitutional cases do you handle?',
+        desc: 'We handle a wide range of constitutional matters including civil rights violations, freedom of expression cases, minority rights protection, and challenges to unconstitutional laws and policies.'
+      },
+      {
+        title: 'How do you approach constitutional advocacy?',
+        desc: 'Our approach combines deep constitutional knowledge with strategic litigation, public awareness campaigns, and academic research to create lasting legal precedents and social impact.'
+      }
+    ]
   },
-  {
-    title: 'IT Support and Consulting',
-    href: '/service/IT Support and Consulting',
+  'digital-case-management': {
+    title: 'Digital Case Management',
+    subtitle: 'Transparent Legal Process Tracking',
+    description: 'Track your legal case in real time, securely share documents, and get consistent updates — all from your phone or computer.',
+    imageUrl: '/images/DigitalCaseManagement.jpg',
+    features: [
+      'Real-time Case Tracking',
+      'Secure Document Sharing',
+      'Milestone Notifications',
+      'Client Portal Access',
+      'Digital Evidence Management',
+      'Transparent Communication'
+    ],
+    process: [
+      'Digital Case Setup',
+      'Document Upload & Organization',
+      'Progress Tracking',
+      'Client Communication Portal',
+      'Milestone Updates',
+      'Case Completion Reports'
+    ],
+    faq: [
+      {
+        title: 'How secure is the digital case management system?',
+        desc: 'Our system uses enterprise-grade encryption and security protocols to ensure your legal documents and communications remain completely confidential and protected.'
+      },
+      {
+        title: 'Can I access my case information from anywhere?',
+        desc: 'Yes, our digital platform is accessible 24/7 from any device with internet access, allowing you to stay informed about your case progress at all times.'
+      }
+    ]
   },
-  { title: 'Human Resources', href: '/service/human-resources' },
-  { title: 'Web Development', href: '/service/web-development' },
-  { title: 'SEO & Content Writing', href: '/service/seo-content-writing' },
-];
+  'lawcademics': {
+    title: 'Lawcademics Division',
+    subtitle: 'Where Legal Practice Meets Academic Research',
+    description: 'Where legal practice meets legal theory. Our research-backed legal arguments and academic publications support our court strategy.',
+    imageUrl: '/images/LawcademicsDivision.jpg',
+    features: [
+      'Legal Research & Analysis',
+      'Academic Publications',
+      'Policy Development',
+      'Legal Education',
+      'Comparative Law Studies',
+      'Interdisciplinary Research'
+    ],
+    process: [
+      'Research Methodology Design',
+      'Legal Literature Review',
+      'Comparative Analysis',
+      'Policy Recommendations',
+      'Academic Writing',
+      'Knowledge Dissemination'
+    ],
+    faq: [
+      {
+        title: 'What research areas does your division focus on?',
+        desc: 'We focus on constitutional law, human rights, comparative legal systems, policy development, and interdisciplinary research combining law with economics, sociology, and political science.'
+      },
+      {
+        title: 'How does research support your legal practice?',
+        desc: 'Our research provides evidence-based legal arguments, policy insights, and academic credibility that strengthens our court representation and advocacy efforts.'
+      }
+    ]
+  },
+  'corporate-legal-support': {
+    title: 'Corporate Legal Support',
+    subtitle: 'Business Law Solutions for Modern Economy',
+    description: "From compliance to contract negotiation, our business law services are tailored for Pakistan's modern economy — especially startups and tech-enabled enterprises.",
+    imageUrl: '/images/CorporateLegalSupport.jpg',
+    features: [
+      'Business Formation',
+      'Contract Negotiation',
+      'Regulatory Compliance',
+      'Corporate Governance',
+      'Mergers & Acquisitions',
+      'Intellectual Property'
+    ],
+    process: [
+      'Business Structure Analysis',
+      'Legal Compliance Audit',
+      'Documentation Preparation',
+      'Ongoing Legal Support',
+      'Compliance Monitoring',
+      'Strategic Legal Advice'
+    ],
+    faq: [
+      {
+        title: 'What legal structure is best for my business?',
+        desc: 'The optimal structure depends on business size, liability concerns, tax implications, and growth plans. We analyze your specific needs and recommend the best approach.'
+      },
+      {
+        title: 'How do you help with regulatory compliance?',
+        desc: 'We conduct compliance audits, provide ongoing monitoring, and ensure your business meets all legal and regulatory requirements in Pakistan.'
+      }
+    ]
+  },
+  'lawconomic-solutions': {
+    title: 'Lawconomic Solutions',
+    subtitle: 'Affordable Legal Services',
+    description: 'Transparent pricing, flexible payment plans, and subsidized services ensure that justice is never out of financial reach.',
+    imageUrl: '/images/Lawconomic Solutions.jpg',
+    features: [
+      'Transparent Pricing',
+      'Flexible Payment Plans',
+      'Subsidized Services',
+      'Cost-Benefit Analysis',
+      'Financial Planning',
+      'Access to Justice'
+    ],
+    process: [
+      'Initial Cost Assessment',
+      'Payment Plan Options',
+      'Service Delivery',
+      'Regular Billing',
+      'Payment Tracking',
+      'Ongoing Support'
+    ],
+    faq: [
+      {
+        title: 'What payment plans do you offer?',
+        desc: 'We offer flexible payment plans including monthly installments, milestone-based payments, and sliding scale fees based on financial need.'
+      },
+      {
+        title: 'How do you ensure transparency in pricing?',
+        desc: 'We provide detailed cost breakdowns, no hidden fees, and clear communication about all costs before beginning any legal work.'
+      }
+    ]
+  }
+};
 
-const faqData = [
-  {
-    title: 'What services does your business provide?',
-    desc: "Our pricing varies depending on the specific services you require and the scope of your project. We offer customized solutions to fit each client's unique needs and budget. Please contact us.",
+// Continue with more services...
+const additionalServiceData = {
+  'divorce-lawyer': {
+    title: 'Divorce Lawyer',
+    subtitle: 'Compassionate Family Law Representation',
+    description: 'Expert family law representation for divorce proceedings, property division, and alimony arrangements with compassionate legal guidance.',
+    imageUrl: '/images/Divorce Lawyer.jpg',
+    features: ['Divorce Proceedings', 'Property Division', 'Alimony Arrangements', 'Child Support', 'Mediation Services', 'Court Representation'],
+    process: ['Initial Consultation', 'Case Assessment', 'Mediation Attempt', 'Court Filing', 'Negotiation', 'Final Settlement'],
+    faq: [
+      {
+        title: 'How long does a divorce case typically take?',
+        desc: 'Divorce cases can take 3-12 months depending on complexity, cooperation between parties, and court schedules. We work to expedite the process while protecting your interests.'
+      }
+    ]
   },
-  {
-    title: 'How much do your services cost?',
-    desc: "Our pricing varies depending on the specific services you require and the scope of your project. We offer customized solutions to fit each client's unique needs and budget. Please contact us.",
+  'child-custody': {
+    title: 'Child Custody',
+    subtitle: 'Child-Focused Family Law Solutions',
+    description: 'Specialized legal services for child custody arrangements, visitation rights, and family law matters with child-focused approach.',
+    imageUrl: '/images/Child Custody.jpg',
+    features: ['Custody Arrangements', 'Visitation Rights', 'Child Support', 'Guardianship', 'Parental Rights', 'Best Interest Advocacy'],
+    process: ['Child Welfare Assessment', 'Parental Capacity Evaluation', 'Custody Agreement Drafting', 'Court Representation', 'Mediation Services', 'Ongoing Support'],
+    faq: [
+      {
+        title: 'How is child custody determined in Pakistan?',
+        desc: 'Custody is determined based on the child\'s best interests, considering factors like parental capability, child\'s age and preference, and living conditions.'
+      }
+    ]
   },
-  {
-    title: 'Do you offer any guarantees or refunds?',
-    desc: "Our pricing varies depending on the specific services you require and the scope of your project. We offer customized solutions to fit each client's unique needs and budget. Please contact us.",
+  'guardianship-lawyer': {
+    title: 'Guardianship Lawyer',
+    subtitle: 'Protecting Vulnerable Individuals',
+    description: 'Legal assistance for guardianship proceedings, conservatorship matters, and protection of vulnerable individuals.',
+    imageUrl: '/images/Guardianship Lawyer.jpg',
+    features: ['Guardianship Proceedings', 'Conservatorship', 'Estate Management', 'Vulnerable Person Protection', 'Legal Capacity Assessment', 'Ongoing Oversight'],
+    process: ['Capacity Assessment', 'Guardian Selection', 'Court Petition Filing', 'Background Investigation', 'Guardian Appointment', 'Regular Monitoring'],
+    faq: [
+      {
+        title: 'When is guardianship necessary?',
+        desc: 'Guardianship is necessary when an individual cannot make decisions for themselves due to age, disability, or mental incapacity.'
+      }
+    ]
   },
-  {
-    title: 'How do I get started with your services?',
-    desc: "Our pricing varies depending on the specific services you require and the scope of your project. We offer customized solutions to fit each client's unique needs and budget. Please contact us.",
+  'domestic-violence-lawyer': {
+    title: 'Domestic Violence Lawyer',
+    subtitle: 'Protection and Justice for Victims',
+    description: 'Compassionate legal representation for domestic violence cases, protection orders, and family safety matters.',
+    imageUrl: '/images/Domestic Violence Lawyer.jpg',
+    features: ['Protection Orders', 'Emergency Relief', 'Criminal Defense', 'Family Safety Planning', 'Victim Advocacy', 'Legal Support Services'],
+    process: ['Emergency Assessment', 'Protection Order Filing', 'Safety Planning', 'Court Representation', 'Ongoing Support', 'Recovery Assistance'],
+    faq: [
+      {
+        title: 'How quickly can I get a protection order?',
+        desc: 'Emergency protection orders can be obtained within 24-48 hours in urgent cases. We prioritize victim safety and immediate legal protection.'
+      }
+    ]
   },
+  'property-lawyer': {
+    title: 'Property Lawyer',
+    subtitle: 'Comprehensive Real Estate Legal Services',
+    description: 'Comprehensive real estate legal services including property disputes, land acquisition, and real estate transaction documentation.',
+    imageUrl: '/images/Property Lawyer.jpg',
+    features: ['Property Disputes', 'Land Acquisition', 'Real Estate Transactions', 'Property Registration', 'Tenant Rights', 'Development Law'],
+    process: ['Property Analysis', 'Legal Due Diligence', 'Documentation Review', 'Negotiation', 'Registration Assistance', 'Dispute Resolution'],
+    faq: [
+      {
+        title: 'What documents do I need for property transactions?',
+        desc: 'Required documents include title deeds, property tax records, NOC certificates, and ownership verification. We help gather and verify all necessary documentation.'
+      }
+    ]
+  },
+  'inheritance-of-property': {
+    title: 'Inheritance of Property',
+    subtitle: 'Expert Estate Settlement Services',
+    description: 'Specialized legal services for inheritance disputes, property distribution, and estate settlement matters.',
+    imageUrl: '/images/Inheritance of Property.jpg',
+    features: ['Estate Planning', 'Property Distribution', 'Inheritance Disputes', 'Succession Certificate', 'Will Execution', 'Estate Administration'],
+    process: ['Estate Assessment', 'Heir Identification', 'Property Valuation', 'Distribution Planning', 'Legal Documentation', 'Final Settlement'],
+    faq: [
+      {
+        title: 'How is property divided among heirs?',
+        desc: 'Property division follows Islamic inheritance laws and Pakistani succession laws, with specific shares for different family members.'
+      }
+    ]
+  },
+  'succession-certificate': {
+    title: 'Succession Certificate',
+    subtitle: 'Legal Heirship Documentation',
+    description: 'Expert legal assistance for succession certificate applications, inheritance matters, and estate planning.',
+    imageUrl: '/images/Succession Certificate.jpg',
+    features: ['Succession Certificate Application', 'Heir Verification', 'Documentation Assistance', 'Court Representation', 'Certificate Issuance', 'Follow-up Support'],
+    process: ['Heir Identification', 'Documentation Gathering', 'Application Filing', 'Court Proceedings', 'Certificate Issuance', 'Property Transfer'],
+    faq: [
+      {
+        title: 'How long does it take to get a succession certificate?',
+        desc: 'Succession certificate applications typically take 3-6 months depending on court schedules and documentation completeness.'
+      }
+    ]
+  },
+  'criminal-lawyer': {
+    title: 'Criminal Lawyer',
+    subtitle: 'Aggressive Criminal Defense',
+    description: 'Experienced criminal defense attorneys providing aggressive representation for all types of criminal cases and legal proceedings.',
+    imageUrl: '/images/Criminal Lawyer.jpg',
+    features: ['Criminal Defense', 'Bail Applications', 'Evidence Analysis', 'Witness Preparation', 'Plea Negotiations', 'Appellate Advocacy'],
+    process: ['Case Analysis', 'Evidence Review', 'Defense Strategy', 'Court Representation', 'Client Communication', 'Appeal Preparation'],
+    faq: [
+      {
+        title: 'What should I do if I\'m arrested?',
+        desc: 'Remain silent, request legal representation immediately, and contact our office. We provide 24/7 emergency legal assistance.'
+      }
+    ]
+  },
+  'civil-lawyer': {
+    title: 'Civil Lawyer',
+    subtitle: 'Expert Civil Litigation',
+    description: 'Expert civil litigation representation for disputes, contract matters, and civil legal proceedings.',
+    imageUrl: '/images/Civil Lawyer.jpg',
+    features: ['Civil Litigation', 'Contract Disputes', 'Property Disputes', 'Tort Claims', 'Commercial Disputes', 'Alternative Dispute Resolution'],
+    process: ['Case Evaluation', 'Legal Strategy', 'Documentation', 'Negotiation', 'Court Representation', 'Settlement or Trial'],
+    faq: [
+      {
+        title: 'How do I know if I have a strong civil case?',
+        desc: 'We evaluate case strength based on evidence, legal merit, damages, and likelihood of success. Free consultations help assess your case.'
+      }
+    ]
+  },
+  'fia-lawyer': {
+    title: 'F.I.A Lawyer',
+    subtitle: 'Federal Investigation Agency Defense',
+    description: 'Specialized representation for Federal Investigation Agency cases, white-collar crimes, and federal legal proceedings.',
+    imageUrl: '/images/F.I.A Lawyer.jpg',
+    features: ['FIA Case Defense', 'White-collar Crime Defense', 'Federal Proceedings', 'Cyber Crime Defense', 'Financial Crime Defense', 'Federal Appeals'],
+    process: ['Case Analysis', 'Federal Procedure Review', 'Evidence Examination', 'Federal Court Representation', 'Client Protection', 'Appeal Strategy'],
+    faq: [
+      {
+        title: 'What types of cases does FIA handle?',
+        desc: 'FIA handles cyber crimes, financial fraud, human trafficking, immigration violations, and other federal offenses.'
+      }
+    ]
+  },
+  'legal-notice': {
+    title: 'Legal Notice',
+    subtitle: 'Professional Legal Notice Services',
+    description: 'Professional legal notice drafting and serving services for various legal matters and dispute resolution.',
+    imageUrl: '/images/Legal Notice.jpg',
+    features: ['Notice Drafting', 'Legal Documentation', 'Notice Serving', 'Response Handling', 'Dispute Resolution', 'Legal Compliance'],
+    process: ['Case Assessment', 'Notice Drafting', 'Legal Review', 'Notice Serving', 'Response Monitoring', 'Follow-up Action'],
+    faq: [
+      {
+        title: 'How long does a legal notice remain valid?',
+        desc: 'Legal notices typically have a 30-day response period, but validity depends on the specific legal matter and court requirements.'
+      }
+    ]
+  },
+  'company-lawyer': {
+    title: 'Company Lawyer',
+    subtitle: 'Comprehensive Corporate Legal Services',
+    description: 'Comprehensive corporate legal services including business formation, compliance, and corporate governance.',
+    imageUrl: '/images/Company Lawyer.jpg',
+    features: ['Corporate Formation', 'Corporate Governance', 'Regulatory Compliance', 'Contract Drafting', 'Mergers & Acquisitions', 'Corporate Litigation'],
+    process: ['Business Structure Analysis', 'Legal Compliance Audit', 'Documentation Preparation', 'Registration Assistance', 'Ongoing Support', 'Compliance Monitoring'],
+    faq: [
+      {
+        title: 'What legal structure is best for my business?',
+        desc: 'The optimal structure depends on business size, liability concerns, tax implications, and growth plans. We analyze your specific needs.'
+      }
+    ]
+  },
+  'company-registration': {
+    title: 'Company Registration',
+    subtitle: 'Complete Business Registration Services',
+    description: 'Complete business registration services including company formation, legal compliance, and corporate documentation.',
+    imageUrl: '/images/Company Registration.jpg',
+    features: ['Company Formation', 'Legal Compliance', 'Corporate Documentation', 'Tax Registration', 'Business Licensing', 'Regulatory Filings'],
+    process: ['Business Planning', 'Structure Selection', 'Documentation Preparation', 'Registration Filing', 'Compliance Setup', 'Ongoing Support'],
+    faq: [
+      {
+        title: 'How long does company registration take?',
+        desc: 'Company registration typically takes 2-4 weeks depending on business type, documentation completeness, and regulatory requirements.'
+      }
+    ]
+  },
+  'foundation-trust-ngo': {
+    title: 'Foundation Trust NGO',
+    subtitle: 'NGO Registration & Compliance',
+    description: 'Legal services for NGO registration, trust formation, and compliance with regulatory requirements.',
+    imageUrl: '/images/Foundation Trust NGO.jpg',
+    features: ['NGO Registration', 'Trust Formation', 'Regulatory Compliance', 'Tax Exemption', 'Governance Structure', 'Compliance Monitoring'],
+    process: ['Structure Planning', 'Documentation Preparation', 'Registration Filing', 'Compliance Setup', 'Tax Exemption Application', 'Ongoing Support'],
+    faq: [
+      {
+        title: 'What are the requirements for NGO registration?',
+        desc: 'Requirements include founding members, governing documents, financial statements, and compliance with regulatory guidelines.'
+      }
+    ]
+  },
+  'documentation-lawyer': {
+    title: 'Documentation Lawyer',
+    subtitle: 'Professional Legal Documentation',
+    description: 'Professional legal documentation services including contract drafting, legal agreements, and document review.',
+    imageUrl: '/images/Documentation Lawyer.jpg',
+    features: ['Contract Drafting', 'Legal Agreements', 'Document Review', 'Legal Opinions', 'Compliance Documentation', 'Risk Assessment'],
+    process: ['Requirement Analysis', 'Document Drafting', 'Legal Review', 'Client Consultation', 'Finalization', 'Implementation Support'],
+    faq: [
+      {
+        title: 'What types of contracts do you draft?',
+        desc: 'We draft all types of contracts including business agreements, employment contracts, property agreements, and specialized legal documents.'
+      }
+    ]
+  },
+  'processor-server': {
+    title: 'Processor Server',
+    subtitle: 'Legal Process Serving Services',
+    description: 'Legal process serving services for court documents, legal notices, and official document delivery.',
+    imageUrl: '/images/Processor Server.jpg',
+    features: ['Document Serving', 'Court Filing', 'Legal Notifications', 'Process Tracking', 'Affidavit Services', 'Legal Delivery'],
+    process: ['Document Review', 'Service Planning', 'Document Delivery', 'Proof of Service', 'Court Filing', 'Follow-up Reporting'],
+    faq: [
+      {
+        title: 'How do you ensure proper service of documents?',
+        desc: 'We follow legal procedures for document serving, maintain detailed records, and provide proof of service documentation.'
+      }
+    ]
+  },
+  'asylum-lawyer': {
+    title: 'Asylum Lawyer',
+    subtitle: 'Expert Immigration & Asylum Services',
+    description: 'Expert legal representation for asylum applications, refugee status, and immigration law matters.',
+    imageUrl: '/images/Asylum Lawyer.jpg',
+    features: ['Asylum Applications', 'Refugee Status', 'Immigration Law', 'Humanitarian Protection', 'Appeal Representation', 'Legal Advocacy'],
+    process: ['Case Assessment', 'Application Preparation', 'Evidence Gathering', 'Interview Preparation', 'Legal Representation', 'Follow-up Support'],
+    faq: [
+      {
+        title: 'What are the grounds for asylum in Pakistan?',
+        desc: 'Asylum can be granted based on persecution, fear of harm, or humanitarian grounds. We assess each case individually.'
+      }
+    ]
+  },
+  'private-investigator': {
+    title: 'Private Investigator',
+    subtitle: 'Legal Investigation Services',
+    description: 'Legal investigation services for evidence gathering, background checks, and investigative support for legal cases.',
+    imageUrl: '/images/Private Investigator.jpg',
+    features: ['Evidence Gathering', 'Background Checks', 'Surveillance', 'Document Verification', 'Witness Location', 'Case Support'],
+    process: ['Case Analysis', 'Investigation Planning', 'Evidence Collection', 'Documentation', 'Report Preparation', 'Legal Support'],
+    faq: [
+      {
+        title: 'What types of investigations do you conduct?',
+        desc: 'We conduct various investigations including background checks, surveillance, evidence gathering, and witness location for legal cases.'
+      }
+    ]
+  },
+  'legal-advisor': {
+    title: 'Legal Advisor',
+    subtitle: 'Comprehensive Legal Advisory Services',
+    description: 'Comprehensive legal advisory services for individuals and businesses with strategic legal guidance.',
+    imageUrl: '/images/Legal Advisor.jpg',
+    features: ['Legal Consultation', 'Strategic Planning', 'Risk Assessment', 'Compliance Advice', 'Legal Strategy', 'Ongoing Support'],
+    process: ['Initial Assessment', 'Legal Analysis', 'Strategy Development', 'Implementation Guidance', 'Monitoring', 'Regular Updates'],
+    faq: [
+      {
+        title: 'How often should I seek legal advice?',
+        desc: 'Regular legal consultation is recommended for businesses and individuals with ongoing legal matters or compliance requirements.'
+      }
+    ]
+  }
+};
+
+// Merge all service data
+const allServiceData = { ...serviceData, ...additionalServiceData };
+
+const serviceList = [
+  // Core Services
+  { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
+  { title: 'Digital Case Management', href: '/service/digital-case-management' },
+  { title: 'Lawcademics Division', href: '/service/lawcademics' },
+  { title: 'Corporate Legal Support', href: '/service/corporate-legal-support' },
+  { title: 'Lawconomic Solutions', href: '/service/lawconomic-solutions' },
+  
+  // Family Law
+  { title: 'Divorce Lawyer', href: '/service/divorce-lawyer' },
+  { title: 'Child Custody', href: '/service/child-custody' },
+  { title: 'Guardianship Lawyer', href: '/service/guardianship-lawyer' },
+  { title: 'Domestic Violence Lawyer', href: '/service/domestic-violence-lawyer' },
+  
+  // Property & Real Estate
+  { title: 'Property Lawyer', href: '/service/property-lawyer' },
+  { title: 'Inheritance of Property', href: '/service/inheritance-of-property' },
+  { title: 'Succession Certificate', href: '/service/succession-certificate' },
+  
+  // Criminal & Civil Law
+  { title: 'Criminal Lawyer', href: '/service/criminal-lawyer' },
+  { title: 'Civil Lawyer', href: '/service/civil-lawyer' },
+  { title: 'F.I.A Lawyer', href: '/service/fia-lawyer' },
+  
+  // Business & Corporate
+  { title: 'Company Lawyer', href: '/service/company-lawyer' },
+  { title: 'Company Registration', href: '/service/company-registration' },
+  { title: 'Foundation Trust NGO', href: '/service/foundation-trust-ngo' },
+  
+  // Documentation & Process
+  { title: 'Legal Notice', href: '/service/legal-notice' },
+  { title: 'Documentation Lawyer', href: '/service/documentation-lawyer' },
+  { title: 'Processor Server', href: '/service/processor-server' },
+  
+  // Immigration & Specialized
+  { title: 'Asylum Lawyer', href: '/service/asylum-lawyer' },
+  { title: 'Private Investigator', href: '/service/private-investigator' },
+  { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
 export default function ServiceDetailsPage() {
-  pageTitle('Service Details');
+  const { serviceId } = useParams();
+  
+  // Debug logging to see what serviceId is being passed
+  console.log('Service ID from URL:', serviceId);
+  console.log('Available services:', Object.keys(allServiceData));
+  
+  const currentService = allServiceData[serviceId] || {
+    title: 'Legal Services',
+    subtitle: 'Professional Legal Solutions',
+    description: 'Comprehensive legal services tailored to your specific needs.',
+    imageUrl: '/images/about1.jpg',
+    features: ['Legal Consultation', 'Case Analysis', 'Court Representation', 'Documentation', 'Legal Advice', 'Follow-up Support'],
+    process: ['Initial Consultation', 'Case Assessment', 'Strategy Development', 'Legal Representation', 'Regular Updates', 'Case Resolution'],
+    faq: [
+      {
+        title: 'What legal services do you provide?',
+        desc: 'We provide comprehensive legal services including constitutional advocacy, family law, criminal defense, property law, corporate legal support, and specialized legal documentation.'
+      }
+    ]
+  };
+
+  // Debug logging to see what service data is being used
+  console.log('Current service data:', currentService);
+  console.log('Service image URL:', currentService.imageUrl);
+
+  pageTitle(`${currentService.title} - Karachi Law Firms`);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
-      <Breadcrumb title="Service Details" bgUrl="/images/page_header_1.jpeg" />
+      <Breadcrumb title={currentService.title} bgUrl={currentService.imageUrl || "/images/about1.jpg"} />
 
       <Section pt="140" ptLg="80" pb="115" pbLg="55">
         <div className="container">
@@ -60,171 +529,164 @@ export default function ServiceDetailsPage() {
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
                 <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
-                  All Services
+                  All Legal Services
                 </h2>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
-                      <NavLink to={item.href}>
+                      <NavLink
+                        to={item.href}
+                        className={({ isActive }) =>
+                          isActive ? 'active' : ''
+                        }
+                      >
                         {item.title}
-                        <Icon icon="fa6-solid:arrow-right-long" />
+                        <svg
+                          width={20}
+                          height={20}
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clipPath="url(#clip0_81_254)">
+                            <path
+                              d="M18.1846 18.6831C18.1846 19.0607 17.8786 19.3667 17.501 19.3667C17.1234 19.3667 16.8174 19.0607 16.8174 18.6831C16.8174 18.3055 17.1234 17.9995 17.501 17.9995C17.8786 17.9995 18.1846 18.3055 18.1846 18.6831Z"
+                              fill="currentColor"
+                            />
+                          </g>
+                        </svg>
                       </NavLink>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div
-                className="cs_quick_contact_card background-filled cs_mb_40 text-center"
-                style={{
-                  backgroundImage: `url('/images/service-list-card.jpeg')`,
-                }}
-              >
-                <div className="cs_quick_contact_card_in">
-                  <div className="cs_quick_contact_card_icon cs_height_100 cs_width_100 bg-accent d-flex align-items-center justify-content-center rounded-circle cs_mb_24">
-                    <svg
-                      width={50}
-                      height={50}
-                      viewBox="0 0 50 50"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clipPath="url(#clip0_81_8759)">
-                        <path
-                          d="M28.4609 0C27.9215 0 27.4844 0.437164 27.4844 0.976561C27.4844 1.51596 27.9215 1.95312 28.4609 1.95312C39.2607 1.95312 48.0467 10.7395 48.0467 21.5389C48.0467 22.0783 48.4843 22.5155 49.0233 22.5155C49.5627 22.5155 49.9998 22.0783 49.9998 21.5389C49.9998 9.66261 40.3376 0 28.4609 0Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M43.1486 22.5157C43.688 22.5157 44.1252 22.0782 44.1252 21.5392C44.1252 12.9016 37.0982 5.87451 28.4609 5.87451C27.9215 5.87451 27.4844 6.31206 27.4844 6.85107C27.4844 7.39047 27.9215 7.82763 28.4609 7.82763C36.0213 7.82763 42.1721 13.9784 42.1721 21.5392C42.1721 22.0782 42.6092 22.5157 43.1486 22.5157Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M36.2963 21.5395C36.2963 22.0785 36.7335 22.516 37.2729 22.516C37.8123 22.516 38.2494 22.0785 38.2494 21.5395C38.2494 16.1421 33.8583 11.751 28.4609 11.751C27.9215 11.751 27.4844 12.1881 27.4844 12.7272C27.4844 13.2666 27.9215 13.7037 28.4609 13.7037C32.7815 13.7037 36.2963 17.2186 36.2963 21.5395Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M27.4844 18.602C27.4844 19.1411 27.9215 19.5782 28.4609 19.5782C29.542 19.5782 30.4217 20.4579 30.4217 21.5394C30.4217 22.0784 30.8589 22.5159 31.3982 22.5159C31.9373 22.5159 32.3748 22.0784 32.3748 21.5394C32.3748 19.381 30.6189 17.6255 28.4609 17.6255C27.9215 17.6255 27.4844 18.0627 27.4844 18.602Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M18.3047 31.707C18.3047 32.2464 17.8675 32.6836 17.3281 32.6836C16.7887 32.6836 16.3516 32.2464 16.3516 31.707C16.3516 31.168 16.7887 30.7305 17.3281 30.7305C17.8675 30.7305 18.3047 31.168 18.3047 31.707Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M26.7609 48.8141C31.2077 50.9935 36.5574 50.0867 40.0738 46.5703L42.0929 44.5512C43.1893 43.456 43.1897 41.6818 42.0933 40.5858L34.2915 32.7848C33.1971 31.6888 31.4225 31.6873 30.3269 32.7844L27.0119 36.0998C26.3627 36.749 25.3606 36.8814 24.6297 36.4149C23.438 35.6531 22.2787 34.8131 21.1842 33.9181C20.7665 33.5767 20.1516 33.6385 19.8102 34.0558C19.4688 34.4736 19.5306 35.0889 19.9479 35.4299C21.1011 36.3729 22.3222 37.2579 23.5783 38.0605C25.0756 39.0169 27.1004 38.7731 28.3929 37.4807L31.7086 34.1649C32.0401 33.8331 32.5772 33.8323 32.9102 34.1653L40.7124 41.9668C41.0447 42.2994 41.0454 42.8373 40.7124 43.1695L38.6929 45.1894C35.7636 48.1187 31.3142 48.8706 27.6204 47.0605C14.0885 40.4249 6.72617 29.9032 2.93284 22.2448C1.11819 18.5823 1.8716 14.1496 4.80776 11.2142L6.78301 9.23937C7.11413 8.90749 7.65162 8.90635 7.98426 9.23975L15.7872 17.0423C16.1176 17.3723 16.121 17.9102 15.7864 18.2439L12.4715 21.5593C11.1791 22.8517 10.9353 24.8766 11.8916 26.3742C12.4551 27.2558 13.0624 28.1255 13.6971 28.959C14.0237 29.3882 14.6363 29.471 15.0655 29.1444C15.4946 28.8179 15.5778 28.2053 15.2509 27.7757C14.6489 26.9849 14.0721 26.1594 13.5373 25.3229C13.0708 24.5916 13.2031 23.5895 13.8524 22.9402L17.167 19.6256C18.2629 18.5312 18.2641 16.7562 17.1677 15.661L9.36556 7.85921C8.2715 6.76325 6.49653 6.76173 5.40133 7.85883L3.42685 9.83332C-0.102507 13.3615 -1.0043 18.6979 1.18266 23.1119C5.11065 31.0415 12.7362 41.937 26.7609 48.8141Z"
-                          fill="white"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_81_8759">
-                          <rect width={50} height={50} fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <h2 className="cs_fs_48 cs_fs_lg_36 text-white cs_mb_40">
-                    Have Any Query Feel Free Contact
-                  </h2>
-                  <Button btnText="Contact Us" btnUrl="/contact" />
+              <div className="cs_contact_info cs_style1">
+                <div className="cs_contact_info_icon">
+                  <svg
+                    width={60}
+                    height={60}
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clipPath="url(#clip0_81_254)">
+                      <path
+                        d="M18.1846 18.6831C18.1846 19.0607 17.8786 19.3667 17.501 19.3667C17.1234 19.3667 16.8174 19.0607 16.8174 18.6831C16.8174 18.3055 17.1234 17.9995 17.501 17.9995C17.8786 17.9995 18.1846 18.3055 18.1846 18.6831Z"
+                        fill="currentColor"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_81_254">
+                        <rect width={60} height={60} fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
                 </div>
-              </div>
-              <div className="bg-gray cs_pl_30 cs_pr_30 cs_pt_55 cs_pb_60">
-                <h2 className="cs_fs_26 cs_mb_25">Quick Contact</h2>
-                <FormStyle5 />
+                <h3 className="text-white cs_mb_15">Need Legal Help?</h3>
+                <p className="text-white cs_mb_25">
+                  Get expert legal advice and representation for all your legal needs.
+                </p>
+                <Button btnText="Free Consultation" btnUrl="/contact" />
               </div>
             </div>
             <div className="col-xl-8 col-lg-7">
-              <img
-                src="/images/service-details-img-1.jpeg"
-                alt="Thumb"
-                className="cs_mb_40"
-              />
-              <h2 className="cs_fs_26 cs_mb_20">Business &amp; finance</h2>
-              <p className="cs_mb_40">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                voluptatem. Ut enim ad minima veniam, quis nostrum
-                exercitationem ullam corporis suscipit laboriosam, nisi ut
-                aliquid ex ea commodi consequatur? Quis autem vel eum iure
-                reprehenderit qui in ea voluptate velit esse quam nihil
-                molestiae consequatur, vel illum qui dolorem eum fugiat quo
-                voluptas nulla pariatur
-              </p>
-              <blockquote className="cs_blockquote fw-semibold cs_pt_35 cs_pb_35 cs_pl_40 cs_pr_40 bg-white shadow-lg cs_rounded_5 cs_mb_40">
-                “ Lorem Ipsum is simply free text not dummy available
-                typesetting industry been the industry standard Lorem ipsum is
-                simply free text ”
-              </blockquote>
-              <p className="cs_mb_40">
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit, sed quia non numquam eius modi
-                tempora incidunt ut labore et dolore magnam aliquam quaerat
-                voluptatem. Ut enim ad minima veniam, quis nostrum
-                exercitationem ullam corporis suscipit laboriosam,
-              </p>
-              <div className="row cs_mb_30">
-                <div className="col-xl-6">
+              <div className="cs_service_details">
+                <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/service-details-img-2.jpeg"
-                    alt=""
-                    className="cs_rounded_15 cs_mb_30"
+                    src={currentService.imageUrl}
+                    alt={currentService.title}
+                    className="w-100 cs_rounded_10"
                   />
                 </div>
-                <div className="col-xl-6">
-                  <h3 className="cs_fs_26 cs_mb_15">Our benefits</h3>
-                  <p className="cs_mb_40">
-                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                    amet, consectetur, adipisci velit, sed quia non numquam eius
-                    modi tempora incidunt ut labore et dolore magnam aliquam
-                    quaerat voluptatem. Ut enim ad minima veniam.
+                <div className="cs_service_details_content">
+                  <h2 className="cs_mb_30">{currentService.title}</h2>
+                  <h4 className="text-accent cs_mb_20">{currentService.subtitle}</h4>
+                  <p className="cs_mb_30">
+                    {currentService.description}
                   </p>
-                  <IconboxStyle5
-                    iconUrl="/images/icons/iconbox_icon_8.svg"
-                    title="Accounting and Bookkeeping"
-                  />
-                  <IconboxStyle5
-                    iconUrl="/images/icons/iconbox_icon_9.svg"
-                    title="IT Support and Consulting"
-                  />
+                  
+                  <div className="row cs_mb_40">
+                    <div className="col-lg-6">
+                      <div className="cs_service_details_list">
+                        <h3 className="cs_mb_20">Our Services Include</h3>
+                        <ul>
+                          {currentService.features.map((feature, index) => (
+                            <li key={index}>{feature}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <div className="cs_service_details_list">
+                        <h3 className="cs_mb_20">Our Process</h3>
+                        <ul>
+                          {currentService.process.map((step, index) => (
+                            <li key={index}>{step}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="cs_section_heading cs_style_1 cs_mb_30">
-                <div className="cs_section_heading_in">
-                  <h3 className="cs_fs_20 text-accent fw-normal cs_lh_base cs_mb_15">
-                    frequently asked questions
-                  </h3>
-                  <h2 className="cs_fs_36 cs_mb_0">Questions & Answers</h2>
-                </div>
-              </div>
-              <Accordion data={faqData} />
             </div>
           </div>
         </div>
       </Section>
 
-      <Section
-        pt="133"
-        ptLg="75"
-        pb="140"
-        pbLg="80"
-        style={{ backgroundImage: `url('/images/contact_bg_2.jpeg')` }}
-      >
+      <Section pt="110" ptLg="80" pb="110" pbLg="80" className="bg-gray">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8 offset-lg-2">
+            <div className="col-lg-6">
               <SectionHeadingStyle2
-                sectionTitle="Feel Free to Get in Touch<br/>
-                with Ralph"
-                sectionTitleUp="Meet Our Team Member"
-                textVarient="text-white"
+                sectionTitleUp="Frequently Asked Questions"
+                sectionTitle={`Common Questions About ${currentService.title}`}
+                sectionSubTitle={`Get answers to the most frequently asked questions about our ${currentService.title.toLowerCase()} services.`}
               />
+            </div>
+            <div className="col-lg-6">
+              <Accordion data={currentService.faq} />
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section pt="110" ptLg="80" pb="110" pbLg="80">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <SectionHeadingStyle2
+                sectionTitleUp="Contact Us"
+                sectionTitle="Ready to Get Started?"
+                sectionSubTitle="Contact us today for a free consultation and let us help you navigate your legal challenges with expertise and dedication."
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
               <FormStyle6 />
+            </div>
+            <div className="col-lg-6">
+              <div className="cs_contact_info">
+                <IconboxStyle5
+                  imgUrl="/images/icons/contact_icon_1.svg"
+                  title="Call Us"
+                  titleUp="Have Any Question?"
+                  desc="(123) 45678"
+                />
+                <IconboxStyle5
+                  imgUrl="/images/icons/contact_icon_2.svg"
+                  title="Send Email"
+                  titleUp="Get in Touch"
+                  desc="info@karachilawfirms.com"
+                />
+                <IconboxStyle5
+                  imgUrl="/images/icons/contact_icon_3.svg"
+                  title="Visit Office"
+                  titleUp="Our Location"
+                  desc="Karachi, Pakistan"
+                />
+              </div>
             </div>
           </div>
         </div>

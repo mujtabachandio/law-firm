@@ -4,17 +4,7 @@ import SocialBtns from '../../components/SocialBtns';
 import MenuWidget from '../Widget/MenuWidget';
 import NewsLetterWidget from '../Widget/NewsLetterWidget';
 
-const menuDataOne = [
-  { title: 'About', href: '/about' },
-  { title: 'Cases', href: '/portfolio' },
-  { title: 'Services', href: '/service' },
-  { title: 'Contact', href: '/contact' },
-  { title: 'Legal Fees', href: '/pricing' },
-  { title: 'Legal Resources', href: '/shop' },
-  { title: 'Lawcademics', href: '/blog' },
-  { title: 'Privacy Policy', href: '/' },
-  { title: 'Contact', href: '/contact' },
-];
+
 
 const servicesData = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -37,7 +27,7 @@ export default function Footer() {
     <footer
       className="cs_footer background-filled text-white"
       style={{ 
-        backgroundImage: 'url("/images/footer_bg.jpeg")',
+        backgroundColor: '#000000',
         position: 'relative',
       }}
     >
@@ -45,7 +35,7 @@ export default function Footer() {
       <div 
         className="position-absolute w-100 h-100 top-0 start-0"
         style={{
-          background: 'linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%)',
+          background: 'linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%)',
           zIndex: 1,
         }}
       />
@@ -58,11 +48,11 @@ export default function Footer() {
               Need Legal Help?
             </h3>
             <h2 className="text-white fw-medium m-0 cs_fs_22">
-              (+92) 1234567890
+              (123) 45678
             </h2>
           </div>
           <div className="cs_footer_logo">
-            <span className="text-white fw-bold fs-4">Karachi Law Firms</span>
+            <img src="/images/main-logo2.png" alt="Karachi Law Firms" style={{ height: '100px', width: 'auto' }} />
           </div>
           <div className="cs_footer_contact_info">
             <h3 className="text-accent fw-normal cs_mb_4 cs_fs_16 cs_lh_lg">

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Nav from './Nav';
 export default function Header({ variant }) {
   const [mobileToggle, setMobileToggle] = useState(false);
-  const [searchToggle, setSearchToggle] = useState(false);
   const [isSticky, setIsSticky] = useState();
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
@@ -42,7 +41,7 @@ export default function Header({ variant }) {
           <div className="cs_main_header_in">
             <div className="cs_main_header_left">
               <Link className="cs_site_branding" to="/">
-                <span className="text-white fw-bold fs-4">Karachi Law Firms</span>
+                <img src="/images/main-logo.png" alt="Karachi Law Firms" style={{ height: '50px', width: 'auto' }} />
               </Link>
               <div className="cs_nav cs_primary_font fw-medium">
                 <span
@@ -60,46 +59,6 @@ export default function Header({ variant }) {
             </div>
             <div className="cs_main_header_right">
               <div className="cs_toolbox">
-                <div
-                  className={`cs_header_search_wrap position-relative ${
-                    searchToggle ? 'active' : ''
-                  }`}
-                >
-                  <span
-                    className="cs_header_search_btn d-flex"
-                    onClick={() => setSearchToggle(!searchToggle)}
-                  >
-                    <svg
-                      width={25}
-                      height={25}
-                      viewBox="0 0 25 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24.7628 23.6399L18.3082 17.2884C19.9984 15.452 21.037 13.0234 21.037 10.3509C21.0362 4.63387 16.3273 0 10.5181 0C4.70891 0 0 4.63387 0 10.3509C0 16.0678 4.70891 20.7017 10.5181 20.7017C13.0281 20.7017 15.3301 19.8335 17.1384 18.3902L23.618 24.7667C23.9338 25.0777 24.4463 25.0777 24.7621 24.7667C25.0785 24.4557 25.0785 23.9509 24.7628 23.6399ZM10.5181 19.1092C5.60289 19.1092 1.61836 15.1879 1.61836 10.3509C1.61836 5.51376 5.60289 1.59254 10.5181 1.59254C15.4333 1.59254 19.4178 5.51376 19.4178 10.3509C19.4178 15.1879 15.4333 19.1092 10.5181 19.1092Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                  <form className="cs_header_search_form position-absolute bg-white cs_transition_3 cs_rounded_5 end-0 cs_pt_20 cs_pb_20 cs_pl_20 cs_pr_20">
-                    <input type="text" placeholder="Type your keywork  ..." />
-                    <button className="cs_header_search_sumbit_btn">
-                      <svg
-                        width={25}
-                        height={25}
-                        viewBox="0 0 25 25"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M24.7628 23.6399L18.3082 17.2884C19.9984 15.452 21.037 13.0234 21.037 10.3509C21.0362 4.63387 16.3273 0 10.5181 0C4.70891 0 0 4.63387 0 10.3509C0 16.0678 4.70891 20.7017 10.5181 20.7017C13.0281 20.7017 15.3301 19.8335 17.1384 18.3902L23.618 24.7667C23.9338 25.0777 24.4463 25.0777 24.7621 24.7667C25.0785 24.4557 25.0785 23.9509 24.7628 23.6399ZM10.5181 19.1092C5.60289 19.1092 1.61836 15.1879 1.61836 10.3509C1.61836 5.51376 5.60289 1.59254 10.5181 1.59254C15.4333 1.59254 19.4178 5.51376 19.4178 10.3509C19.4178 15.1879 15.4333 19.1092 10.5181 19.1092Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </button>
-                  </form>
-                </div>
                 <div className="cs_header_contact">
                   <div className="cs_header_contact_icon text-accent">
                     <svg
@@ -136,7 +95,7 @@ export default function Header({ variant }) {
                       Need legal help? Call us:
                     </h3>
                     <h3 className="text-white m-0 cs_fs_13">
-                      (+92) 1234567890
+                      (123) 45678
                     </h3>
                   </div>
                 </div>

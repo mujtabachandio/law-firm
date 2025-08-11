@@ -6,24 +6,24 @@ import { pageTitle } from '../../helpers/PageTitle';
 
 const teamData = [
   {
-    imgUrl: '/images/team_member_1.jpeg',
+    imgUrl: '/images/attorney1.jpg',
     name: 'Sabahat Syed',
     designation: 'Senior Constitutional Litigator',
     experience: '15+ Years in Public Interest Law',
     srcUrl: '/team/sabahat-syed',
   },
   {
-    imgUrl: '/images/team_member_2.jpeg',
+    imgUrl: '/images/attorney2.JPG',
     name: 'Raza Hyder',
     designation: 'Corporate Law & Digital Regulations',
     experience: '12 Years | Ex-Advisor to SECP',
     srcUrl: '/team/raza-hyder',
   },
   {
-    imgUrl: '/images/team_member_3.jpeg',
+    imgUrl: '/images/attorney3.jpg',
     name: 'Fatima Jilani',
     designation: 'Senior Legal Researcher',
-    experience: '10+ Years in Academic Research',
+    experience: '10+ Years in Constitutional Law',
     srcUrl: '/team/fatima-jilani',
   },
 ];

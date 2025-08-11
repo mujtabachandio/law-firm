@@ -94,6 +94,9 @@ export default function Service({ iconUrl, title, subTitle, imgUrl, href }) {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
+          {/* Debug: Log the image URL */}
+          {console.log('Service image URL:', imgUrl)}
+          
           <Link
             to={href}
             className="cs_service_btn d-flex align-items-center justify-content-center rounded-circle position-absolute text-white"
@@ -122,6 +125,8 @@ export default function Service({ iconUrl, title, subTitle, imgUrl, href }) {
               />
             </svg>
           </Link>
+          
+          {/* Service Image - Using both background and img tag for better compatibility */}
           <div
             className="cs_service_thumb-in position-relative-in background-filled h-100"
             style={{
@@ -130,6 +135,21 @@ export default function Service({ iconUrl, title, subTitle, imgUrl, href }) {
               backgroundPosition: 'center',
               filter: isHovered ? 'brightness(0.8)' : 'brightness(1)',
               transition: 'all 0.3s ease'
+            }}
+          />
+          
+          {/* Fallback img tag for better image loading */}
+          <img
+            src={imgUrl}
+            alt={title}
+            className="position-absolute top-0 start-0 w-100 h-100"
+            style={{
+              objectFit: 'cover',
+              zIndex: 1
+            }}
+            onError={(e) => {
+              console.error('Failed to load image:', imgUrl);
+              e.target.style.display = 'none';
             }}
           />
         </motion.div>

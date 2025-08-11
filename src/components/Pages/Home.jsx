@@ -53,35 +53,31 @@ const movingTextData = [
 const serviceData = [
   {
     iconUrl: '/images/icons/service_icon_1.svg',
-    title: 'Accounting and Bookkeeping',
+    title: 'Constitutional Advocacy',
     subTitle:
-      'Services related to financial record-keeping, bookkeeping, preparation and action.',
-    imgUrl: '/images/service_1.jpeg',
-    href: '/service/services-details',
+      'We stand where it matters most — defending civil liberties, minority rights, and democratic principles.',
+    imgUrl: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop',
   },
   {
     iconUrl: '/images/icons/service_icon_2.svg',
-    title: 'IT Support and Consulting',
+    title: 'Digital Case Management',
     subTitle:
-      'Providing technical support, network setup, software installation system.',
-    imgUrl: '/images/service_2.jpeg',
-    href: '/service/services-details',
+      'Track your legal case in real time, securely share documents, and get consistent updates.',
+    imgUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
   },
   {
     iconUrl: '/images/icons/service_icon_3.svg',
-    title: 'Marketing and Advertising',
+    title: 'Lawcademics Division',
     subTitle:
-      'Services that help businesses create and execute market strategies.',
-    imgUrl: '/images/service_3.jpeg',
-    href: '/service/services-details',
+      'Where legal practice meets legal theory. Our research-backed legal arguments support our court strategy.',
+    imgUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop',
   },
   {
     iconUrl: '/images/icons/service_icon_4.svg',
-    title: 'Human Resources',
+    title: 'Corporate Legal Support',
     subTitle:
-      'Assistance with HR-related tasks such as recruitment, training, performance.',
-    imgUrl: '/images/service_4.jpeg',
-    href: '/service/services-details',
+      "From compliance to contract negotiation, our business law services are tailored for Pakistan's modern economy.",
+    imgUrl: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop',
   },
 ];
 
@@ -174,22 +170,25 @@ const testimonialData = [
 
 const teamData = [
   {
-    imgUrl: '/images/team_member_1.jpeg',
-    name: 'Ralph Edwards',
-    designation: 'Web designer',
-    srcUrl: '/team/team-details',
+    imgUrl: '/images/attorney1.jpg',
+    name: 'Sabahat Syed',
+    designation: 'Senior Constitutional Litigator',
+    experience: '15+ Years in Public Interest Law',
+    srcUrl: '/team/sabahat-syed',
   },
   {
-    imgUrl: '/images/team_member_2.jpeg',
-    name: 'Wade Warren',
-    designation: 'Marketing Coordinator',
-    srcUrl: '/team/team-details',
+    imgUrl: '/images/attorney2.JPG',
+    name: 'Raza Hyder',
+    designation: 'Corporate Law & Digital Regulations',
+    experience: '12 Years | Ex-Advisor to SECP',
+    srcUrl: '/team/raza-hyder',
   },
   {
-    imgUrl: '/images/team_member_3.jpeg',
-    name: 'Jane Cooper',
-    designation: 'Creative Designer',
-    srcUrl: '/team/team-details',
+    imgUrl: '/images/attorney3.jpg',
+    name: 'Fatima Jilani',
+    designation: 'Senior Legal Researcher',
+    experience: '10+ Years in Constitutional Law',
+    srcUrl: '/team/fatima-jilani',
   },
 ];
 
@@ -275,7 +274,7 @@ export default function Home() {
       >
         <AboutUsSection
           thumbUrl="/images/experience_img.jpeg"
-          experienceBgUrl="/images/experience_bg.jpeg"
+          experienceBgUrl="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop"
           experienceIconUrl="/images/experience_icon.svg"
           experienceNumber="40"
           experienceTitle="Work Experience"
