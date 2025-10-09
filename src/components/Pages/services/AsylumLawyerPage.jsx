@@ -3,11 +3,12 @@ import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
 import Accordion from '../../Accordion';
-import IconboxStyle5 from '../../Iconbox/IconboxStyle5';
+
 import { NavLink } from 'react-router-dom';
 
-import FormStyle6 from '../../Form/FormStyle6';
+
 import Button from '../../Button';
+import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import { pageTitle } from '../../../helpers/PageTitle';
 
 const serviceList = [
@@ -73,7 +74,7 @@ export default function AsylumLawyerPage() {
 
   return (
     <>
-      <Breadcrumb title="Asylum Lawyer" bgUrl="/images/Asylum Lawyer.jpg" />
+      <Breadcrumb title="Asylum Lawyer" bgUrl="/images/Asylum%20Lawyer.jpg" />
 
 
 
@@ -230,45 +231,18 @@ export default function AsylumLawyerPage() {
         </div>
       </Section>
 
-      <Section pt="110" ptLg="80" pb="110" pbLg="80">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <SectionHeadingStyle2
-                sectionTitleUp="Contact Us"
-                sectionTitle="Need Asylum Legal Help?"
-                sectionSubTitle="Contact us today for a free consultation and let us help you navigate the asylum process with expert legal representation."
-              />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-6">
-              <FormStyle6 />
-            </div>
-            <div className="col-lg-6">
-              <div className="cs_contact_info">
-                <IconboxStyle5
-                  imgUrl="/images/icons/contact_icon_1.svg"
-                  title="Call Us"
-                  titleUp="Have Any Question?"
-                  desc="(123) 45678"
-                />
-                <IconboxStyle5
-                  imgUrl="/images/icons/contact_icon_2.svg"
-                  title="Send Email"
-                  titleUp="Get in Touch"
-                  desc="info@karachilawfirms.com"
-                />
-                <IconboxStyle5
-                  imgUrl="/images/icons/contact_icon_3.svg"
-                  title="Visit Office"
-                  titleUp="Our Location"
-                  desc="Karachi, Pakistan"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+      
+    
+      {/* Contact Section Bottom */}
+      <Section
+        pt="133"
+        ptLg="75"
+        pb="140"
+        pbLg="80"
+        className="background-filled overflow-hidden"
+        style={{ backgroundImage: 'url("/images/OurCoreServices.jpg")' }}
+      >
+        <ContactSectionBottom />
       </Section>
     </>
   );

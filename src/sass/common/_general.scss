@@ -389,8 +389,8 @@ label {
   }
 }
 .cs_page_header {
-  height: 640px;
-  padding: 190px 0 50px;
+  height: 400px;
+  padding: 120px 0 50px;
   &::before {
     content: '';
     position: absolute;
@@ -401,7 +401,7 @@ label {
     background-color: rgba(0, 0, 0, 0.8);
   }
   @media (max-width: 991px) {
-    height: 500px;
+    height: 300px;
   }
 }
 .breadcrumb-item + .breadcrumb-item::before {

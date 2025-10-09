@@ -3,7 +3,7 @@
 ----------------------------------------------------------------
 1. Typography
 2. Preloader
-4. General
+3. General
 4. Slider
 5. Video Popup
 6. Header
@@ -18,8 +18,7 @@
 15. Testimonial
 16. Portfolio
 17. Pricing
-18. Steps
-19. Video Modal
+18. CTA
 --------------------------------------------------------------*/
 
 @import 'default/color_variable';
@@ -40,9 +39,9 @@
 @import 'shortcode/testimonial';
 @import 'shortcode/portfolio';
 @import 'shortcode/pricing';
-@import 'shortcode/steps';
-@import 'shortcode/video_block';
-@import 'shortcode/funfact';
+
+
+
 @import 'shortcode/cta';
-@import 'shortcode/ecommerce';
+
 @import 'custom';

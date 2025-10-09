@@ -37,21 +37,7 @@ export default function AboutUsSection({
                   />
                 </div>
               </div>
-              <div
-                className="cs_experience_box background-filled text-center bg-white cs_rounded_10 position-absolute bottom-0 end-0 cs_zindex_3 d-flex flex-column justify-content-center align-items-center"
-                style={{
-                  backgroundImage: `url(${experienceBgUrl})`,
-                }}
-              >
-                <img src={experienceIconUrl} alt="Icon" className="cs_mb_5" />
-                <h3 className="text-white cs_fs_60 cs_fs_lg_46 fw-bold lh_1 mb-0 d-flex justify-content-between">
-                  <span className="odometer">{experienceNumber}</span>
-                  <span className="fw-light">+</span>
-                </h3>
-                <h2 className="cs_fs_18 fw-normal text-white m-0">
-                  {experienceTitle}
-                </h2>
-              </div>
+              
             </div>
           </div>
           <div className="col-lg-6">

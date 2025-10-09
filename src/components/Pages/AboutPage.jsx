@@ -5,6 +5,7 @@ import AboutUsSection from '../Section/AboutSection';
 import ServiceSection from '../Section/ServiceSection';
 import TeamSection from '../Section/TeamSection';
 import TestimonialSection from '../Section/TestimonialSection';
+import ContactSectionBottom from '../Section/ContactSection/ContactSectionBottom';
 import { pageTitle } from '../../helpers/PageTitle';
 
 const serviceData = [
@@ -44,22 +45,25 @@ const serviceData = [
 
 const teamData = [
   {
-    imgUrl: '/images/attorney1.jpg',
-    name: 'Sabahat Syed',
-    designation: 'Senior Constitutional Litigator',
-    srcUrl: '/team/sabahat-syed',
+    imgUrl: '/images/AshfaqShahBukhari.jpg',
+    name: 'Ashfaq Shah Bukhari',
+    designation: 'Senior Partner',
+    srcUrl: '/team/ashfaq-shah-bukhari',
+    initials: 'ASB',
   },
   {
-    imgUrl: '/images/attorney2.JPG',
-    name: 'Raza Hyder',
-    designation: 'Corporate Law & Digital Regulations',
-    srcUrl: '/team/raza-hyder',
+    imgUrl: null, // Will use avatar instead
+    name: 'Danish Hussain',
+    designation: 'Associate',
+    srcUrl: '/team/danish-hussain',
+    initials: 'DH',
   },
   {
-    imgUrl: '/images/attorney3.jpg',
-    name: 'Fatima Jilani',
-    designation: 'Senior Legal Researcher',
-    srcUrl: '/team/fatima-jilani',
+    imgUrl: null, // Will use avatar instead
+    name: 'Mansoor Ahmed',
+    designation: 'Associate',
+    srcUrl: '/team/mansoor-ahmed',
+    initials: 'MA',
   },
 ];
 
@@ -103,7 +107,11 @@ export default function AboutPage() {
   }, []);
   return (
     <>
-      <Breadcrumb title="About Karachi Law Firms" bgUrl="/images/about1.jpg" />
+      <Breadcrumb title="About Karachi Law Firms" bgUrl="/images/attorney-page.jpg" />
+      {/* Pakistani flag indicator near location context */}
+      <div className="text-center cs_pt_10" title="Pakistan" aria-label="Pakistan">
+        <img src="/pak-flag.png" alt="Pakistan" style={{ height: '16px', width: 'auto' }} />
+      </div>
 
       <Section
         pt="135"
@@ -171,6 +179,37 @@ export default function AboutPage() {
           sectionSubTitle="Real stories from individuals and businesses who have experienced the KLF difference in their legal journey."
           data={testimonialData}
         />
+      </Section>
+
+      {/* Contact Section Bottom */}
+      <Section
+        pt="50"
+        ptLg="30"
+        pb="50"
+        pbLg="30"
+        className="background-filled overflow-hidden position-relative"
+        style={{ 
+          backgroundImage: 'url("/images/OurCoreServices.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark Overlay */}
+        <div 
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+            zIndex: 1
+          }}
+        ></div>
+        <div style={{ position: 'relative', zIndex: 2 }}>
+          <ContactSectionBottom />
+        </div>
       </Section>
     </>
   );

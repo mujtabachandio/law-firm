@@ -28,13 +28,15 @@ import ProcessorServerPage from './components/Pages/services/ProcessorServerPage
 import AsylumLawyerPage from './components/Pages/services/AsylumLawyerPage';
 import PrivateInvestigatorPage from './components/Pages/services/PrivateInvestigatorPage';
 import LegalAdvisorPage from './components/Pages/services/LegalAdvisorPage';
-import BlogListPage from './components/Pages/BlogListPage';
-import BlogGridPage from './components/Pages/BlogGridPage';
+import BlogPage from './components/Pages/BlogPage';
 import BlogDetailsPage from './components/Pages/BlogDetailsPage';
 import ContactPage from './components/Pages/ContactPage';
 import LawcademicsHubPage from './components/Pages/LawcademicsHubPage';
 import AboutPage from './components/Pages/AboutPage';
 import TeamPage from './components/Pages/TeamPage';
+import ReviewsPage from './components/Pages/ReviewsPage';
+import PrivacyPolicyPage from './components/Pages/PrivacyPolicyPage';
+import TermsPage from './components/Pages/TermsPage';
 
 function App() {
   return (
@@ -75,13 +77,15 @@ function App() {
         {/* Fallback for any remaining services - can be removed once all are individual */}
         <Route path="/service/:serviceId" element={<ServiceDetailsPage />} />
         
-        <Route path="/blog" element={<BlogListPage />} />
-        <Route path="/blog-grid" element={<BlogGridPage />} />
+        <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:blogId" element={<BlogDetailsPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/lawcademics" element={<LawcademicsHubPage />} />
         <Route path="/lawcademics-hub" element={<LawcademicsHubPage />} />
         <Route path="/team" element={<TeamPage />} />
+        <Route path="/reviews" element={<ReviewsPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms" element={<TermsPage />} />
       </Route>
     </Routes>
   );

@@ -203,12 +203,17 @@ export default function Nav({ setMobileToggle }) {
         </Link>
       </li>
       <li>
+        <Link to="/blog" onClick={() => setMobileToggle(false)}>
+          Blog
+        </Link>
+      </li>
+      <li>
         <Link to="/team" onClick={() => setMobileToggle(false)}>
           Attorneys
         </Link>
       </li>
       <li>
-        <Link to="/contact" onClick={() => setMobileToggle(false)}>
+          <Link to="/contact" onClick={() => setMobileToggle(false)}>
           Contact
         </Link>
       </li>

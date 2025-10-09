@@ -1,3 +1,11 @@
+.cs_site_header.cs_mobile_toggle_active .cs_nav { display: block !important; }
+.cs_site_header.cs_mobile_toggle_active .cs_nav .cs_nav_list { display: block !important; }
+.cs_site_header.cs_mobile_toggle_active .cs_nav .cs_nav_list > li { display: block; margin: 10px 0; }
+
+.cs_munu_toggle {
+  position: relative;
+  z-index: 1003;
+}
 /*--------------------------------------------------------------
 6. Header
 ----------------------------------------------------------------*/
@@ -9,6 +17,8 @@
   left: 0;
   top: 0px;
   transition: all 0.4s ease;
+  /* Enforce single site-wide font */
+ font-family: 'Lato', Arial, sans-serif;
 }
 .cs_site_header.cs_style_1 {
   .cs_main_header {
@@ -165,6 +175,8 @@
 
 .cs_site_branding {
   display: inline-block;
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 600;
   + .cs_nav {
     margin-left: 65px;
   }
@@ -173,6 +185,8 @@
 .cs_header_contact {
   display: flex;
   align-items: center;
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 500;
   .cs_header_contact_icon {
     flex: none;
     margin-right: 12px;
@@ -253,12 +267,14 @@
     color: $white;
 
     .cs_nav_list {
-      display: flex !important;
-      flex-wrap: wrap;
-      height: inherit;
-      li:not(.cs-mega_menu) {
-        position: relative;
-      }
+  display: flex !important;
+  flex-wrap: wrap;
+  height: inherit;
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 500;
+  li:not(.cs-mega_menu) {
+    position: relative;
+  }
 
       > li {
         margin-right: 60px;

@@ -3,6 +3,7 @@ import Breadcrumb from '../Breadcrumb';
 import Section from '../Section';
 import BrandSection from '../Section/BrandSection';
 import TestimonialSection from '../Section/TestimonialSection';
+import ContactSectionBottom from '../Section/ContactSection/ContactSectionBottom';
 import { pageTitle } from '../../helpers/PageTitle';
 
 const serviceData = [
@@ -428,6 +429,37 @@ export default function ServicesPage() {
           sectionSubTitle="Real stories from individuals and businesses who have experienced the KLF difference in their legal journey."
           data={testimonialData}
         />
+      </Section>
+
+      {/* Contact Section Bottom */}
+      <Section
+        pt="50"
+        ptLg="30"
+        pb="50"
+        pbLg="30"
+        className="background-filled overflow-hidden position-relative"
+        style={{ 
+          backgroundImage: 'url("/images/OurCoreServices.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark Overlay */}
+        <div 
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+            zIndex: 1
+          }}
+        ></div>
+        <div style={{ position: 'relative', zIndex: 2 }}>
+          <ContactSectionBottom />
+        </div>
       </Section>
     </>
   );

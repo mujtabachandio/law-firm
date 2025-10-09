@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
+
 import HeroStyle2 from '../Hero/HeroStyle2';
 import Section from '../Section';
 import AboutUsSection from '../Section/AboutSection';
-import BrandSection from '../Section/BrandSection';
 import ContactSection from '../Section/ContactSection';
 import MovingTextSection from '../Section/MovingTextSection';
 import ServiceSection from '../Section/ServiceSection';
@@ -80,25 +80,25 @@ const comparisonData = [
 
 const teamData = [
   {
-    imgUrl: '/images/attorney1.jpg',
-    name: 'Sabahat Syed',
-    designation: 'Senior Constitutional Litigator',
-    experience: '15+ Years in Public Interest Law',
-    srcUrl: '/team/sabahat-syed',
+    imgUrl: '/images/AshfaqShahBukhari.jpg',
+    name: 'Ashfaq Shah Bukhari',
+    designation: 'Senior Partner',
+    srcUrl: '/team/ashfaq-shah-bukhari',
+    initials: 'ASB',
   },
   {
-    imgUrl: '/images/attorney2.JPG',
-    name: 'Raza Hyder',
-    designation: 'Corporate Law & Digital Regulations',
-    experience: '12 Years | Ex-Advisor to SECP',
-    srcUrl: '/team/raza-hyder',
+    imgUrl: null, // Will use avatar instead
+    name: 'Danish Hussain',
+    designation: 'Associate',
+    srcUrl: '/team/danish-hussain',
+    initials: 'DH',
   },
   {
-    imgUrl: '/images/attorney3.jpg',
-    name: 'Fatima Jilani',
-    designation: 'Senior Legal Researcher',
-    experience: '10+ Years in Constitutional Law',
-    srcUrl: '/team/fatima-jilani',
+    imgUrl: null, // Will use avatar instead
+    name: 'Mansoor Ahmed',
+    designation: 'Associate',
+    srcUrl: '/team/mansoor-ahmed',
+    initials: 'MA',
   },
 ];
 
@@ -108,8 +108,8 @@ const lawcademicsData = [
     title: "Reforming Article 19: Freedom of Speech in Pakistan's Digital Age",
     desc: 'Analysis of Supreme Court decisions and constitutional amendments affecting digital rights.',
     postUrl: '/blog/reforming-article-19',
-    postedBy: 'Fatima Jilani',
-    adminUrl: '/team/fatima-jilani',
+    postedBy: 'Mansoor Ahmed',
+    adminUrl: '/team/mansoor-ahmed',
     numberOfComment: 3,
     commentUrl: '/blog/reforming-article-19',
   },
@@ -118,8 +118,8 @@ const lawcademicsData = [
     title: 'The State vs. Gender Equity: A Constitutional Review',
     desc: "Policy-focused writing aimed at improving Pakistan's justice system for gender equality.",
     postUrl: '/blog/gender-equity-constitutional-review',
-    postedBy: 'Sabahat Syed',
-    adminUrl: '/team/sabahat-syed',
+    postedBy: 'Ashfaq Shah Bukhari',
+    adminUrl: '/team/ashfaq-shah-bukhari',
     numberOfComment: 4,
     commentUrl: '/blog/gender-equity-constitutional-review',
   },
@@ -128,8 +128,8 @@ const lawcademicsData = [
     title: 'Due Process and Detention Laws: A Comparative Framework',
     desc: 'Strategic breakdowns of precedent-setting cases and legal reform proposals.',
     postUrl: '/blog/due-process-detention-laws',
-    postedBy: 'Raza Hyder',
-    adminUrl: '/team/raza-hyder',
+    postedBy: 'Danish Hussain',
+    adminUrl: '/team/danish-hussain',
     numberOfComment: 5,
     commentUrl: '/blog/due-process-detention-laws',
   },
@@ -162,13 +162,7 @@ const testimonialData = [
   },
 ];
 
-const brandData = [
-  { imgUrl: '/images/brand_1.svg' },
-  { imgUrl: '/images/brand_2.svg' },
-  { imgUrl: '/images/brand_3.svg' },
-  { imgUrl: '/images/brand_4.svg' },
-  { imgUrl: '/images/brand_5.svg' },
-];
+
 
 export default function Home2() {
   pageTitle('Karachi Law Firms - Justice, Digitalized');
@@ -180,10 +174,11 @@ export default function Home2() {
       {/* Hero Section - Cinematic Full-Screen */}
       <HeroStyle2
         titleUp="Pakistan's First Digital-First Law Ecosystem"
+        subtitle="Constitutional Advocacy for the Modern Age"
         title="Justice, Digitalized. Excellence, Humanized."
         btnText="Get Legal Help"
         btnUrl="/contact"
-        bgUrl="/"
+        bgUrl="/bg-pattern.jpg"
       />
 
       {/* Moving Text Section */}
@@ -349,46 +344,62 @@ export default function Home2() {
 
       {/* Final CTA - Bold, High-Contrast Gold Block */}
       <Section
-        pt="133"
-        ptLg="75"
-        pb="140"
-        pbLg="80"
-        className="background-filled overflow-hidden"
-        style={{ backgroundImage: 'url("/images/OurCoreServices.jpg")' }}
+        pt="50"
+        ptLg="30"
+        pb="50"
+        pbLg="30"
+        className="background-filled overflow-hidden position-relative"
+        style={{ 
+          backgroundImage: 'url("/images/OurCoreServices.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
-        <ContactSection
-          sectionTitleUp="Contact With Us"
-          sectionTitle="Justice isn't automatic it's made possible. Let's fight for it together."
-          sectionSubTitle="Whether you're facing injustice or seeking legal clarity, our team is ready to be your legal partner in progress."
-          textVarient="text-white"
-          className="cs_mb_40"
+        {/* Dark Overlay */}
+        <div 
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+            zIndex: 1
+          }}
+        ></div>
+        <div style={{ position: 'relative', zIndex: 2 }}>
+          <ContactSection
+            sectionTitleUp="Contact With Us"
+            sectionTitle="Justice isn't automatic it's made possible. Let's fight for it together."
+            sectionSubTitle="Whether you're facing injustice or seeking legal clarity, our team is ready to be your legal partner in progress."
+            textVarient="text-white"
+            className="cs_mb_10"
           contactInfo={[
             {
               imgUrl: '/images/icons/contact_icon_1.svg',
-              titleUp: 'Have Any Question?',
-              title: '(123) 45678',
+              titleUp: 'Call Us Now',
+              title: '+92 300 0927678',
               textColor: 'text-white',
             },
             {
               imgUrl: '/images/icons/contact_icon_2.svg',
-              titleUp: 'Send Email',
-              title: 'info@karachilawfirms.com',
+              titleUp: 'Email Us',
+              title: 'info@karachilawfirms.pk',
               textColor: 'text-white',
             },
             {
-              imgUrl: '/images/icons/contact_icon_3.svg',
-              titleUp: 'Address',
-              title: 'Karachi, Pakistan',
+              imgUrl: '/pak-flag.png',
+              titleUp: 'Visit Our Office',
+              title: 'Office 104, 1st Floor, Fareed Chambers, Abdullah Haroon Road, Saddar, Karachi 74400',
               textColor: 'text-white',
             },
           ]}
-        />
+          />
+        </div>
       </Section>
 
-      {/* Brand Section */}
-      <Section pt="140" ptLg="80">
-        <BrandSection data={brandData} />
-      </Section>
+
     </>
   );
 }

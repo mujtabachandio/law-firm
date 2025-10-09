@@ -17,7 +17,7 @@ export default function Breadcrumb({ bgUrl, title }) {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        minHeight: '300px'
+        minHeight: '150px'
       }}
     >
       <div className="container position-relative z-index-1">

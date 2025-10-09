@@ -672,7 +672,7 @@ export default function ServiceDetailsPage() {
                   imgUrl="/images/icons/contact_icon_1.svg"
                   title="Call Us"
                   titleUp="Have Any Question?"
-                  desc="(123) 45678"
+                  desc="03000927678"
                 />
                 <IconboxStyle5
                   imgUrl="/images/icons/contact_icon_2.svg"
@@ -681,10 +681,10 @@ export default function ServiceDetailsPage() {
                   desc="info@karachilawfirms.com"
                 />
                 <IconboxStyle5
-                  imgUrl="/images/icons/contact_icon_3.svg"
+                  iconUrl="/pak-flag.png"
                   title="Visit Office"
                   titleUp="Our Location"
-                  desc="Karachi, Pakistan"
+                  desc="Office 104, 1st Floor, Fareed Chambers, Abdullah Haroon Rd, Saddar Karachi, 74400"
                 />
               </div>
             </div>

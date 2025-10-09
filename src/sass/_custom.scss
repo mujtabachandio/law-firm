@@ -12,6 +12,19 @@
   }
 }
 
+/* Fix footer height issues */
+.cs_footer {
+  min-height: auto !important;
+  height: auto !important;
+  flex-shrink: 0 !important;
+}
+
+.cs_footer_top,
+.cs_footer_main,
+.cs_copyright {
+  flex-shrink: 0 !important;
+}
+
 .cs_header_search_form {
   @media (max-width: 767px) {
     left: 50%;
@@ -446,7 +459,7 @@ select.cs_shop-input {
     
     .tagline-item {
       position: absolute;
-      font-family: 'Helvetica World', sans-serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 1.4rem;
       font-weight: 500;
       color: white !important;
@@ -743,16 +756,16 @@ select.cs_shop-input {
 
 // Lawcademics Hub Styles
 .category-filter {
-  .category-btn {
-    background: rgba(255, 255, 255, 0.9);
-    border: 2px solid $border;
-    border-radius: 25px;
-    padding: 12px 24px;
-    font-family: 'Helvetica World', sans-serif;
-    font-weight: 500;
-    color: $secondary;
-    transition: all 0.3s ease;
-    cursor: pointer;
+      .category-btn {
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid $border;
+      border-radius: 25px;
+      padding: 12px 24px;
+      font-family: 'Lato', Arial, sans-serif;
+      font-weight: 500;
+      color: $secondary;
+      transition: all 0.3s ease;
+      cursor: pointer;
     
     &.active {
       background: $dark-blue;
@@ -796,7 +809,7 @@ select.cs_shop-input {
     flex: 2;
     
     h3 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 28px;
       font-weight: 700;
       color: $dark-blue;
@@ -895,7 +908,7 @@ select.cs_shop-input {
     }
     
     .lottie-text {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 14px;
       font-weight: 600;
       color: $golden-yellow;
@@ -904,7 +917,7 @@ select.cs_shop-input {
     }
     
     .lottie-subtext {
-      font-family: 'Helvetica World', sans-serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 12px;
       color: rgba(255,255,255,0.7);
       font-style: italic;
@@ -957,6 +970,108 @@ select.cs_shop-input {
       padding-left: 25px;
     }
   }
+}
+
+// Compact Contact Section Styling
+.cs_iconbox_wrapper.cs_style1 {
+  .cs_iconbox {
+    margin-bottom: 15px !important;
+    
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+// Fix icon centering in contact section
+.cs_iconbox_wrapper .d-flex.align-items-center.justify-content-center {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  img {
+    display: block !important;
+    margin: 0 auto !important;
+  }
+}
+
+// Enhanced contact section styling
+.cs_iconbox_wrapper.cs_style1 {
+  .d-flex {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 8px 0;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      transform: translateX(5px);
+    }
+    
+    .bg-accent {
+      // Enhanced icon container styling
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 8px !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+      transition: all 0.3s ease !important;
+      
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+      }
+      
+      img {
+        display: block !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        width: 20px !important;
+        height: 20px !important;
+        max-width: 20px !important;
+        max-height: 20px !important;
+        filter: brightness(0) invert(1) !important;
+      }
+    }
+  }
+}
+
+// Contact section text improvements
+.cs_iconbox_wrapper.cs_style1 .d-flex .flex-grow-1 {
+  .text-accent {
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .text-white {
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    font-size: 16px !important;
+    word-break: break-word !important;
+  }
+}
+
+// Compact Contact Form
+.cs_contact_form {
+  .form-control {
+    height: 40px !important;
+    padding: 8px 15px !important;
+  }
+  
+  textarea.form-control {
+    height: auto !important;
+    min-height: 80px !important;
+  }
+  
+  // Make background image smaller and more subtle
+  background-size: 200px 200px !important;
+  background-repeat: no-repeat !important;
+  background-position: center right !important;
+  background-opacity: 0.1 !important;
 }
 
 // Enhanced dropdown styling - Side by Side Grid Layout
@@ -1170,7 +1285,8 @@ body .cs_site_header .cs_nav .cs_nav_list .menu-item-has-children > ul {
     padding: 0;
     min-width: auto;
     width: auto !important;
-    display: block !important;
+    /* Closed by default on small screens */
+    display: none !important;
     grid-template-columns: none !important;
     max-height: none !important;
     overflow-y: visible !important;
@@ -1208,6 +1324,10 @@ body .cs_site_header .cs_nav .cs_nav_list .menu-item-has-children > ul {
         }
       }
     }
+  }
+  /* Open submenu only when the toggle is active */
+  .cs_nav .cs_nav_list span.cs-munu_dropdown_toggle.active + ul {
+    display: block !important;
   }
 }
 
@@ -1248,5 +1368,213 @@ body .cs_site_header .cs_nav .cs_nav_list .menu-item-has-children > ul {
         font-size: 2.2rem !important;
       }
     }
+  }
+}
+
+/* Contact Form Button Alignment */
+.contact-form-section {
+  .cs_btn {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+/* WhatsApp Button Styling for Header, Contact Section, and Contact Page */
+.whatsapp-btn {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  }
+}
+
+
+
+/* Button Container Alignment */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Consistent Button Heights */
+.cs_btn, .btn-success {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+/* Clickable Contact Links */
+.contact-link {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  
+  &:hover {
+    color: var(--cs-accent-color, #ffd700) !important;
+    text-decoration: underline !important;
+    transform: translateY(-1px);
+  }
+  
+  /* Add subtle indicator for clickable elements */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cs-accent-color, #ffd700);
+    transition: width 0.3s ease;
+  }
+  
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+/* Phone number specific styling */
+.contact-link[href^="tel:"] {
+  &:hover {
+    color: #25D366 !important; /* WhatsApp green for phone numbers */
+  }
+  
+  &::after {
+    background-color: #25D366;
+  }
+}
+
+/* Email specific styling */
+.contact-link[href^="mailto:"] {
+  &:hover {
+    color: #007bff !important; /* Blue for emails */
+  }
+  
+  &::after {
+    background-color: #007bff;
+  }
+}
+
+/* Ensure contact links are accessible */
+.contact-link:focus {
+  outline: 2px solid var(--cs-accent-color, #ffd700);
+  outline-offset: 2px;
+}
+
+/* Mobile touch feedback */
+@media (max-width: 768px) {
+  .contact-link {
+    padding: 4px 0;
+    
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+/* Book Now Call Button in Header */
+.book-now-btn {
+  &:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(218, 165, 32, 0.4) !important;
+  }
+  
+  &:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 8px rgba(218, 165, 32, 0.3) !important;
+  }
+  
+  &:focus {
+    outline: 2px solid rgba(218, 165, 32, 0.5);
+    outline-offset: 2px;
+  }
+}
+
+/* Ensure button text is readable */
+.book-now-btn {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+/* Mobile responsiveness for the button */
+@media (max-width: 768px) {
+  .book-now-btn {
+    padding: '6px 12px' !important;
+    fontSize: '12px' !important;
+    borderRadius: '16px' !important;
+  }
+}
+
+/* Welcome Popup Styles */
+.welcome-popup {
+  .btn-close {
+    &:focus {
+      box-shadow: none;
+    }
+    
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  
+  .btn {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Ensure popup is above all other elements */
+.welcome-popup-backdrop {
+  z-index: 9999 !important;
+}
+
+.welcome-popup-content {
+  z-index: 10000 !important;
+}
+
+/* Mobile responsiveness for popup */
+@media (max-width: 768px) {
+  .welcome-popup-content {
+    width: 95vw !important;
+    margin: 20px;
+    
+    .btn {
+      font-size: 14px !important;
+      padding: 10px 20px !important;
+    }
+  }
+}
+
+
+
+@media (max-width: 991px) {
+  /* High-specificity overrides to win against global !important rules */
+  body .cs_site_header .cs_nav .cs_nav_list .menu-item-has-children > ul {
+    display: none !important;
+  }
+  body .cs_site_header .cs_nav .cs_nav_list span.cs-munu_dropdown_toggle.active + ul {
+    display: block !important;
   }
 }

@@ -56,6 +56,41 @@
     }
   }
 }
+/* New footer card layout styling */
+.cs_footer_card {
+  background: rgba(0, 43, 44, 0.85);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cs_footer_accent_bar {
+  height: 10px;
+  width: 100%;
+  background: linear-gradient(90deg, #d08921, #f1a43a);
+  border-radius: 6px;
+}
+
+.cs_footer_list {
+  li { margin-bottom: 4px; }
+}
+.cs_footer_link {
+  color: #d7e3e3;
+  text-decoration: none;
+  &:hover { color: #ffffff; text-decoration: underline; }
+}
+
+.cs_back_to_top {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.cs_footer_list.two-col {
+  columns: 2;
+  column-gap: 16px;
+}
 @media (max-width: 767px) {
   .cs_footer_logo {
     display: none;

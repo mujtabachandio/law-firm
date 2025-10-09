@@ -218,10 +218,11 @@
   }
 }
 .cs_hero.cs_style_2 {
-  height: 100vh;
-  min-height: 350px;
+  /* Use small viewport units to avoid browser UI/OS bars affecting layout */
+  height: auto;
+  min-height: 100svh;
   max-height: 900px;
-  padding: 190px 0 50px;
+  padding: clamp(120px, 12vh, 190px) 0 clamp(40px, 6vh, 80px);
   h2 {
     letter-spacing: 0.5em;
   }
@@ -234,21 +235,17 @@
     }
     span {
       &::before {
-        content: '';
-        width: 353px;
-        height: 34px;
-        position: absolute;
-        bottom: -30px;
-        background-image: url('../../../public/images/hero_highlight_shape.svg');
-        background-size: 100% 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        @media (max-width: 991px) {
-          height: 25px;
-          bottom: -20px;
-        }
+        content: none; // remove highlight image under hero title
       }
     }
+  }
+  @media (max-width: 1199px) {
+    h2 { letter-spacing: 0.35em; }
+    h1 { letter-spacing: 0.12em; }
+  }
+  @media (max-width: 767px) {
+    h2 { letter-spacing: 0.25em; }
+    h1 { letter-spacing: 0.06em; }
   }
 }
 .cs_slider_activate {
