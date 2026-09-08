@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -9,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -66,7 +67,6 @@ const faqData = [
 ];
 
 export default function DomesticViolenceLawyerPage() {
-  pageTitle('Domestic Violence Lawyer - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -74,7 +74,19 @@ export default function DomesticViolenceLawyerPage() {
 
   return (
     <>
-      <Breadcrumb title="Domestic Violence Lawyer" bgUrl="/images/Domestic%20Violence%20Lawyer.jpg" />
+      <Helmet>
+        <title>Domestic Violence Lawyer in Karachi | Immediate Legal Help</title>
+        <meta
+          name="description"
+          content="Need a domestic violence lawyer in Karachi? Get urgent legal protection, residence orders, restraining orders and court support under Pakistani law."
+        />
+        <meta
+          name="keywords"
+          content="domestic violence lawyer in Karachi, protection order lawyer Pakistan, family violence lawyer Karachi, residence order lawyer, restraining order lawyer Karachi, domestic abuse legal help, child protection order lawyer, family court violence cases, harassment lawyer Karachi, criminal family law lawyer, domestic violence law Pakistan"
+        />
+        <link rel="canonical" href="https://karachilawfirms.pk/service/domestic-violence-lawyer" />
+      </Helmet>
+      <Breadcrumb title="Domestic Violence Lawyer" bgUrl="/images/Domestic Violence%20Lawyer.jpg" />
 
 
 
@@ -84,9 +96,9 @@ export default function DomesticViolenceLawyerPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -138,7 +150,7 @@ export default function DomesticViolenceLawyerPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Protection Help?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Protection Help?</div>
                 <p className="text-white cs_mb_25">
                   Get immediate legal protection and support for domestic violence cases.
                 </p>
@@ -149,62 +161,153 @@ export default function DomesticViolenceLawyerPage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Domestic Violence Lawyer.jpg"
+                    src="/images/Domestic Violence%20Lawyer.jpg"
                     alt="Domestic Violence Lawyer"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Domestic Violence Lawyer</h2>
+                  <h1 className="cs_mb_30">Domestic Violence Lawyer in Karachi for Immediate Legal Protection</h1>
                   <h4 className="text-accent cs_mb_20">Immediate Protection & Legal Support</h4>
-                  <p className="cs_mb_30">
-                    Domestic violence cases require immediate attention and compassionate legal representation. 
-                    We provide urgent legal protection for victims of domestic violence, helping you obtain 
-                    protection orders, secure your safety, and navigate the legal system with dignity and 
-                    support. Our priority is your safety and well-being.
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    Unfortunately, family disputes can sometimes escalate into allegations of harassment, domestic 
+                    violence, or financial fraud. In such cases, the boundaries between family and criminal law blur. 
+                    Domestic violence cases require immediate attention and compassionate legal representation.
+                  </p>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    Our family lawyers file residence orders, protection orders, and complaints under existing 
+                    Pakistani legislation to help victims of domestic abuse. If a family dispute results in false 
+                    criminal accusations or if there is a need to file charges for protection, you require specialized 
+                    legal assistance. We provide urgent legal protection, helping you obtain protection orders, secure 
+                    your safety, and navigate the legal system with dignity and support. Our priority is your safety 
+                    and well-being, ensuring that family court matters do not unfairly lead to criminal records while 
+                    protecting your reputation and freedom during heated domestic battles.
                   </p>
                   
-                  <div className="row cs_mb_40">
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Protection Services Include</h3>
-                        <ul>
-                          <li>Emergency Protection Orders</li>
-                          <li>Restraining Orders</li>
-                          <li>Safety Planning</li>
-                          <li>Criminal Charges</li>
-                          <li>Child Protection</li>
-                          <li>Financial Support</li>
-                        </ul>
+                  <div className="cs_mb_40">
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Comprehensive Protection Services</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We provide immediate legal protection and support for victims of domestic violence:
+                    </p>
+                    
+                    <div className="row cs_mb_30">
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Protection Services</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Emergency Protection Orders</li>
+                            <li>Residence Orders</li>
+                            <li>Restraining Orders</li>
+                            <li>Safety Planning</li>
+                            <li>Child Protection Orders</li>
+                            <li>Complaint Filing</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Protection Process</h3>
-                        <ul>
-                          <li>Immediate Safety Assessment</li>
-                          <li>Emergency Petition Filing</li>
-                          <li>Protection Order Obtainment</li>
-                          <li>Evidence Collection</li>
-                          <li>Court Representation</li>
-                          <li>Ongoing Support</li>
-                        </ul>
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Legal Support</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Criminal Charges Assistance</li>
+                            <li>Financial Support Claims</li>
+                            <li>Evidence Collection</li>
+                            <li>Court Representation</li>
+                            <li>Order Enforcement</li>
+                            <li>Ongoing Legal Support</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="cs_mb_40">
-                    <h3 className="cs_mb_20">Why Choose Our Domestic Violence Services?</h3>
-                    <p className="cs_mb_20">
-                      Our domestic violence lawyers understand the urgency and sensitivity of these cases. 
-                      We provide immediate legal protection while ensuring your safety and rights are 
-                      protected throughout the legal process.
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Our Protection Process</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We act quickly to ensure your immediate safety and long-term protection:
                     </p>
-                    <p className="cs_mb_20">
-                      We believe that everyone deserves to live free from fear and violence. Our approach 
-                      combines legal expertise with compassionate support to help you break free from abuse 
-                      and rebuild your life with dignity and independence.
-                    </p>
+                    
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>1</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Immediate Safety Assessment</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We assess your immediate safety needs and provide guidance on securing your protection.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>2</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Emergency Petition Filing</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We file emergency petitions for protection orders and residence orders immediately.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>3</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Protection Order Obtainment</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We work to obtain protection orders under Pakistani legislation to ensure your safety.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>4</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Evidence Collection</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We help gather medical reports, witness statements, and documentation to support your case.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>5</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Court Representation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We represent you in court proceedings, filing complaints and advocating for your protection.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>6</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Ongoing Support</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We provide ongoing support for order enforcement, financial claims, and long-term safety planning.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="cs_mb_40" style={{ background: '#f8f9fa', padding: '30px', borderRadius: '10px' }}>
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Why Choose KLF for Domestic Violence Protection?</h3>
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Immediate Response:</strong> We understand the urgency of domestic violence cases and act quickly to secure your protection.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Compassionate Support:</strong> We provide sensitive, respectful legal representation during this difficult time.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Comprehensive Protection:</strong> We file residence orders, protection orders, and complaints under Pakistani legislation.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Safety First:</strong> Your safety and well-being are our top priorities in every decision and action we take.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -229,6 +332,21 @@ export default function DomesticViolenceLawyerPage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

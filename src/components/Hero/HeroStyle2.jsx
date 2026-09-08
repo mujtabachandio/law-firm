@@ -53,28 +53,32 @@ export default function HeroStyle2({ titleUp, subtitle, title, btnText, btnUrl, 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <motion.h2 
-              className="text-white cs_mb_15 fw-normal"
-              initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 0.9, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              style={{ letterSpacing: '0.35em', textTransform: 'uppercase' }}
-            >
-              {titleUp}
-            </motion.h2>
-            
-            {/* Main Title */}
+            {/* Main Title - Must be first h1 on page */}
             <motion.div 
               className="hero-title-container cs_mb_20"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h1 className="text-white fw-bold" style={{ fontSize: 'clamp(34px, 8vw, 58px)', lineHeight: 1.08, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                <span style={{ color: '#D6B24C' }}>Justice, Digitalized.</span><br />
-                Excellence, Humanized.
+                {title || (
+                  <>
+                    <span style={{ color: '#D6B24C' }}>Justice, Digitalized.</span><br />
+                    Excellence, Humanized.
+                  </>
+                )}
               </h1>
             </motion.div>
+            
+            <motion.h2 
+              className="text-white cs_mb_15 fw-normal"
+              initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 0.9, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              style={{ letterSpacing: '0.35em', textTransform: 'uppercase' }}
+            >
+              {titleUp}
+            </motion.h2>
             
             {/* Subtitle (static if provided; otherwise rotating taglines) */}
             <motion.div 
@@ -109,7 +113,23 @@ export default function HeroStyle2({ titleUp, subtitle, title, btnText, btnUrl, 
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              <Button btnText={btnText || 'GRT LEGAL HELP'} btnUrl={btnUrl} />
+              <a
+                href="tel:03000927678"
+                className="d-inline-flex align-items-center justify-content-center"
+                style={{
+                  background: '#E2C773',
+                  color: '#0E2433',
+                  borderRadius: 9999,
+                  padding: '14px 28px',
+                  fontWeight: 700,
+                  letterSpacing: '1px',
+                  textTransform: 'uppercase',
+                  textDecoration: 'none',
+                  boxShadow: '0 6px 20px rgba(226,199,115,0.35)'
+                }}
+              >
+                <span>{btnText || 'Get Legal Help'}</span>
+              </a>
             </motion.div>
             
             {/* Lottie Animation */}
@@ -161,28 +181,32 @@ export default function HeroStyle2({ titleUp, subtitle, title, btnText, btnUrl, 
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <motion.h2 
-                className="text-white cs_mb_15 fw-normal cs_fs_18 opacity-75"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 0.75, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                style={{ letterSpacing: '0.35em', textTransform: 'uppercase' }}
-              >
-                {titleUp}
-              </motion.h2>
-              
-              {/* Main Title */}
+              {/* Main Title - Must be first h1 on page */}
               <motion.div 
                 className="hero-title-container cs_mb_20"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <h1 className="text-white fw-bold" style={{ fontSize: 'clamp(44px, 7vw, 64px)', lineHeight: 1.06, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                  <span style={{ color: '#D6B24C' }}>Justice, Digitalized.</span><br />
-                  Excellence, Humanized.
+                  {title || (
+                    <>
+                      <span style={{ color: '#D6B24C' }}>Justice, Digitalized.</span><br />
+                      Excellence, Humanized.
+                    </>
+                  )}
                 </h1>
               </motion.div>
+              
+              <motion.h2 
+                className="text-white cs_mb_15 fw-normal cs_fs_18 opacity-75"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 0.75, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                style={{ letterSpacing: '0.35em', textTransform: 'uppercase' }}
+              >
+                {titleUp}
+              </motion.h2>
 
               {/* Subtitle */}
               <motion.div 

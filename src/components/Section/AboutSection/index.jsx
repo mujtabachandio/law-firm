@@ -50,7 +50,7 @@ export default function AboutUsSection({
               />
               <div className="cs_progressbar cs_style_1 cs_mb_20">
                 <div className="cs_progressbar_heading d-flex justify-content-between align-items-center cs_mb_8">
-                  <h3 className="fw-medium m-0 cs_fs_18">{grothTitle}</h3>
+                  <h2 className="fw-medium m-0 cs_fs_18">{grothTitle}</h2>
                   <p className="cs_fs_14 cs_lh_base m-0">{grothPercentage}%</p>
                 </div>
                 <div className="cs_progress cs_rounded_8 overflow-hidden">
@@ -69,9 +69,9 @@ export default function AboutUsSection({
                       <span className="position-absolute cs_height_20 cs_width_20 top-0 start-0 cs_mt_5 bg-accent text-white cs_fs_10 d-flex align-items-center justify-content-center cs_rounded_30">
                         <Icon icon="fa6-solid:angles-right" />
                       </span>
-                      <h3 className="cs_fs_16 cs_pl_35 cs_mb_12 cs_lh_lg">
+                      <h2 className="cs_fs_16 cs_pl_35 cs_mb_12 cs_lh_lg">
                         {item.title}
-                      </h3>
+                      </h2>
                       <p className="m-0">{item.subTitle}</p>
                     </div>
                   </div>

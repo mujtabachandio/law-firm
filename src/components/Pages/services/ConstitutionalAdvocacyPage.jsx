@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy', active: true },
@@ -65,7 +65,6 @@ const faqData = [
 ];
 
 export default function ConstitutionalAdvocacyPage() {
-  pageTitle('Constitutional Advocacy - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -82,9 +81,9 @@ export default function ConstitutionalAdvocacyPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -136,7 +135,7 @@ export default function ConstitutionalAdvocacyPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Constitutional Help?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Constitutional Help?</div>
                 <p className="text-white cs_mb_25">
                   Get expert constitutional advocacy and civil rights representation.
                 </p>
@@ -153,7 +152,7 @@ export default function ConstitutionalAdvocacyPage() {
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Constitutional Advocacy</h2>
+                  <h1 className="cs_mb_30">Constitutional Advocacy</h1>
                   <h4 className="text-accent cs_mb_20">Defending Civil Liberties & Democratic Principles</h4>
                   <p className="cs_mb_30">
                     We stand where it matters most — defending civil liberties, minority rights, and democratic principles. 
@@ -227,6 +226,21 @@ export default function ConstitutionalAdvocacyPage() {
           </div>
         </div>
       </Section>
+
+      
+
+      {/* Google Reviews Section */}
+
+
+      
+
+      <GoogleReviews />
+
+
+      
+
+      
+
 
       
 

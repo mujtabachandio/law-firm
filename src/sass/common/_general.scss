@@ -224,8 +224,19 @@ label {
       border-color: transparent;
     }
   }
+  .cs_accordian_body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+  &.active {
+    .cs_accordian_body {
+      opacity: 1;
+    }
+  }
   p {
-    display: none;
+    display: block;
   }
 }
 .cs_accordian_toggle {
@@ -236,6 +247,7 @@ label {
   height: 10px;
   width: 10px;
   transform: translateY(-50%);
+  transition: transform 0.3s ease;
   &::before,
   &::after {
     content: '';
@@ -249,6 +261,7 @@ label {
   }
   &::after {
     transform: rotate(90deg);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 .cs_accordian.active {
@@ -258,11 +271,13 @@ label {
     }
   }
   .cs_accordian_head {
-    pointer-events: none;
     background: transparent !important;
   }
   .cs_accordian_title {
     color: $accent;
+  }
+  .cs_accordian_body {
+    opacity: 1;
   }
   p {
     display: block;

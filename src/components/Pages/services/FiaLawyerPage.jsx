@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -8,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -65,7 +66,6 @@ const faqData = [
 ];
 
 export default function FiaLawyerPage() {
-  pageTitle('F.I.A Lawyer - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -73,6 +73,12 @@ export default function FiaLawyerPage() {
 
   return (
     <>
+      <Helmet>
+        <title>FIA Lawyer Karachi | Expert Federal Investigation Defense</title>
+        <meta name="description" content="Hire top FIA lawyers in Karachi for cybercrime, financial corruption, and federal investigation defense. Expert legal support for FIA cases." />
+        <meta name="keywords" content="FIA lawyer Karachi, FIA defense lawyer, cybercrime lawyer Karachi, federal investigation lawyer, money laundering defense, financial corruption lawyer, immigration fraud lawyer, white-collar crime lawyer, FIA legal representation, FIA bail lawyer, human trafficking defense, federal court lawyer" />
+        <link rel="canonical" href="https://karachilawfirms.pk/service/fia-lawyer" />
+      </Helmet>
       <Breadcrumb title="F.I.A Lawyer" bgUrl="/images/F.I.A%20Lawyer.jpg" />
 
 
@@ -83,9 +89,9 @@ export default function FiaLawyerPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -137,7 +143,7 @@ export default function FiaLawyerPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need FIA Defense?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need FIA Defense?</div>
                 <p className="text-white cs_mb_25">
                   Get expert FIA case representation and federal investigation defense.
                 </p>
@@ -148,63 +154,154 @@ export default function FiaLawyerPage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/F.I.A Lawyer.jpg"
+                    src="/images/F.I.A%20Lawyer.jpg"
                     alt="F.I.A Lawyer"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">F.I.A Lawyer</h2>
-                  <h4 className="text-accent cs_mb_20">Federal Investigation Agency Defense</h4>
-                  <p className="cs_mb_30">
-                    FIA (Federal Investigation Agency) cases can be complex and intimidating. We provide 
-                    expert legal representation for all types of FIA cases, including cybercrime, human 
-                    trafficking, immigration fraud, and other federal offenses. Our experienced FIA lawyers 
-                    understand the intricacies of federal investigations and work tirelessly to protect your 
-                    rights and achieve the best possible outcome.
+                  <h1 className="cs_mb_30">FIA Lawyer Karachi for Expert Federal Investigation & Cybercrime Defense</h1>
+                  <h4 className="text-accent cs_mb_20">Expert Federal Investigation Agency Defense</h4>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    One of the most pressing issues for businesses and high-net-worth individuals in Karachi is 
+                    navigating the scrutiny of federal agencies. The Federal Investigation Agency (FIA) often 
+                    monitors large-scale financial transactions, cyber activities, and corporate compliance. Facing 
+                    an inquiry without expert representation can lead to frozen assets and significant reputational 
+                    damage.
+                  </p>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    A trusted FIA lawyer in Karachi is essential for managing these high-stakes situations. We 
+                    defend people charged with financial corruption, money laundering, defamation, cyber fraud, 
+                    white-collar crimes, and federal investigations. Our experienced FIA lawyers provide the necessary 
+                    defense against allegations of financial impropriety and ensure that your business remains 
+                    compliant with federal regulations. By engaging a specialist from one of the best law firms in 
+                    Karachi, you can proactively address regulatory red flags before they escalate into formal charges.
                   </p>
                   
-                  <div className="row cs_mb_40">
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our FIA Defense Services Include</h3>
-                        <ul>
-                          <li>Cybercrime Defense</li>
-                          <li>Immigration Fraud Cases</li>
-                          <li>Human Trafficking Defense</li>
-                          <li>Federal Investigation Representation</li>
-                          <li>Digital Evidence Analysis</li>
-                          <li>Federal Court Litigation</li>
-                        </ul>
+                  <div className="cs_mb_40">
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Comprehensive FIA Defense Services</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We provide expert defense for all types of FIA cases and federal investigations:
+                    </p>
+                    
+                    <div className="row cs_mb_30">
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>FIA Cases</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Cybercrime Defense</li>
+                            <li>Financial Corruption Cases</li>
+                            <li>Money Laundering Defense</li>
+                            <li>White-Collar Crimes</li>
+                            <li>Immigration Fraud Cases</li>
+                            <li>Human Trafficking Defense</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our FIA Defense Process</h3>
-                        <ul>
-                          <li>Initial Case Assessment</li>
-                          <li>Investigation Analysis</li>
-                          <li>Evidence Review</li>
-                          <li>Legal Strategy Development</li>
-                          <li>Federal Court Representation</li>
-                          <li>Appeals & Post-Conviction</li>
-                        </ul>
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Defense Services</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Federal Investigation Representation</li>
+                            <li>Digital Evidence Analysis</li>
+                            <li>Documentary Evaluation</li>
+                            <li>Technical Defense Tactics</li>
+                            <li>Federal Court Litigation</li>
+                            <li>Bail Applications & Appeals</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="cs_mb_40">
-                    <h3 className="cs_mb_20">Why Choose Our FIA Defense Services?</h3>
-                    <p className="cs_mb_20">
-                      Our FIA lawyers bring deep understanding of federal law and investigation procedures. 
-                      We provide aggressive defense strategies while ensuring your constitutional rights are 
-                      protected throughout the federal investigation and legal process.
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Our FIA Defense Process</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We follow a comprehensive approach to defend clients in FIA cases:
                     </p>
-                    <p className="cs_mb_20">
-                      We believe that everyone deserves strong legal representation in federal cases. Our 
-                      approach combines legal expertise with technical understanding to help clients navigate 
-                      complex FIA investigations and achieve favorable outcomes.
-                    </p>
+                    
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>1</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Initial Case Assessment</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We analyze the FIA investigation, charges, and available evidence to understand the case against you.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>2</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Investigation Analysis</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We review the FIA investigation process, identify procedural issues, and assess the strength of evidence.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>3</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Evidence Review</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We conduct thorough documentary evaluation and digital evidence analysis to build a strong defense.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>4</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Legal Strategy Development</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We develop technical defense tactics and legal strategies tailored to the specific FIA charges you face.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>5</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Federal Court Representation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We represent you in federal courts, presenting strong legal arguments and challenging evidence effectively.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>6</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Appeals & Post-Conviction</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We handle appeals and post-conviction relief when necessary, fighting to protect your rights and freedom.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="cs_mb_40" style={{ background: '#f8f9fa', padding: '30px', borderRadius: '10px' }}>
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Why Choose KLF for FIA Defense?</h3>
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Expert FIA Knowledge:</strong> Our lawyers have deep understanding of federal law, FIA procedures, and investigation tactics.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Technical Defense:</strong> We provide advanced legal knowledge, documentary evaluation, and technical defense tactics required for FIA cases.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Comprehensive Representation:</strong> From cybercrime to financial corruption, we defend clients in all types of FIA cases.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Strong Advocacy:</strong> We provide aggressive defense strategies while ensuring your constitutional rights are protected throughout the process.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -229,6 +326,21 @@ export default function FiaLawyerPage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -8,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -65,7 +66,6 @@ const faqData = [
 ];
 
 export default function PropertyLawyerPage() {
-  pageTitle('Property Lawyer - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -73,6 +73,13 @@ export default function PropertyLawyerPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Property Lawyer Karachi, Real Estate Law Services</title>
+        <meta name="description" content="Need a Property Lawyer? Karachi Law Firms offers trusted property legal services and real estate law expertise in Karachi. Secure your property rights now." />
+        <meta name="keywords" content="Property Lawyer in Karachi, Property Legal Services, Real Estate Law Services, Property Lawyers" />
+        <link rel="canonical" href="https://karachilawfirms.pk/service/property-lawyer" />
+      </Helmet>
+      
       <Breadcrumb title="Property Lawyer" bgUrl="/images/Property%20Lawyer.jpg" />
 
       
@@ -83,9 +90,9 @@ export default function PropertyLawyerPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -137,7 +144,7 @@ export default function PropertyLawyerPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Property Help?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Property Help?</div>
                 <p className="text-white cs_mb_25">
                   Get expert property law representation and real estate legal guidance.
                 </p>
@@ -148,63 +155,159 @@ export default function PropertyLawyerPage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Property Lawyer.jpg"
+                    src="/images/Property%20Lawyer.jpg"
                     alt="Property Lawyer"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Property Lawyer</h2>
-                  <h4 className="text-accent cs_mb_20">Protecting Your Property Rights</h4>
-                  <p className="cs_mb_30">
-                    Property disputes can be complex and emotionally charged. We provide comprehensive 
-                    legal representation for all types of property matters including ownership disputes, 
-                    boundary conflicts, property fraud, and real estate transactions. Our experienced 
-                    property lawyers understand the intricacies of property law and work to protect your 
-                    rights and interests.
+                  <h1 className="cs_mb_30">Secure Your Property Rights with an Expert Lawyer</h1>
+                  <h4 className="text-accent cs_mb_20">Expert Property Lawyer in Karachi</h4>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    Property disputes are one of the most confidential and crucial matters. Real estate disputes in 
+                    Karachi are among the most common legal issues, ranging from fraudulent transfers and illegal 
+                    possession to boundary disputes and inheritance conflicts. These matters can quickly become 
+                    stressful, time-consuming, and financially draining regardless of whether the property is an 
+                    inherited plot, a business building, or a family home.
+                  </p>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    Our experienced property attorneys at Karachi Law Firms offer strategic, dependable, and goal-oriented 
+                    legal assistance to safeguard your ownership and investments. We are aware of the complexity of 
+                    Pakistani real estate regulations and provide comprehensive property and real estate legal assistance 
+                    in Karachi to individuals, families, companies, and Pakistanis living abroad. Our area of expertise 
+                    is helping Pakistanis living abroad who are dealing with fraud, illegal possession, or family 
+                    property disputes, ensuring their property rights are protected even from a distance.
                   </p>
                   
-                  <div className="row cs_mb_40">
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Property Services Include</h3>
-                        <ul>
-                          <li>Property Dispute Resolution</li>
-                          <li>Ownership Verification</li>
-                          <li>Property Fraud Cases</li>
-                          <li>Tenant-Landlord Disputes</li>
-                          <li>Real Estate Transactions</li>
-                          <li>Property Documentation</li>
-                        </ul>
+                  <div className="cs_mb_40">
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Comprehensive Property Legal Services</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We provide complete legal services for all property and real estate matters:
+                    </p>
+                    
+                    <div className="row cs_mb_30">
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Property Disputes & Verification</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Resolution of Property Disputes</li>
+                            <li>Verification of Ownership</li>
+                            <li>Property Fraud Incidents</li>
+                            <li>Boundary & Encroachment Issues</li>
+                            <li>Inheritance Share Disputes</li>
+                            <li>Illegal Possession Cases</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Property Process</h3>
-                        <ul>
-                          <li>Case Assessment</li>
-                          <li>Evidence Collection</li>
-                          <li>Legal Research</li>
-                          <li>Negotiation Attempt</li>
-                          <li>Court Representation</li>
-                          <li>Property Recovery</li>
-                        </ul>
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Real Estate Services</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Tenant-Landlord Conflicts</li>
+                            <li>Real Estate Transactions</li>
+                            <li>Property Documentation</li>
+                            <li>Lease Agreements</li>
+                            <li>Power of Attorney</li>
+                            <li>Mutation & Registry</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="cs_mb_40">
-                    <h3 className="cs_mb_20">Why Choose Our Property Legal Services?</h3>
-                    <p className="cs_mb_20">
-                      Our property lawyers bring years of experience in real estate law and understand 
-                      the complexities of property disputes. We provide strategic legal counsel that 
-                      helps clients navigate property conflicts and achieve favorable outcomes.
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Our Legal Process for Property Cases</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      Our every case is guaranteed to be transparent, professional, and have a solid legal framework:
                     </p>
-                    <p className="cs_mb_20">
-                      We believe that property rights are fundamental to security and prosperity. Our 
-                      approach combines legal expertise with practical understanding to help you protect 
-                      your property interests and resolve disputes effectively.
-                    </p>
+                    
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>1</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Case Assessment</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>To decide the appropriate course of action, we examine the specifics of your case, property documents, and the nature of the dispute.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>2</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Evidence Control</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>Registries, tax receipts, agreements, photos, maps, witness statements, and any other evidence needed in court or during negotiations are all included.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>3</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Legal Investigation and Confirmation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We verify official land records, perform a thorough legal analysis, and evaluate the case's advantages and disadvantages.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>4</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Negotiation Effort</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>To reduce time, expense, and emotional strain, we try to reach an out-of-court settlement where it seems feasible. Legal documentation is used to guarantee enforceability.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>5</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Legal Representation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We file the proper civil or rent lawsuit and represent you during the procedures if a settlement is not possible.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>6</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Recovery and Enforcement</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We make sure that court orders are carried out, that illegal occupants are removed, that possession is recovered, and that decrees are enforced.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="cs_mb_40" style={{ background: '#f8f9fa', padding: '30px', borderRadius: '10px' }}>
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Why Choose KLF for Property Matters?</h3>
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Trained Real Estate & Property Attorneys:</strong> Our team has a great deal of expertise dealing with inheritance-based claims, fraudulent transactions, tenant litigation, and complicated property disputes.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Local Knowledge, Worldwide Assistance:</strong> Our area of expertise is helping Pakistanis living abroad who are dealing with fraud, illegal possession, or family property disputes.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Full-Service Legal Approach:</strong> We integrate legal expertise, property verification abilities, and a hands-on comprehension of Karachi's land and real estate laws.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Clear Communication:</strong> At every step, clients receive clear legal instructions, documented assistance, and frequent updates.
+                        </p>
+                      </div>
+                      <div className="col-lg-12 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Solid Legal Representation:</strong> In civil courts, property hearings, revenue boards, and other pertinent land authorities, our attorneys represent clients. Your long-term financial stability and peace of mind may be impacted by property disputes. That's why, at KLF your case is handled with dedication, diligence, and legal accuracy.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -229,6 +332,21 @@ export default function PropertyLawyerPage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

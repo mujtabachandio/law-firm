@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -9,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -66,7 +67,6 @@ const faqData = [
 ];
 
 export default function CivilLawyerPage() {
-  pageTitle('Civil Lawyer - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -74,6 +74,12 @@ export default function CivilLawyerPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Civil Lawyer Karachi | Expert Civil Litigation Services</title>
+        <meta name="description" content="Hire top civil lawyers in Karachi for property, contract, personal injury and employment disputes. Expert civil litigation representation guaranteed." />
+        <meta name="keywords" content="civil lawyer Karachi, civil litigation Karachi, property dispute lawyer, contract dispute lawyer, personal injury lawyer, employment law lawyer, civil court representation, boundary disputes lawyer, tenancy lawyer Karachi, legal dispute resolution, civil rights lawyer, alternative dispute resolution Karachi" />
+        <link rel="canonical" href="https://karachilawfirms.pk/service/civil-lawyer" />
+      </Helmet>
       <Breadcrumb title="Civil Lawyer" bgUrl="/images/Civil%20Lawyer.jpg" />
 
 
@@ -84,9 +90,9 @@ export default function CivilLawyerPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -138,7 +144,7 @@ export default function CivilLawyerPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Civil Litigation?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Civil Litigation?</div>
                 <p className="text-white cs_mb_25">
                   Get expert civil litigation representation and legal dispute resolution.
                 </p>
@@ -149,63 +155,153 @@ export default function CivilLawyerPage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Civil Lawyer.jpg"
+                    src="/images/Civil%20Lawyer.jpg"
                     alt="Civil Lawyer"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Civil Lawyer</h2>
-                  <h4 className="text-accent cs_mb_20">Comprehensive Civil Litigation</h4>
-                  <p className="cs_mb_30">
-                    Civil disputes can be complex and emotionally challenging. We provide comprehensive 
-                    civil litigation services for all types of civil cases, from contract disputes to 
-                    personal injury claims. Our experienced civil lawyers understand the intricacies of 
-                    civil law and work diligently to protect your rights and achieve favorable outcomes 
-                    through negotiation, mediation, or trial.
+                  <h1 className="cs_mb_30">Civil Lawyer Karachi for Expert Legal Representation & Dispute Resolution</h1>
+                  <h4 className="text-accent cs_mb_20">Expert Civil Litigation & Dispute Resolution</h4>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    Civil disputes can be complex and emotionally challenging, affecting your business, property, 
+                    and personal rights. In Karachi's competitive business environment, civil disputes ranging from 
+                    contract breaches to property disputes are common. These matters require strategic legal 
+                    representation to protect your interests and achieve favorable outcomes.
+                  </p>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    We provide comprehensive civil litigation services for all types of civil cases, from contract 
+                    disputes to personal injury claims, property disputes, and employment matters. Our experienced 
+                    civil lawyers understand the intricacies of civil law and work diligently to protect your rights 
+                    and achieve favorable outcomes through negotiation, mediation, or trial. We represent clients in 
+                    trial courts, sessions courts, and high courts, ensuring that your case is handled with the 
+                    expertise and dedication it deserves.
                   </p>
                   
-                  <div className="row cs_mb_40">
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Civil Litigation Services Include</h3>
-                        <ul>
-                          <li>Contract Disputes</li>
-                          <li>Property Disputes</li>
-                          <li>Personal Injury Claims</li>
-                          <li>Employment Law Matters</li>
-                          <li>Consumer Protection</li>
-                          <li>Civil Rights Cases</li>
-                        </ul>
+                  <div className="cs_mb_40">
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Comprehensive Civil Litigation Services</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      Our civil litigation services cover all aspects of civil disputes and legal proceedings:
+                    </p>
+                    
+                    <div className="row cs_mb_30">
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Civil Disputes</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Contract Disputes & Breach</li>
+                            <li>Property Disputes</li>
+                            <li>Land & Real Estate Conflicts</li>
+                            <li>Tenant & Landlord Disputes</li>
+                            <li>Boundary & Ownership Issues</li>
+                            <li>Easement & Right of Way</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Civil Litigation Process</h3>
-                        <ul>
-                          <li>Case Assessment</li>
-                          <li>Evidence Gathering</li>
-                          <li>Legal Strategy Development</li>
-                          <li>Negotiation & Mediation</li>
-                          <li>Court Representation</li>
-                          <li>Appeals & Post-Trial</li>
-                        </ul>
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Legal Claims</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Personal Injury Claims</li>
+                            <li>Employment Law Matters</li>
+                            <li>Consumer Protection Cases</li>
+                            <li>Civil Rights Violations</li>
+                            <li>Defamation & Libel</li>
+                            <li>Damages & Compensation</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="cs_mb_40">
-                    <h3 className="cs_mb_20">Why Choose Our Civil Litigation Services?</h3>
-                    <p className="cs_mb_20">
-                      Our civil litigation lawyers bring years of experience in civil law and courtroom 
-                      advocacy. We provide strategic legal representation while exploring all options for 
-                      efficient dispute resolution, including alternative dispute resolution methods.
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Our Civil Litigation Process</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We follow a systematic approach to ensure effective resolution of civil disputes:
                     </p>
-                    <p className="cs_mb_20">
-                      We believe that civil disputes should be resolved fairly and efficiently. Our 
-                      approach combines legal expertise with practical problem-solving to help clients 
-                      achieve the best possible outcomes in their civil cases.
-                    </p>
+                    
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>1</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Case Assessment</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We analyze your civil dispute, review documents, and assess the legal merits and potential outcomes of your case.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>2</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Evidence Gathering</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We gather all relevant evidence including documents, witness statements, expert reports, and supporting materials.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>3</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Legal Strategy Development</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We develop a comprehensive legal strategy tailored to your case, exploring negotiation, mediation, or trial options.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>4</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Negotiation & Mediation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We attempt to resolve disputes through negotiation or mediation when possible, saving time and costs.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>5</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Court Representation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We represent you in civil courts, presenting strong legal arguments and evidence to protect your interests.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>6</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Appeals & Post-Trial</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We handle appeals and post-trial matters when necessary, ensuring your rights are protected throughout the process.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="cs_mb_40" style={{ background: '#f8f9fa', padding: '30px', borderRadius: '10px' }}>
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Why Choose KLF for Civil Litigation?</h3>
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Experienced Civil Lawyers:</strong> Our team has extensive experience handling all types of civil disputes in trial courts, sessions courts, and high courts.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Strategic Approach:</strong> We explore all options including negotiation and mediation to resolve disputes efficiently while protecting your rights.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Strong Court Representation:</strong> We present compelling legal arguments and evidence in court to achieve favorable outcomes for our clients.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Comprehensive Services:</strong> From contract disputes to personal injury, we handle all aspects of civil litigation with expertise and dedication.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -230,6 +326,21 @@ export default function CivilLawyerPage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

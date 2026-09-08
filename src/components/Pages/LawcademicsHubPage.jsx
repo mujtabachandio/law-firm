@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../Breadcrumb';
 import Section from '../Section';
-import { pageTitle } from '../../helpers/PageTitle';
 
 const categories = [
   'All',
@@ -94,10 +94,17 @@ export default function LawcademicsHubPage() {
     }
   };
 
-  pageTitle('Lawcademics Hub - Karachi Law Firms');
   
   return (
     <>
+      <Helmet>
+        <title>Lawcademics by Karachi Law Firms, Legal Learning Hub</title>
+        <meta
+          name="description"
+          content="Lawcademics is an upcoming legal learning platform by Karachi Law Firms, offering resources and guidance on Pakistani law. Coming soon."
+        />
+        <link rel="canonical" href="https://karachilawfirms.pk/lawcademics" />
+      </Helmet>
       <Breadcrumb title="Lawcademics Hub" bgUrl="/images/LawcademicsDivision.jpg" />
 
       <Section pt="135" ptLg="75" pb="140" pbLg="80">
@@ -105,9 +112,9 @@ export default function LawcademicsHubPage() {
           <div className="row">
             <div className="col-lg-12">
               <div className="cs_section_heading cs_style_1 text-center cs_mb_60">
-                <h2 className="cs_section_title cs_mb_20">
-                  Lawcademics Hub
-                </h2>
+                <h1 className="cs_section_title cs_mb_20">
+                  Lawcademics, Coming Soon from Karachi Law Firms
+                </h1>
                 <p className="cs_section_subtitle">
                   Lawcademics is KLF's engine for thought leadership and legal innovation. Our goal is to bridge theory and practice — turning research into real-world legal outcomes.
                 </p>
@@ -161,7 +168,7 @@ export default function LawcademicsHubPage() {
                   </div>
                   
                   {/* Coming Soon Text */}
-                  <h1 style={{
+                  <p style={{
                     color: 'white',
                     fontSize: '48px',
                     fontWeight: '700',
@@ -169,7 +176,7 @@ export default function LawcademicsHubPage() {
                     textShadow: '0 2px 4px rgba(0,0,0,0.1)'
                   }}>
                     Coming Soon
-                  </h1>
+                  </p>
                   
                   <h3 style={{
                     color: 'white',

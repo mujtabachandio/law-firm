@@ -39,7 +39,7 @@ export default function Breadcrumb({ bgUrl, title }) {
             ))}
           </ol>
         </nav>
-        <h1 className="cs_fs_48 cs_fs_lg_36 text-white m-0">{title}</h1>
+        <p className="cs_fs_48 cs_fs_lg_36 text-white m-0">{title}</p>
       </div>
       <div className="position-absolute end-0 bottom-0">
         <svg

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -8,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -65,7 +66,6 @@ const faqData = [
 ];
 
 export default function DivorceLawyerPage() {
-  pageTitle('Divorce Lawyer - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -73,6 +73,13 @@ export default function DivorceLawyerPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Divorce Lawyer in Karachi | Expert Family Law Services</title>
+        <meta name="description" content="Looking for a trusted divorce lawyer in Karachi? Get expert legal help for Talaq, Khula, child custody, maintenance, and family law matters." />
+        <meta name="keywords" content="Divorce lawyer in Karachi, family lawyer Karachi, khula lawyer Karachi, talaq lawyer Pakistan, child custody lawyer Karachi, divorce law firm Karachi, family court lawyer, maintenance lawyer Karachi, alimony lawyer Pakistan, legal divorce services." />
+        <link rel="canonical" href="https://karachilawfirms.pk/service/divorce-lawyer" />
+      </Helmet>
+      
       <Breadcrumb title="Divorce Lawyer" bgUrl="/images/Divorce%20Lawyer.jpg" />
 
 
@@ -82,9 +89,9 @@ export default function DivorceLawyerPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -136,7 +143,7 @@ export default function DivorceLawyerPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Divorce Help?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Divorce Help?</div>
                 <p className="text-white cs_mb_25">
                   Get compassionate family law representation and expert divorce guidance.
                 </p>
@@ -147,62 +154,168 @@ export default function DivorceLawyerPage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Divorce Lawyer.jpg"
+                    src="/images/Divorce%20Lawyer.jpg"
                     alt="Divorce Lawyer"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Divorce Lawyer</h2>
-                  <h4 className="text-accent cs_mb_20">Compassionate Family Law Representation</h4>
-                  <p className="cs_mb_30">
-                    Expert family law representation for divorce proceedings, property division, and alimony 
-                    arrangements with compassionate legal guidance. We understand that divorce is one of the 
-                    most challenging experiences in life, and we provide sensitive, professional legal support 
-                    to help you navigate this difficult process with dignity and respect.
+                  <h1 className="cs_mb_30">Divorce Lawyer in Karachi for Family, Khula & Custody Matters</h1>
+                  <h4 className="text-accent cs_mb_20">Expert Representation for Divorce & Family Matters</h4>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    Divorce is one of the most challenging experiences in life, affecting not just the couple but 
+                    entire families, especially children. In Pakistan, the legal dissolution of a marriage can take 
+                    several forms, primarily Divorce (Talaq) initiated by the husband or Khula initiated by the wife. 
+                    Each process involves specific procedural requirements under the Muslim Family Laws Ordinance.
+                  </p>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    When a marriage reaches an irreconcilable stage, engaging a divorce lawyer in Karachi is the 
+                    first step toward a legal resolution. A skilled lawyer ensures that the dower (Mahr), maintenance, 
+                    and other financial settlements are handled according to the law. At Karachi Law Firms, we 
+                    understand that divorce is not just a legal ending but a transition. Our team works to ensure 
+                    that the process is as smooth as possible, protecting our clients from unnecessary litigation 
+                    and emotional distress while ensuring your legal rights are fully protected.
                   </p>
                   
-                  <div className="row cs_mb_40">
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Divorce Services Include</h3>
-                        <ul>
-                          <li>Divorce Proceedings</li>
-                          <li>Property Division</li>
-                          <li>Alimony Arrangements</li>
-                          <li>Child Support</li>
-                          <li>Mediation Services</li>
-                          <li>Court Representation</li>
-                        </ul>
+                  <div className="cs_mb_40">
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Understanding Khula: The Right of the Wife</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      If a woman seeks to end her marriage, she may apply for Khula through the family courts. This 
+                      process often involves the return of certain benefits received from the husband. Having 
+                      representation from one of the best law firms in Karachi is essential here, as the court must 
+                      be convinced of the "reasons" for the dissolution to ensure a fair decree is issued. Our 
+                      experienced attorneys help women file khula applications, prepare supporting documentation, 
+                      make compelling arguments in court, and ensure the legal process goes smoothly.
+                    </p>
+                  </div>
+
+                  <div className="cs_mb_40">
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Comprehensive Divorce Services</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We deal with both mutual divorce (Mubarat) and unilateral divorce (Talaq). Throughout the 
+                      divorce process, our attorneys prepare notices, finish paperwork, represent clients in Union 
+                      Council proceedings, and guarantee legal compliance. Our comprehensive services include:
+                    </p>
+                    
+                    <div className="row cs_mb_30">
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Divorce Types We Handle</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Mutual Divorce (Mubarat)</li>
+                            <li>Unilateral Divorce (Talaq)</li>
+                            <li>Khula Proceedings</li>
+                            <li>Contested Divorce</li>
+                            <li>Divorce by Mutual Consent</li>
+                            <li>Divorce Mediation</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Divorce Process</h3>
-                        <ul>
-                          <li>Initial Consultation</li>
-                          <li>Case Assessment</li>
-                          <li>Mediation Attempt</li>
-                          <li>Court Filing</li>
-                          <li>Negotiation</li>
-                          <li>Final Settlement</li>
-                        </ul>
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Related Legal Matters</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Property Division</li>
+                            <li>Alimony & Maintenance</li>
+                            <li>Child Custody Arrangements</li>
+                            <li>Child Support</li>
+                            <li>Dowry & Dower (Haq Mehr)</li>
+                            <li>Post-Divorce Modifications</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="cs_mb_40">
-                    <h3 className="cs_mb_20">Why Choose Our Divorce Services?</h3>
-                    <p className="cs_mb_20">
-                      Our divorce lawyers bring years of experience in family law and understand the emotional 
-                      complexities of divorce cases. We provide compassionate, professional representation while 
-                      ensuring your legal rights are protected and your interests are advocated for effectively.
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Our Divorce Process</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      From beginning to end, our methodical legal procedure guarantees clarity, effectiveness, and 
+                      solid representation:
                     </p>
-                    <p className="cs_mb_20">
-                      We believe in resolving family disputes with dignity and respect. Our approach combines 
-                      legal expertise with emotional sensitivity to help you achieve the best possible outcome 
-                      for your family's future.
-                    </p>
+                    
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>1</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Initial Consultation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We start with a thorough conversation to understand your circumstances, emotional concerns, and legal goals.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>2</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Document Review</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We examine nikahnama, financial records, correspondence, and all relevant documentation.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>3</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Legal Strategy</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We create a personalized legal plan based on whether your case requires mediation, negotiation, or court representation.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>4</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Court Filing & Representation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We draft petitions, file paperwork in family courts, attend hearings, and complete all legal processes.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>5</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Mediation & Settlement</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We assist in peaceful solutions whenever possible, reducing costs and emotional strain for all parties.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>6</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Final Resolution</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We ensure court orders are properly executed and provide ongoing support for any post-divorce legal needs.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="cs_mb_40" style={{ background: '#f8f9fa', padding: '30px', borderRadius: '10px' }}>
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Why Choose KLF for Divorce Services?</h3>
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Experienced Family Lawyers:</strong> In Karachi, our team has dealt with hundreds of family cases, including difficult divorces and delicate custody disputes.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Respectful & Confidential:</strong> Trust is necessary in family issues. Every conversation is kept confidential, and each case is handled with respect and compassion.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Strong Court Representation:</strong> Our attorneys are knowledgeable in successful legal tactics, judges' expectations, and family court procedures.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Fast Filing & Documentation:</strong> We effectively handle all documentation to prevent unnecessary delays.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -227,6 +340,21 @@ export default function DivorceLawyerPage() {
           </div>
         </div>
       </Section>
+
+      
+
+      {/* Google Reviews Section */}
+
+
+      
+
+      <GoogleReviews />
+
+
+      
+
+      
+
 
       
 

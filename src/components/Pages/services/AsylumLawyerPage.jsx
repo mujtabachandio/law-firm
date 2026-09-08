@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
 import Accordion from '../../Accordion';
-
 import { NavLink } from 'react-router-dom';
-
-
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -66,7 +64,6 @@ const faqData = [
 ];
 
 export default function AsylumLawyerPage() {
-  pageTitle('Asylum Lawyer - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -74,28 +71,27 @@ export default function AsylumLawyerPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Asylum Legal Services & Application Support in Karachi</title>
+        <meta name="description" content="Get legal support for asylum applications, case assessment, interview preparation and court representation." />
+        <meta name="keywords" content="Asylum Applications, Case Assessment, Evidence Gathering, Interview Preparation, Court Representation" />
+      </Helmet>
       <Breadcrumb title="Asylum Lawyer" bgUrl="/images/Asylum%20Lawyer.jpg" />
-
-
-
-
       <Section pt="140" ptLg="80" pb="115" pbLg="55">
         <div className="container">
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
                       <NavLink
                         to={item.href}
                         className={({ isActive }) =>
-                          isActive || item.active ? 'active' : ''
-                        }
-                      >
+                          isActive || item.active ? 'active' : ''}>
                         {item.title}
                         <svg
                           width={20}
@@ -138,7 +134,7 @@ export default function AsylumLawyerPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Asylum Help?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Asylum Help?</div>
                 <p className="text-white cs_mb_25">
                   Get expert asylum application and immigration legal services.
                 </p>
@@ -149,13 +145,13 @@ export default function AsylumLawyerPage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Asylum Lawyer.jpg"
+                    src="/images/Asylum%20Lawyer.jpg"
                     alt="Asylum Lawyer"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Asylum Lawyer</h2>
+                  <h1 className="cs_mb_30">Comprehensive Asylum Legal Services</h1>
                   <h4 className="text-accent cs_mb_20">Comprehensive Asylum Legal Services</h4>
                   <p className="cs_mb_30">
                     Seeking asylum is a complex legal process that requires expert guidance and 
@@ -230,6 +226,21 @@ export default function AsylumLawyerPage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

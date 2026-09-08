@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -8,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -65,7 +66,6 @@ const faqData = [
 ];
 
 export default function PrivateInvestigatorPage() {
-  pageTitle('Private Investigator - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -73,6 +73,18 @@ export default function PrivateInvestigatorPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Private Investigator in Karachi | Corporate & Family Investigations</title>
+        <meta
+          name="description"
+          content="Hire a professional private investigator in Karachi for background checks, surveillance, fraud investigations and asset searches, handled discreetly and legally."
+        />
+        <meta
+          name="keywords"
+          content="Private Investigator Karachi, Private Detective Karachi, Corporate Investigation, Background Checks, Surveillance Services"
+        />
+        <link rel="canonical" href="https://karachilawfirms.pk/service/private-investigator" />
+      </Helmet>
       <Breadcrumb title="Private Investigator" bgUrl="/images/Private%20Investigator.jpg" />
 
 
@@ -83,9 +95,9 @@ export default function PrivateInvestigatorPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -137,7 +149,7 @@ export default function PrivateInvestigatorPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Investigation Services?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Investigation Services?</div>
                 <p className="text-white cs_mb_25">
                   Get professional private investigation and surveillance services.
                 </p>
@@ -148,20 +160,28 @@ export default function PrivateInvestigatorPage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Private Investigator.jpg"
+                    src="/images/Private%20Investigator.jpg"
                     alt="Private Investigator"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Private Investigator</h2>
+                  <h1 className="cs_mb_30">Private Investigator in Karachi for Corporate & Family Investigations</h1>
                   <h4 className="text-accent cs_mb_20">Professional Investigation Services</h4>
-                  <p className="cs_mb_30">
-                    Private investigation services are essential for gathering evidence and information 
-                    in legal cases. We provide comprehensive investigation services including surveillance, 
-                    background checks, asset searches, and evidence gathering. Our experienced investigators 
-                    use advanced techniques and equipment while ensuring all activities comply with legal 
-                    requirements and maintain the integrity of evidence for court proceedings.
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    Many legal issues in Karachi arise from a lack of verified information, whether it is an 
+                    untrustworthy business partner or an employee engaging in internal theft. Before these issues 
+                    reach the courtroom, they often require an investigative phase to gather evidence. This is why 
+                    many law firms in Karachi work alongside or provide the services of a private detective in Karachi.
+                  </p>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    Utilizing a private detective in Karachi allows a business to conduct thorough due diligence, 
+                    perform background checks, and uncover hidden liabilities. In family law cases, investigators 
+                    can uncover hidden bank accounts, real estate holdings, evidence of undisclosed employment, and 
+                    background information relevant to child custody fitness. By integrating investigative work with 
+                    legal strategy, Karachi Law Firm ensures that your legal positions are backed by solid, verifiable 
+                    evidence. Our experienced investigators use advanced techniques and equipment while ensuring all 
+                    activities comply with legal requirements and maintain the integrity of evidence for court proceedings.
                   </p>
                   
                   <div className="row cs_mb_40">
@@ -229,6 +249,21 @@ export default function PrivateInvestigatorPage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

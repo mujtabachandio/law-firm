@@ -40,156 +40,148 @@ export default function Nav({ setMobileToggle }) {
         </Link>
         <DropDown>
           <ul>
-            {/* Core Services */}
-            <li className="dropdown-header">
-              <span>Core Services</span>
-            </li>
-            <li>
-              <Link to="/service/constitutional-advocacy" onClick={() => setMobileToggle(false)}>
-                Constitutional Advocacy
+            {/* Family Law Services */}
+            <li className="main-category">
+              <Link to="/service/family-law" onClick={() => setMobileToggle(false)}>
+                Family Law
               </Link>
             </li>
-            <li>
-              <Link to="/service/digital-case-management" onClick={() => setMobileToggle(false)}>
-                Digital Case Management
-              </Link>
-            </li>
-            <li>
-              <Link to="/service/lawcademics" onClick={() => setMobileToggle(false)}>
-                Lawcademics
-              </Link>
-            </li>
-            <li>
-              <Link to="/service/corporate-legal-support" onClick={() => setMobileToggle(false)}>
-                Corporate Legal Support
-              </Link>
-            </li>
-            <li>
-              <Link to="/service/lawconomic-solutions" onClick={() => setMobileToggle(false)}>
-                Lawconomic Solutions
-              </Link>
-            </li>
-            
-            {/* Family Law */}
-            <li className="dropdown-header">
-              <span>Family Law</span>
-            </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/divorce-lawyer" onClick={() => setMobileToggle(false)}>
                 Divorce Lawyer
               </Link>
             </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/child-custody" onClick={() => setMobileToggle(false)}>
                 Child Custody
               </Link>
             </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/guardianship-lawyer" onClick={() => setMobileToggle(false)}>
                 Guardianship Lawyer
               </Link>
             </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/domestic-violence-lawyer" onClick={() => setMobileToggle(false)}>
                 Domestic Violence Lawyer
               </Link>
             </li>
-            
-            {/* Property & Real Estate */}
-            <li className="dropdown-header">
-              <span>Property & Real Estate</span>
-            </li>
-            <li>
-              <Link to="/service/property-lawyer" onClick={() => setMobileToggle(false)}>
-                Property Lawyer
+            <li className="sub-service">
+              <Link to="/service/maintenance-reconciliation" onClick={() => setMobileToggle(false)}>
+                Maintenance & Reconciliation
               </Link>
             </li>
-            <li>
+            
+            {/* Property & Real Estate Services */}
+            <li className="main-category">
+              <Link to="/service/property-law" onClick={() => setMobileToggle(false)}>
+                 Property Lawyer
+              </Link>
+            </li>
+            <li className="sub-service">
+              <Link to="/service/property-lawyer" onClick={() => setMobileToggle(false)}>
+              Property & Real Estate
+              </Link>
+            </li>
+            <li className="sub-service">
               <Link to="/service/inheritance-of-property" onClick={() => setMobileToggle(false)}>
                 Inheritance of Property
               </Link>
             </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/succession-certificate" onClick={() => setMobileToggle(false)}>
                 Succession Certificate
               </Link>
             </li>
             
-            {/* Criminal & Civil Law */}
-            <li className="dropdown-header">
-              <span>Criminal & Civil Law</span>
-            </li>
-            <li>
-              <Link to="/service/criminal-lawyer" onClick={() => setMobileToggle(false)}>
-                Criminal Lawyer
+            {/* Criminal & Civil Law Services */}
+            <li className="main-category">
+              <Link to="/service/criminal-law" onClick={() => setMobileToggle(false)}>
+                 Criminal Lawyer
               </Link>
             </li>
-            <li>
+            <li className="sub-service">
+              <Link to="/service/criminal-lawyer" onClick={() => setMobileToggle(false)}>
+              Criminal & Civil Law
+              </Link>
+            </li>
+            <li className="sub-service">
               <Link to="/service/civil-lawyer" onClick={() => setMobileToggle(false)}>
                 Civil Lawyer
               </Link>
             </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/fia-lawyer" onClick={() => setMobileToggle(false)}>
                 F.I.A Lawyer
               </Link>
             </li>
             
-            {/* Business & Corporate */}
-            <li className="dropdown-header">
-              <span>Business & Corporate</span>
+            {/* Business & Corporate Services */}
+            <li className="main-category">
+              <Link to="/service/corporate-law" onClick={() => setMobileToggle(false)}>
+                 Corporate Legal Support
+              </Link>
             </li>
-            <li>
+            <li className="sub-service">
+              <Link to="/service/corporate-legal-support" onClick={() => setMobileToggle(false)}>
+              Business & Corporate
+              </Link>
+            </li>
+            <li className="sub-service">
               <Link to="/service/company-lawyer" onClick={() => setMobileToggle(false)}>
                 Company Lawyer
               </Link>
             </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/company-registration" onClick={() => setMobileToggle(false)}>
                 Company Registration
               </Link>
             </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/foundation-trust-ngo" onClick={() => setMobileToggle(false)}>
                 Foundation Trust NGO
               </Link>
             </li>
             
-            {/* Documentation & Process */}
-            <li className="dropdown-header">
-              <span>Documentation & Process</span>
+            {/* Documentation & Process Services */}
+            <li className="main-category">
+              <Link to="/service/documentation-process" onClick={() => setMobileToggle(false)}>
+                Documentation & Process
+              </Link>
             </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/legal-notice" onClick={() => setMobileToggle(false)}>
                 Legal Notice
               </Link>
             </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/documentation-lawyer" onClick={() => setMobileToggle(false)}>
                 Documentation Lawyer
               </Link>
             </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/processor-server" onClick={() => setMobileToggle(false)}>
                 Processor Server
               </Link>
             </li>
             
-            {/* Immigration & Specialized */}
-            <li className="dropdown-header">
-              <span>Immigration & Specialized</span>
+            {/* Immigration & Specialized Services */}
+            <li className="main-category">
+              <Link to="/service/immigration-specialized" onClick={() => setMobileToggle(false)}>
+                Immigration & Specialized
+              </Link>
             </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/asylum-lawyer" onClick={() => setMobileToggle(false)}>
                 Asylum Lawyer
               </Link>
             </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/private-investigator" onClick={() => setMobileToggle(false)}>
                 Private Investigator
               </Link>
             </li>
-            <li>
+            <li className="sub-service">
               <Link to="/service/legal-advisor" onClick={() => setMobileToggle(false)}>
                 Legal Advisor
               </Link>

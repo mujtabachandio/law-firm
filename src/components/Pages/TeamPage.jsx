@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../Breadcrumb';
 import Section from '../Section';
 import TeamSection from '../Section/TeamSection';
 import ContactSectionBottom from '../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../helpers/PageTitle';
 
 const teamData = [
   {
@@ -29,6 +29,7 @@ const teamData = [
     srcUrl: '/team/mansoor-ahmed',
     initials: 'MA',
     experience: '6+ years in criminal defense and documentation',
+    linkedIn: 'https://www.linkedin.com/in/mansoor-ahmed-b5bbb4b3/',
   },
   {
     imgUrl: null, // Will use avatar instead
@@ -41,19 +42,25 @@ const teamData = [
 ];
 
 export default function TeamPage() {
-  pageTitle('Attorneys - Karachi Law Firms');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
+      <Helmet>
+        <title>Meet Our Legal Team | Karachi Law Firms</title>
+        <meta
+          name="description"
+          content="Meet the experienced lawyers and legal team at Karachi Law Firms, covering family, criminal, property, corporate and constitutional law in Karachi."
+        />
+        <link rel="canonical" href="https://karachilawfirms.pk/team" />
+      </Helmet>
       <Breadcrumb title="Our Attorneys" bgUrl="/images/attorney-page.jpg" />
       <Section pt="140" ptLg="80" pb="110" pbLg="55">
-        <div className="row">
-          <div className="col-lg-12">
-            <TeamSection data={teamData} />
-          </div>
+        <div className="container">
+          <h1 className="cs_fs_48 cs_fw_700 cs_mb_40 text-center">Meet the Karachi Law Firms Legal Team</h1>
         </div>
+        <TeamSection data={teamData} />
       </Section>
 
       {/* Contact Section Bottom */}

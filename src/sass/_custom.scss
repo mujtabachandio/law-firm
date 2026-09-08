@@ -1077,11 +1077,12 @@ select.cs_shop-input {
 // Enhanced dropdown styling - Side by Side Grid Layout
 // Target the specific dropdown structure
 .cs_nav .cs_nav_list .menu-item-has-children > ul {
-  width: 700px !important;
-  min-width: 700px !important;
-  max-width: 900px !important;
+  width: 800px !important;
+  min-width: 800px !important;
+  max-width: 800px !important;
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
+  grid-auto-flow: row dense !important;
   gap: 0 !important;
   background-color: #18191d !important; // Match header background
   border-radius: 8px !important;
@@ -1123,6 +1124,7 @@ select.cs_shop-input {
     grid-template-columns: 1fr !important;
     min-width: 300px !important;
     width: 300px !important;
+    max-width: 300px !important;
     max-height: 50vh !important;
   }
   
@@ -1155,15 +1157,6 @@ select.cs_shop-input {
     display: flex !important;
     align-items: center;
     
-    &:nth-child(even) {
-      border-right: none;
-    }
-    
-    &:last-child,
-    &:nth-last-child(2):nth-child(odd) {
-      border-bottom: none;
-    }
-    
     a {
       padding: 12px 20px;
       color: rgba(255,255,255,0.9) !important;
@@ -1183,15 +1176,156 @@ select.cs_shop-input {
       }
     }
   }
+  
+  // Main category styling - highlighted
+  // First 3 categories (Family Law, Property, Criminal) go to left column
+  // Last 3 categories (Business, Documentation, Immigration) go to right column
+  li.main-category {
+    background: rgba($golden-yellow, 0.08) !important;
+    border-left: 3px solid $golden-yellow !important;
+    border-bottom: 1px solid rgba($golden-yellow, 0.2) !important;
+    
+    // First category group (Family Law) - left column - item 1
+    &:nth-child(1) {
+      grid-column: 1;
+    }
+    
+    // Second category group (Property & Real Estate) - left column - item 7
+    &:nth-child(7) {
+      grid-column: 1;
+    }
+    
+    // Third category group (Criminal & Civil Law) - left column - item 11
+    &:nth-child(11) {
+      grid-column: 1;
+    }
+    
+    // Fourth category group (Business & Corporate) - right column - item 15
+    &:nth-child(15) {
+      grid-column: 2;
+      border-right: none;
+    }
+    
+    // Fifth category group (Documentation & Process) - right column - item 20
+    &:nth-child(20) {
+      grid-column: 2;
+      border-right: none;
+    }
+    
+    // Sixth category group (Immigration & Specialized) - right column - item 24
+    &:nth-child(24) {
+      grid-column: 2;
+      border-right: none;
+    }
+    
+    a {
+      color: $golden-yellow !important;
+      font-weight: 700 !important;
+      font-size: 14px !important;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      
+      &:hover {
+        background: rgba($golden-yellow, 0.2) !important;
+        color: $golden-yellow !important;
+        padding-left: 25px;
+      }
+    }
+  }
+  
+  // Sub-service styling - indented children, grouped under main category
+  // Sub-services follow their parent category's column
+  li.sub-service {
+    background: transparent !important;
+    border-left: 3px solid transparent !important;
+    padding-left: 0 !important;
+    
+    // Family Law sub-services (items 2-6) - left column
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      grid-column: 1;
+    }
+    
+    // Property & Real Estate sub-services (items 8-10) - left column
+    &:nth-child(8),
+    &:nth-child(9),
+    &:nth-child(10) {
+      grid-column: 1;
+    }
+    
+    // Criminal & Civil Law sub-services (items 12-14) - left column
+    &:nth-child(12),
+    &:nth-child(13),
+    &:nth-child(14) {
+      grid-column: 1;
+    }
+    
+    // Business & Corporate sub-services (items 16-19) - right column
+    &:nth-child(16),
+    &:nth-child(17),
+    &:nth-child(18),
+    &:nth-child(19) {
+      grid-column: 2;
+      border-right: none;
+    }
+    
+    // Documentation & Process sub-services (items 21-23) - right column
+    &:nth-child(21),
+    &:nth-child(22),
+    &:nth-child(23) {
+      grid-column: 2;
+      border-right: none;
+    }
+    
+    // Immigration & Specialized sub-services (items 25-27) - right column
+    &:nth-child(25),
+    &:nth-child(26),
+    &:nth-child(27) {
+      grid-column: 2;
+      border-right: none;
+    }
+    
+    a {
+      padding-left: 35px !important;
+      color: rgba(255,255,255,0.75) !important;
+      font-size: 12px !important;
+      font-weight: 400 !important;
+      position: relative;
+      
+      &::before {
+        content: '→';
+        position: absolute;
+        left: 20px;
+        color: rgba($golden-yellow, 0.5);
+        font-size: 10px;
+        transition: all 0.3s ease;
+      }
+      
+      &:hover {
+        background: rgba($golden-yellow, 0.1) !important;
+        color: rgba(255,255,255,0.95) !important;
+        padding-left: 40px !important;
+        
+        &::before {
+          left: 25px;
+          color: $golden-yellow;
+        }
+      }
+    }
+  }
 }
 
 // Force override all dropdown styles
 .cs_nav .cs_nav_list ul {
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
-  width: 700px !important;
-  min-width: 700px !important;
-  max-width: 900px !important;
+  grid-auto-flow: row dense !important;
+  width: 800px !important;
+  min-width: 800px !important;
+  max-width: 800px !important;
   background-color: #18191d !important;
   border-radius: 8px !important;
   border: 1px solid rgba(255,255,255,0.1) !important;
@@ -1233,9 +1367,10 @@ select.cs_shop-input {
 body .cs_site_header .cs_nav .cs_nav_list .menu-item-has-children > ul {
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
-  width: 700px !important;
-  min-width: 700px !important;
-  max-width: 900px !important;
+  grid-auto-flow: row dense !important;
+  width: 800px !important;
+  min-width: 800px !important;
+  max-width: 800px !important;
   background-color: #18191d !important;
   border-radius: 8px !important;
   border: 1px solid rgba(255,255,255,0.1) !important;
@@ -1271,6 +1406,7 @@ body .cs_site_header .cs_nav .cs_nav_list .menu-item-has-children > ul {
     grid-template-columns: 1fr !important;
     min-width: 300px !important;
     width: 300px !important;
+    max-width: 300px !important;
     max-height: 50vh !important;
   }
 }
@@ -1321,6 +1457,58 @@ body .cs_site_header .cs_nav .cs_nav_list .menu-item-has-children > ul {
         &:hover {
           background: rgba($golden-yellow, 0.1);
           color: $golden-yellow !important;
+        }
+      }
+    }
+    
+    // Mobile main category styling
+    li.main-category {
+      background: rgba($golden-yellow, 0.1) !important;
+      border-left: 3px solid $golden-yellow !important;
+      
+      a {
+        color: $golden-yellow !important;
+        font-weight: 700 !important;
+        font-size: 14px !important;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 12px 30px !important;
+        
+        &:hover {
+          background: rgba($golden-yellow, 0.2) !important;
+          color: $golden-yellow !important;
+        }
+      }
+    }
+    
+    // Mobile sub-service styling
+    li.sub-service {
+      background: transparent !important;
+      border-left: 3px solid transparent !important;
+      
+      a {
+        padding-left: 45px !important;
+        color: rgba(255,255,255,0.7) !important;
+        font-size: 13px !important;
+        font-weight: 400 !important;
+        position: relative;
+        
+        &::before {
+          content: '→';
+          position: absolute;
+          left: 30px;
+          color: rgba($golden-yellow, 0.5);
+          font-size: 10px;
+        }
+        
+        &:hover {
+          background: rgba($golden-yellow, 0.1) !important;
+          color: rgba(255,255,255,0.9) !important;
+          padding-left: 50px !important;
+          
+          &::before {
+            color: $golden-yellow;
+          }
         }
       }
     }

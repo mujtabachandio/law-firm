@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../Breadcrumb';
 import Section from '../Section';
 
@@ -7,12 +8,20 @@ export default function TermsPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Terms & Conditions | Karachi Law Firms</title>
+        <meta
+          name="description"
+          content="Review the terms and conditions that govern your use of the Karachi Law Firms website and our legal services in Pakistan."
+        />
+        <link rel="canonical" href="https://karachilawfirms.pk/terms" />
+      </Helmet>
       <Breadcrumb title="Terms & Conditions" bgUrl="/images/attorney-page.jpg" />
       <Section pt="80" ptLg="50" pb="80" pbLg="50">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-10">
-              <h2 className="cs_mb_20">Terms & Conditions</h2>
+              <h1 className="cs_mb_20">Terms & Conditions</h1>
               <p className="text-muted cs_mb_20">Last updated: September 2025</p>
               <p>Welcome to Karachi Law Firms. By accessing or using our website (www.karachilawfirms.pk) or engaging our services, you agree to comply with and be bound by the following Terms & Conditions.</p>
               <h5 className="cs_mt_30">1. Use of Website</h5>

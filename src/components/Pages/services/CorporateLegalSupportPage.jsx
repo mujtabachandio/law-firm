@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -9,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -66,7 +67,6 @@ const faqData = [
 ];
 
 export default function CorporateLegalSupportPage() {
-  pageTitle('Corporate Legal Support - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -74,6 +74,13 @@ export default function CorporateLegalSupportPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Corporate Legal Support in Karachi, Business Law Services</title>
+        <meta name="description" content="Karachi Law Firms offers expert corporate legal support and business law services. Complete corporate services in Karachi for your business needs." />
+        <meta name="keywords" content="Corporate Legal Support in Karachi, Business Law, Business law Services in Karachi, Expert Corporate legal Support" />
+        <link rel="canonical" href="https://karachilawfirms.pk/service/corporate-legal-support" />
+      </Helmet>
+      
       <Breadcrumb title="Corporate Legal Support" bgUrl="/images/CorporateLegalSupport.jpg" />
 
 
@@ -84,9 +91,9 @@ export default function CorporateLegalSupportPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -138,7 +145,7 @@ export default function CorporateLegalSupportPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Corporate Help?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Corporate Help?</div>
                 <p className="text-white cs_mb_25">
                   Get expert corporate legal support and business law guidance.
                 </p>
@@ -155,55 +162,152 @@ export default function CorporateLegalSupportPage() {
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Corporate Legal Support</h2>
-                  <h4 className="text-accent cs_mb_20">Modern Business Law Solutions</h4>
-                  <p className="cs_mb_30">
-                    From compliance to contract negotiation, our business law services are tailored for 
-                    Pakistan's modern economy — especially startups and tech-enabled enterprises. We provide 
-                    comprehensive corporate legal support that helps businesses navigate complex legal 
-                    challenges and achieve their growth objectives with confidence.
+                  <h1 className="cs_mb_30">Secure Your Business with Corporate Legal Services</h1>
+                  <h4 className="text-accent cs_mb_20">Expert Corporate Legal Support in Karachi</h4>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    In the fast-paced commercial environment of Pakistan's largest city, businesses face a unique 
+                    set of challenges that require more than just standard legal advice. They require a strategic 
+                    partner. From compliance to contract negotiation, our business law services are tailored for 
+                    Pakistan's modern economy — especially startups and tech-enabled enterprises. We are aware of 
+                    the challenges that newly established businesses must deal with, including shifting regulations, 
+                    investor demands, intellectual property issues, employment regulations, contract conflicts, and 
+                    risk management needs.
+                  </p>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    A business is only as strong as its contracts. Our experts ensure that every agreement, whether 
+                    with vendors, employees, or international partners—is bulletproof. By choosing one of the best 
+                    law firms in Karachi, you ensure that your intellectual property is protected and your liability 
+                    is minimized from day one. Our business legal solutions are designed to solve these problems 
+                    quickly, precisely, and strategically.
                   </p>
                   
-                  <div className="row cs_mb_40">
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Corporate Services Include</h3>
-                        <ul>
-                          <li>Corporate Formation & Governance</li>
-                          <li>Contract Negotiation & Drafting</li>
-                          <li>Regulatory Compliance</li>
-                          <li>Intellectual Property Protection</li>
-                          <li>Mergers & Acquisitions</li>
-                          <li>Employment Law</li>
-                        </ul>
+                  <div className="cs_mb_40">
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Comprehensive Corporate Legal Services</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      Whether you require one-time legal support or continuing consultation, our team ensures your 
+                      business moves forward without barriers. Our services include:
+                    </p>
+                    
+                    <div className="row cs_mb_30">
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Core Services</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Corporate Formation & Management</li>
+                            <li>Contract Drafting & Negotiation</li>
+                            <li>Regulatory Compliance</li>
+                            <li>Intellectual Property Protection</li>
+                            <li>Mergers & Acquisitions</li>
+                            <li>Employment Law</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Corporate Process</h3>
-                        <ul>
-                          <li>Business Structure Analysis</li>
-                          <li>Legal Compliance Audit</li>
-                          <li>Contract Development</li>
-                          <li>Regulatory Guidance</li>
-                          <li>Ongoing Legal Support</li>
-                          <li>Risk Management</li>
-                        </ul>
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Specialized Support</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>SECP Compliance & Filings</li>
+                            <li>Startup Legal Support</li>
+                            <li>Investor Relations & Agreements</li>
+                            <li>Risk Management Strategies</li>
+                            <li>Ongoing Legal Consultation</li>
+                            <li>Business Structure Optimization</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="cs_mb_40">
-                    <h3 className="cs_mb_20">Why Choose Our Corporate Legal Support?</h3>
-                    <p className="cs_mb_20">
-                      Our corporate legal team brings deep expertise in business law and understands the 
-                      unique challenges facing modern businesses. We provide strategic legal counsel that 
-                      helps companies navigate complex regulatory environments and achieve their business goals.
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Our Corporate Process</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      Our systematic legal process provides security over time, compliance, and clarity:
                     </p>
-                    <p className="cs_mb_20">
-                      We believe that effective corporate legal support should be proactive, strategic, and 
-                      aligned with business objectives. Our approach combines legal expertise with business 
-                      acumen to provide practical, cost-effective solutions.
+                    
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>1</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Analysis of Business Structure</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We evaluate your current or intended business model to suggest the best structure, governance model, and legal base.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>2</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Audit of Legal Compliance</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>A comprehensive, 360° legal evaluation finds potential for improvement, hazards, and gaps in compliance.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>3</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Contract Development</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>To protect your interests, we draft contracts that are both strategically and legally solid.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>4</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Regulatory Instructions</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>Our staff makes sure your company is aware of and complies with all applicable laws.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>5</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Ongoing Legal Support</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We offer ongoing legal counsel to assist your business in overcoming obstacles as it expands.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>6</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Risk Management</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>Your business is shielded from disagreements, liabilities, and operational challenges by our proactive risk management techniques.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="cs_mb_40" style={{ background: '#f8f9fa', padding: '30px', borderRadius: '10px' }}>
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Why Choose KLF for Corporate Legal Support?</h3>
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Proactive Approach:</strong> We protect your company in advance by foreseeing any legal issues before they become problems.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Strategic Alignment:</strong> Your business plans, expansion goals, and operational requirements are all in line with our legal strategy.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Practical Solutions:</strong> We provide practical, workable solutions to help you make everyday business decisions with confidence.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Cost-Effective:</strong> Our services are made to provide the highest level of security without taxing your finances.
+                        </p>
+                      </div>
+                    </div>
+                    <p className="cs_mb_0 mt-3" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      <strong style={{ color: '#1B365D' }}>Business-Focused:</strong> Our corporate legal team helps you make decisions that are both commercially advantageous and legally sound by fusing technical legal expertise with real-world business acumen.
                     </p>
                   </div>
                 </div>
@@ -229,6 +333,21 @@ export default function CorporateLegalSupportPage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

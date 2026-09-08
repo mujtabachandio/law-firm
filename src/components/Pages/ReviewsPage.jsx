@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../Breadcrumb';
 import Section from '../Section';
-import SectionHeadingStyle3 from '../SectionHeading/SectionHeadingStyle3';
 
 export default function ReviewsPage() {
   useEffect(() => {
@@ -10,17 +10,26 @@ export default function ReviewsPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Client Reviews & Ratings | Karachi Law Firms</title>
+        <meta
+          name="description"
+          content="Read client reviews of Karachi Law Firms and share your own experience of our legal services on Google and Facebook."
+        />
+        <link rel="canonical" href="https://karachilawfirms.pk/reviews" />
+      </Helmet>
       <Breadcrumb title="Client Reviews" bgUrl="/images/attorney-page.jpg" />
       <Section pt="80" ptLg="50" pb="80" pbLg="50">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-10 col-lg-10">
-              <SectionHeadingStyle3
-                sectionTitleUp="Share Your Experience"
-                sectionTitle="Reviews & Ratings"
-                sectionSubTitle="Your feedback helps others find trusted legal support."
-                className="cs_mb_30"
-              />
+              <div className="cs_section_heading cs_style_1 cs_mb_30">
+                <p className="cs_fs_18 cs_fs_lg_16 text-accent cs_lh_base cs_mb_8">
+                  Share Your Experience
+                </p>
+                <h1 className="cs_fs_36 cs_fs_lg_32 cs_mb_15">Client Reviews & Ratings</h1>
+                <p className="m-0 cs_fs_16">Your feedback helps others find trusted legal support.</p>
+              </div>
 
               <div className="card border-0 shadow-sm cs_rounded_10 cs_mb_20">
                 <div className="card-body p-4">

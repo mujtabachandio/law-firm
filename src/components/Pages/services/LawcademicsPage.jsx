@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -65,7 +65,6 @@ const faqData = [
 ];
 
 export default function LawcademicsPage() {
-  pageTitle('Lawcademics Division - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -83,9 +82,9 @@ export default function LawcademicsPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -137,8 +136,8 @@ export default function LawcademicsPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Research Help?</h3>
-                <p className="text-white cs_mb_25">
+                <h3 className="text-black cs_mb_15">Need Research Help?</h3>
+                <p className="text-black cs_mb_25">
                   Get research-backed legal strategies and academic expertise.
                 </p>
                 <Button btnText="Free Consultation" btnUrl="/contact" />
@@ -154,7 +153,7 @@ export default function LawcademicsPage() {
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Lawcademics Division</h2>
+                  <h1 className="cs_mb_30">Lawcademics Division</h1>
                   <h4 className="text-accent cs_mb_20">Where Legal Practice Meets Academic Research</h4>
                   <p className="cs_mb_30">
                     Where legal practice meets legal theory. Our research-backed legal arguments and academic 
@@ -228,6 +227,21 @@ export default function LawcademicsPage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

@@ -6,7 +6,7 @@ export default function ServiceInfo({sectionTitleDown, textVariant, sectionBtnUr
   return (
     <div className="cs_service_1-info  text-center cs_mt_40 d-flex justify-content-center align-items-center flex-wrap">
       {sectionTitleDown && (
-        <h4 className={`fw-normal m-0 ${textVariant}`}>{parser(sectionTitleDown)}</h4>
+        <h3 className={`fw-normal m-0 ${textVariant}`}>{parser(sectionTitleDown)}</h3>
       )}
       <Link
         to={sectionBtnUrl}

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -8,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -65,7 +66,6 @@ const faqData = [
 ];
 
 export default function LegalNoticePage() {
-  pageTitle('Legal Notice - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -73,6 +73,11 @@ export default function LegalNoticePage() {
 
   return (
     <>
+      <Helmet>
+        <title>Legal Notice Services in Karachi | Expert Legal Drafting</title>
+        <meta name="description" content="Get professionally drafted legal notices for disputes, contracts and compliance. Protect your rights with expert legal notice services in Karachi." />
+        <meta name="keywords" content="Legal Notice Services Karachi, Legal Notice Drafting Pakistan, Send Legal Notice Karachi, Contract Breach Legal Notice, Property Dispute Legal Notice" />
+      </Helmet>
       <Breadcrumb title="Legal Notice" bgUrl="/images/Legal%20Notice.jpg" />
 
 
@@ -83,9 +88,9 @@ export default function LegalNoticePage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -137,7 +142,7 @@ export default function LegalNoticePage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Legal Notice?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Legal Notice?</div>
                 <p className="text-white cs_mb_25">
                   Get expert legal notice drafting and serving services.
                 </p>
@@ -148,13 +153,13 @@ export default function LegalNoticePage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Legal Notice.jpg"
+                    src="/images/Legal%20Notice.jpg"
                     alt="Legal Notice"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Legal Notice</h2>
+                  <h1 className="cs_mb_30">Professional Legal Notice Drafting & Serving Services</h1>
                   <h4 className="text-accent cs_mb_20">Professional Legal Notice Services</h4>
                   <p className="cs_mb_30">
                     Legal notices are crucial formal communications that establish your legal position 
@@ -229,6 +234,21 @@ export default function LegalNoticePage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

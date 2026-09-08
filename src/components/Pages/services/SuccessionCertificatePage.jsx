@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -8,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -65,7 +66,6 @@ const faqData = [
 ];
 
 export default function SuccessionCertificatePage() {
-  pageTitle('Succession Certificate - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -73,6 +73,18 @@ export default function SuccessionCertificatePage() {
 
   return (
     <>
+      <Helmet>
+        <title>Succession Certificate in Karachi | Expert Legal Services</title>
+        <meta
+          name="description"
+          content="Get expert succession certificate services in Karachi. Heir identification, asset transfer, Islamic inheritance law and legal documentation made easy."
+        />
+        <meta
+          name="keywords"
+          content="succession certificate Karachi, succession certificate Pakistan, Islamic inheritance law, legal heir verification, asset transfer lawyer, inheritance documentation, court representation Karachi, property succession, succession certificate application, financial asset recovery, inheritance legal services, succession legal guidance"
+        />
+        <link rel="canonical" href="https://karachilawfirms.pk/service/succession-certificate" />
+      </Helmet>
       <Breadcrumb title="Succession Certificate" bgUrl="/images/Succession%20Certificate.jpg" />
 
       
@@ -83,9 +95,9 @@ export default function SuccessionCertificatePage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -137,7 +149,7 @@ export default function SuccessionCertificatePage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Succession Help?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Succession Help?</div>
                 <p className="text-white cs_mb_25">
                   Get expert succession certificate services and inheritance legal guidance.
                 </p>
@@ -148,63 +160,153 @@ export default function SuccessionCertificatePage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Succession Certificate.jpg"
+                    src="/images/Succession%20Certificate.jpg"
                     alt="Succession Certificate"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Succession Certificate</h2>
-                  <h4 className="text-accent cs_mb_20">Establishing Legal Heirship</h4>
-                  <p className="cs_mb_30">
-                    A succession certificate is essential for transferring assets and accessing bank 
-                    accounts, insurance policies, and other financial instruments of a deceased person. 
-                    We help families obtain succession certificates efficiently, ensuring all legal 
-                    heirs are properly identified and their rights are protected according to Islamic 
-                    inheritance law and Pakistani succession law.
+                  <h1 className="cs_mb_30">Succession Certificate in Karachi with Expert Legal Guidance</h1>
+                  <h4 className="text-accent cs_mb_20">Expert Succession Certificate Services & Legal Heirship</h4>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    A succession certificate is essential for transferring assets and accessing bank accounts, insurance 
+                    policies, and other financial instruments of a deceased person. When a family member passes away, 
+                    obtaining a succession certificate is often the first critical step in managing their estate and 
+                    ensuring proper asset distribution.
+                  </p>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    We help families obtain succession certificates efficiently, ensuring all legal heirs are properly 
+                    identified and their rights are protected according to Islamic inheritance law and Pakistani succession 
+                    law. This legal document establishes the rightful heirs of a deceased person and their shares in 
+                    the deceased's assets, making it crucial for property documentation and asset transfer. Our experienced 
+                    team handles the entire process from document preparation to court representation, ensuring that 
+                    succession matters are resolved without unnecessary delays or disputes.
                   </p>
                   
-                  <div className="row cs_mb_40">
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Succession Services Include</h3>
-                        <ul>
-                          <li>Succession Certificate Application</li>
-                          <li>Heir Identification</li>
-                          <li>Document Preparation</li>
-                          <li>Court Representation</li>
-                          <li>Asset Transfer Assistance</li>
-                          <li>Legal Documentation</li>
-                        </ul>
+                  <div className="cs_mb_40">
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Comprehensive Succession Certificate Services</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We provide complete legal assistance for succession certificate applications and related matters:
+                    </p>
+                    
+                    <div className="row cs_mb_30">
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Succession Services</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Succession Certificate Application</li>
+                            <li>Heir Identification & Verification</li>
+                            <li>Document Preparation & Filing</li>
+                            <li>Court Representation</li>
+                            <li>Certificate Issuance</li>
+                            <li>Legal Documentation</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Succession Process</h3>
-                        <ul>
-                          <li>Initial Assessment</li>
-                          <li>Document Collection</li>
-                          <li>Application Preparation</li>
-                          <li>Court Filing</li>
-                          <li>Legal Proceedings</li>
-                          <li>Certificate Issuance</li>
-                        </ul>
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Asset Transfer Assistance</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Bank Account Transfer</li>
+                            <li>Insurance Policy Claims</li>
+                            <li>Property Transfer</li>
+                            <li>Financial Asset Recovery</li>
+                            <li>Dispute Resolution</li>
+                            <li>Post-Certificate Support</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="cs_mb_40">
-                    <h3 className="cs_mb_20">Why Choose Our Succession Services?</h3>
-                    <p className="cs_mb_20">
-                      Our succession lawyers bring deep understanding of inheritance law and court 
-                      procedures. We ensure that succession certificates are obtained efficiently 
-                      while protecting the rights of all legal heirs.
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Our Succession Certificate Process</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We follow a systematic approach to ensure efficient succession certificate issuance:
                     </p>
-                    <p className="cs_mb_20">
-                      We believe that succession matters should be handled with care and efficiency. 
-                      Our approach combines legal expertise with practical understanding to help 
-                      families navigate the succession process smoothly and fairly.
-                    </p>
+                    
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>1</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Initial Assessment</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We assess your case, identify all legal heirs, and determine the assets requiring succession certificate for transfer.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>2</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Document Collection</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We help you gather all required documents including death certificate, family tree, property documents, and identification of all heirs.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>3</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Application Preparation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We prepare the succession certificate application with all necessary details, ensuring compliance with Islamic inheritance law and Pakistani succession law.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>4</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Court Filing</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We file the application in the appropriate court with all supporting documents and ensure proper legal procedures are followed.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>5</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Legal Proceedings</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We represent you in court proceedings, handle any objections, and ensure all legal requirements are met for certificate issuance.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>6</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Certificate Issuance</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We obtain the succession certificate and assist with asset transfer, ensuring all legal heirs can access their rightful shares.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="cs_mb_40" style={{ background: '#f8f9fa', padding: '30px', borderRadius: '10px' }}>
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Why Choose KLF for Succession Certificates?</h3>
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Expert Knowledge:</strong> Our succession lawyers bring deep understanding of inheritance law and court procedures, ensuring efficient certificate issuance.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Efficient Process:</strong> We ensure that succession certificates are obtained efficiently while protecting the rights of all legal heirs according to Islamic law.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Complete Services:</strong> From application preparation to asset transfer, we provide comprehensive succession services to help families navigate the process smoothly.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Care & Efficiency:</strong> We believe that succession matters should be handled with care and efficiency, combining legal expertise with practical understanding.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -229,6 +331,21 @@ export default function SuccessionCertificatePage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

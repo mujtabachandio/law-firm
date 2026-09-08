@@ -1,48 +1,56 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-import Home2 from './components/Pages/Home2';
-import ServicesPage from './components/Pages/ServicesPage';
-import ServiceDetailsPage from './components/Pages/ServiceDetailsPage';
-import ConstitutionalAdvocacyPage from './components/Pages/services/ConstitutionalAdvocacyPage';
-import DigitalCaseManagementPage from './components/Pages/services/DigitalCaseManagementPage';
-import LawcademicsPage from './components/Pages/services/LawcademicsPage';
-import CorporateLegalSupportPage from './components/Pages/services/CorporateLegalSupportPage';
-import LawconomicSolutionsPage from './components/Pages/services/LawconomicSolutionsPage';
-import DivorceLawyerPage from './components/Pages/services/DivorceLawyerPage';
-import ChildCustodyPage from './components/Pages/services/ChildCustodyPage';
-import GuardianshipLawyerPage from './components/Pages/services/GuardianshipLawyerPage';
-import DomesticViolenceLawyerPage from './components/Pages/services/DomesticViolenceLawyerPage';
-import PropertyLawyerPage from './components/Pages/services/PropertyLawyerPage';
-import InheritanceOfPropertyPage from './components/Pages/services/InheritanceOfPropertyPage';
-import SuccessionCertificatePage from './components/Pages/services/SuccessionCertificatePage';
-import CriminalLawyerPage from './components/Pages/services/CriminalLawyerPage';
-import CivilLawyerPage from './components/Pages/services/CivilLawyerPage';
-import FiaLawyerPage from './components/Pages/services/FiaLawyerPage';
-import CompanyLawyerPage from './components/Pages/services/CompanyLawyerPage';
-import CompanyRegistrationPage from './components/Pages/services/CompanyRegistrationPage';
-import FoundationTrustNgoPage from './components/Pages/services/FoundationTrustNgoPage';
-import LegalNoticePage from './components/Pages/services/LegalNoticePage';
-import DocumentationLawyerPage from './components/Pages/services/DocumentationLawyerPage';
-import ProcessorServerPage from './components/Pages/services/ProcessorServerPage';
-import AsylumLawyerPage from './components/Pages/services/AsylumLawyerPage';
-import PrivateInvestigatorPage from './components/Pages/services/PrivateInvestigatorPage';
-import LegalAdvisorPage from './components/Pages/services/LegalAdvisorPage';
-import BlogPage from './components/Pages/BlogPage';
-import BlogDetailsPage from './components/Pages/BlogDetailsPage';
-import ContactPage from './components/Pages/ContactPage';
-import LawcademicsHubPage from './components/Pages/LawcademicsHubPage';
-import AboutPage from './components/Pages/AboutPage';
-import TeamPage from './components/Pages/TeamPage';
-import ReviewsPage from './components/Pages/ReviewsPage';
-import PrivacyPolicyPage from './components/Pages/PrivacyPolicyPage';
-import TermsPage from './components/Pages/TermsPage';
+const Home2 = lazy(() => import('./components/Pages/Home2'));
+const ServicesPage = lazy(() => import('./components/Pages/ServicesPage'));
+const ServiceDetailsPage = lazy(() => import('./components/Pages/ServiceDetailsPage'));
+const ConstitutionalAdvocacyPage = lazy(() => import('./components/Pages/services/ConstitutionalAdvocacyPage'));
+const DigitalCaseManagementPage = lazy(() => import('./components/Pages/services/DigitalCaseManagementPage'));
+const LawcademicsPage = lazy(() => import('./components/Pages/services/LawcademicsPage'));
+const CorporateLegalSupportPage = lazy(() => import('./components/Pages/services/CorporateLegalSupportPage'));
+const LawconomicSolutionsPage = lazy(() => import('./components/Pages/services/LawconomicSolutionsPage'));
+const DivorceLawyerPage = lazy(() => import('./components/Pages/services/DivorceLawyerPage'));
+const ChildCustodyPage = lazy(() => import('./components/Pages/services/ChildCustodyPage'));
+const GuardianshipLawyerPage = lazy(() => import('./components/Pages/services/GuardianshipLawyerPage'));
+const DomesticViolenceLawyerPage = lazy(() => import('./components/Pages/services/DomesticViolenceLawyerPage'));
+const MaintenanceReconciliationPage = lazy(() => import('./components/Pages/services/MaintenanceReconciliationPage'));
+const PropertyLawyerPage = lazy(() => import('./components/Pages/services/PropertyLawyerPage'));
+const InheritanceOfPropertyPage = lazy(() => import('./components/Pages/services/InheritanceOfPropertyPage'));
+const SuccessionCertificatePage = lazy(() => import('./components/Pages/services/SuccessionCertificatePage'));
+const CriminalLawyerPage = lazy(() => import('./components/Pages/services/CriminalLawyerPage'));
+const CivilLawyerPage = lazy(() => import('./components/Pages/services/CivilLawyerPage'));
+const FiaLawyerPage = lazy(() => import('./components/Pages/services/FiaLawyerPage'));
+const CompanyLawyerPage = lazy(() => import('./components/Pages/services/CompanyLawyerPage'));
+const CompanyRegistrationPage = lazy(() => import('./components/Pages/services/CompanyRegistrationPage'));
+const FoundationTrustNgoPage = lazy(() => import('./components/Pages/services/FoundationTrustNgoPage'));
+const LegalNoticePage = lazy(() => import('./components/Pages/services/LegalNoticePage'));
+const DocumentationLawyerPage = lazy(() => import('./components/Pages/services/DocumentationLawyerPage'));
+const ProcessorServerPage = lazy(() => import('./components/Pages/services/ProcessorServerPage'));
+const AsylumLawyerPage = lazy(() => import('./components/Pages/services/AsylumLawyerPage'));
+const PrivateInvestigatorPage = lazy(() => import('./components/Pages/services/PrivateInvestigatorPage'));
+const LegalAdvisorPage = lazy(() => import('./components/Pages/services/LegalAdvisorPage'));
+const FamilyLawPage = lazy(() => import('./components/Pages/services/FamilyLawPage'));
+const PropertyLawPage = lazy(() => import('./components/Pages/services/PropertyLawPage'));
+const CriminalLawPage = lazy(() => import('./components/Pages/services/CriminalLawPage'));
+const CorporateLawPage = lazy(() => import('./components/Pages/services/CorporateLawPage'));
+const DocumentationPage = lazy(() => import('./components/Pages/services/DocumentationPage'));
+const ImmigrationPage = lazy(() => import('./components/Pages/services/ImmigrationPage'));
+const BlogPage = lazy(() => import('./components/Pages/BlogPage'));
+const BlogDetailsPage = lazy(() => import('./components/Pages/BlogDetailsPage'));
+const ContactPage = lazy(() => import('./components/Pages/ContactPage'));
+const LawcademicsHubPage = lazy(() => import('./components/Pages/LawcademicsHubPage'));
+const AboutPage = lazy(() => import('./components/Pages/AboutPage'));
+const TeamPage = lazy(() => import('./components/Pages/TeamPage'));
+const ReviewsPage = lazy(() => import('./components/Pages/ReviewsPage'));
+const PrivacyPolicyPage = lazy(() => import('./components/Pages/PrivacyPolicyPage'));
+const TermsPage = lazy(() => import('./components/Pages/TermsPage'));
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home2 />} />
+    <Suspense fallback={<div className="container py-5">Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home2 />} />
 
         <Route path="/about" element={<AboutPage />} />
         <Route path="/team" element={<TeamPage />} />
@@ -58,6 +66,7 @@ function App() {
         <Route path="/service/child-custody" element={<ChildCustodyPage />} />
         <Route path="/service/guardianship-lawyer" element={<GuardianshipLawyerPage />} />
         <Route path="/service/domestic-violence-lawyer" element={<DomesticViolenceLawyerPage />} />
+        <Route path="/service/maintenance-reconciliation" element={<MaintenanceReconciliationPage />} />
         <Route path="/service/property-lawyer" element={<PropertyLawyerPage />} />
         <Route path="/service/inheritance-of-property" element={<InheritanceOfPropertyPage />} />
         <Route path="/service/succession-certificate" element={<SuccessionCertificatePage />} />
@@ -73,6 +82,15 @@ function App() {
         <Route path="/service/asylum-lawyer" element={<AsylumLawyerPage />} />
         <Route path="/service/private-investigator" element={<PrivateInvestigatorPage />} />
         <Route path="/service/legal-advisor" element={<LegalAdvisorPage />} />
+        <Route path="/service/Family-Law" element={<FamilyLawPage />} />
+        
+        {/* Main Service Category Pages */}
+        <Route path="/service/family-law" element={<FamilyLawPage />} />
+        <Route path="/service/property-law" element={<PropertyLawPage />} />
+        <Route path="/service/criminal-law" element={<CriminalLawPage />} />
+        <Route path="/service/corporate-law" element={<CorporateLawPage />} />
+        <Route path="/service/documentation-process" element={<DocumentationPage />} />
+        <Route path="/service/immigration-specialized" element={<ImmigrationPage />} />
         
         {/* Fallback for any remaining services - can be removed once all are individual */}
         <Route path="/service/:serviceId" element={<ServiceDetailsPage />} />
@@ -86,8 +104,9 @@ function App() {
         <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/terms" element={<TermsPage />} />
-      </Route>
-    </Routes>
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }
 

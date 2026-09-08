@@ -19,9 +19,10 @@ export default function ContactSectionBottom() {
     },
     {
       imgUrl: '/pak-flag.png',
-      titleUp: 'Visit Our Office',
-      title: 'Office 104, 1st Floor, Fareed Chambers, Abdullah Haroon Road, Saddar, Karachi 74400',
+      titleUp: 'Visit Our Offices',
+      title: 'Head Office: 104, 1st Floor, Fareed Chambers, Abdullah Haroon Road, Saddar, Karachi 74400 | Islamabad Office: No. 02, Block No. 02, Street No. 31, G-8/4, Pervaiz market Near Rescue 15, Islamabad 44000',
       textColor: 'text-white',
+      isAddress: true,
     },
   ];
 

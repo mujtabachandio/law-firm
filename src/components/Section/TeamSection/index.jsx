@@ -23,6 +23,7 @@ export default function TeamSection({ data, sectionTitle, sectionTitleUp }) {
               srcUrl={item.srcUrl}
               experience={item.experience}
               initials={item.initials}
+              linkedIn={item.linkedIn}
             />
           </div>
         ))}

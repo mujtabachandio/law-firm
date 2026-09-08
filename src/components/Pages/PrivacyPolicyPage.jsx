@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../Breadcrumb';
 import Section from '../Section';
 
@@ -7,12 +8,20 @@ export default function PrivacyPolicyPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Privacy Policy | Karachi Law Firms</title>
+        <meta
+          name="description"
+          content="Read the Karachi Law Firms privacy policy to understand how we collect, use, share and protect the personal information you provide to us."
+        />
+        <link rel="canonical" href="https://karachilawfirms.pk/privacy-policy" />
+      </Helmet>
       <Breadcrumb title="Privacy Policy" bgUrl="/images/attorney-page.jpg" />
       <Section pt="80" ptLg="50" pb="80" pbLg="50">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-10">
-              <h2 className="cs_mb_20">Privacy Policy</h2>
+              <h1 className="cs_mb_20">Privacy Policy</h1>
               <p className="text-muted cs_mb_20">Last updated: September 2025</p>
               <p>We respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and safeguard information when you interact with Karachi Law Firms.</p>
               <h5 className="cs_mt_30">Information We Collect</h5>

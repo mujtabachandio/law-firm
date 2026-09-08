@@ -1,213 +1,61 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../Breadcrumb';
 import Section from '../Section';
-import BrandSection from '../Section/BrandSection';
 import TestimonialSection from '../Section/TestimonialSection';
 import ContactSectionBottom from '../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../helpers/PageTitle';
 
 const serviceData = [
   {
     iconUrl: '/images/icons/service_icon_1.svg',
-    title: 'Constitutional Advocacy',
+    title: 'Family Law',
     subTitle:
-      'We stand where it matters most — defending civil liberties, minority rights, and democratic principles. Our team specializes in high-impact constitutional litigation.',
-    imgUrl: '/images/Constitutional-Advocacy.JPG',
-    href: '/service/constitutional-advocacy',
+      'Expert family law services including divorce, child custody, guardianship, and domestic violence cases with compassionate legal guidance.',
+    imgUrl: '/images/Family Law.jpg',
+    href: '/service/family-law',
   },
   {
     iconUrl: '/images/icons/service_icon_2.svg',
-    title: 'Digital Case Management',
-    subTitle:
-      'Track your legal case in real time, securely share documents, and get consistent updates — all from your phone or computer.',
-    imgUrl: '/images/DigitalCaseManagement.jpg',
-    href: '/service/digital-case-management',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_3.svg',
-    title: 'Lawcademics Division',
-    subTitle:
-      'Where legal practice meets legal theory. Our research-backed legal arguments and academic publications support our court strategy.',
-    imgUrl: '/images/LawcademicsDivision.jpg',
-    href: '/service/lawcademics',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_4.svg',
-    title: 'Corporate Legal Support',
-    subTitle:
-      "From compliance to contract negotiation, our business law services are tailored for Pakistan's modern economy — especially startups and tech-enabled enterprises.",
-    imgUrl: '/images/CorporateLegalSupport.jpg',
-    href: '/service/corporate-legal-support',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_5.svg',
-    title: 'Lawconomic Solutions',
-    subTitle:
-      'Transparent pricing, flexible payment plans, and subsidized services ensure that justice is never out of financial reach.',
-    imgUrl: '/images/Lawconomic Solutions.jpg',
-    href: '/service/lawconomic-solutions',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_6.svg',
-    title: 'Divorce Lawyer',
-    subTitle:
-      'Expert family law representation for divorce proceedings, property division, and alimony arrangements with compassionate legal guidance.',
-    imgUrl: '/images/Divorce Lawyer.jpg',
-    href: '/service/divorce-lawyer',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_7.svg',
-    title: 'Child Custody',
-    subTitle:
-      'Specialized legal services for child custody arrangements, visitation rights, and family law matters with child-focused approach.',
-    imgUrl: '/images/Child Custody.jpg',
-    href: '/service/child-custody',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_8.svg',
-    title: 'Guardianship Lawyer',
-    subTitle:
-      'Legal assistance for guardianship proceedings, conservatorship matters, and protection of vulnerable individuals.',
-    imgUrl: '/images/Guardianship Lawyer.jpg',
-    href: '/service/guardianship-lawyer',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_9.svg',
-    title: 'Domestic Violence Lawyer',
-    subTitle:
-      'Compassionate legal representation for domestic violence cases, protection orders, and family safety matters.',
-    imgUrl: '/images/Domestic Violence Lawyer.jpg',
-    href: '/service/domestic-violence-lawyer',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_10.svg',
-    title: 'Property Lawyer',
+    title: 'Property & Real Estate',
     subTitle:
       'Comprehensive real estate legal services including property disputes, land acquisition, and real estate transaction documentation.',
     imgUrl: '/images/Property Lawyer.jpg',
-    href: '/service/property-lawyer',
+    href: '/service/property-law',
   },
   {
-    iconUrl: '/images/icons/service_icon_11.svg',
-    title: 'Inheritance of Property',
+    iconUrl: '/images/icons/service_icon_3.svg',
+    title: 'Criminal & Civil Law',
     subTitle:
-      'Specialized legal services for inheritance disputes, property distribution, and estate settlement matters.',
-    imgUrl: '/images/Inheritance of Property.jpg',
-    href: '/service/inheritance-of-property',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_12.svg',
-    title: 'Succession Certificate',
-    subTitle:
-      'Expert legal assistance for succession certificate applications, inheritance matters, and estate planning.',
-    imgUrl: '/images/Succession Certificate.jpg',
-    href: '/service/succession-certificate',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_13.svg',
-    title: 'Criminal Lawyer',
-    subTitle:
-      'Experienced criminal defense attorneys providing aggressive representation for all types of criminal cases and legal proceedings.',
+      'Experienced criminal defense and civil litigation representation for all types of legal cases and proceedings.',
     imgUrl: '/images/Criminal Lawyer.jpg',
-    href: '/service/criminal-lawyer',
+    href: '/service/criminal-law',
   },
   {
-    iconUrl: '/images/icons/service_icon_14.svg',
-    title: 'Civil Lawyer',
+    iconUrl: '/images/icons/service_icon_4.svg',
+    title: 'Business & Corporate',
     subTitle:
-      'Expert civil litigation representation for disputes, contract matters, and civil legal proceedings.',
-    imgUrl: '/images/Civil Lawyer.jpg',
-    href: '/service/civil-lawyer',
+      "Complete corporate legal services including business formation, compliance, and corporate governance for Pakistan's modern economy.",
+    imgUrl: '/images/CorporateLegalSupport.jpg',
+    href: '/service/corporate-law',
   },
   {
-    iconUrl: '/images/icons/service_icon_15.svg',
-    title: 'F.I.A Lawyer',
+    iconUrl: '/images/icons/service_icon_5.svg',
+    title: 'Documentation & Process',
     subTitle:
-      'Specialized representation for Federal Investigation Agency cases, white-collar crimes, and federal legal proceedings.',
-    imgUrl: '/images/F.I.A Lawyer.jpg',
-    href: '/service/fia-lawyer',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_16.svg',
-    title: 'Company Lawyer',
-    subTitle:
-      'Comprehensive corporate legal services including business formation, compliance, and corporate governance.',
-    imgUrl: '/images/Company Lawyer.jpg',
-    href: '/service/company-lawyer',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_17.svg',
-    title: 'Company Registration',
-    subTitle:
-      'Complete business registration services including company formation, legal compliance, and corporate documentation.',
-    imgUrl: '/images/Company Registration.jpg',
-    href: '/service/company-registration',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_18.svg',
-    title: 'Foundation Trust NGO',
-    subTitle:
-      'Legal services for NGO registration, trust formation, and compliance with regulatory requirements.',
-    imgUrl: '/images/Foundation Trust NGO.jpg',
-    href: '/service/foundation-trust-ngo',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_19.svg',
-    title: 'Legal Notice',
-    subTitle:
-      'Professional legal notice drafting and serving services for various legal matters and dispute resolution.',
-    imgUrl: '/images/Legal Notice.jpg',
-    href: '/service/legal-notice',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_20.svg',
-    title: 'Documentation Lawyer',
-    subTitle:
-      'Professional legal documentation services including contract drafting, legal agreements, and document review.',
+      'Professional legal documentation services, process serving, notarization, and legal form assistance for all legal matters.',
     imgUrl: '/images/Documentation Lawyer.jpg',
-    href: '/service/documentation-lawyer',
+    href: '/service/documentation-process',
   },
   {
-    iconUrl: '/images/icons/service_icon_21.svg',
-    title: 'Processor Server',
+    iconUrl: '/images/icons/service_icon_6.svg',
+    title: 'Immigration & Specialized',
     subTitle:
-      'Legal process serving services for court documents, legal notices, and official document delivery.',
-    imgUrl: '/images/Processor Server.jpg',
-    href: '/service/processor-server',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_22.svg',
-    title: 'Asylum Lawyer',
-    subTitle:
-      'Expert legal representation for asylum applications, refugee status, and immigration law matters.',
+      'Expert immigration services, international law matters, and specialized legal areas including asylum and refugee cases.',
     imgUrl: '/images/Asylum Lawyer.jpg',
-    href: '/service/asylum-lawyer',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_23.svg',
-    title: 'Private Investigator',
-    subTitle:
-      'Legal investigation services for evidence gathering, background checks, and investigative support for legal cases.',
-    imgUrl: '/images/Private Investigator.jpg',
-    href: '/service/private-investigator',
-  },
-  {
-    iconUrl: '/images/icons/service_icon_24.svg',
-    title: 'Legal Advisor',
-    subTitle:
-      'Comprehensive legal advisory services for individuals and businesses with strategic legal guidance.',
-    imgUrl: '/images/Legal Advisor.jpg',
-    href: '/service/legal-advisor',
+    href: '/service/immigration-specialized',
   },
 ];
 
-const brandData = [
-  { imgUrl: '/images/brand_1.svg' },
-  { imgUrl: '/images/brand_2.svg' },
-  { imgUrl: '/images/brand_3.svg' },
-  { imgUrl: '/images/brand_4.svg' },
-  { imgUrl: '/images/brand_5.svg' },
-];
 
 const testimonialData = [
   {
@@ -248,29 +96,19 @@ const testimonialData = [
 ];
 
 export default function ServicesPage() {
-  const [visibleServices, setVisibleServices] = useState(8); // Show first 8 services initially
-  const [isLoading, setIsLoading] = useState(false);
-
-  pageTitle('Legal Services - Karachi Law Firms');
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleLoadMore = () => {
-    setIsLoading(true);
-    // Simulate loading delay for better UX
-    setTimeout(() => {
-      setVisibleServices(prev => Math.min(prev + 8, serviceData.length));
-      setIsLoading(false);
-    }, 500);
-  };
-
-  const displayedServices = serviceData.slice(0, visibleServices);
-  const hasMoreServices = visibleServices < serviceData.length;
-
   return (
     <>
+      <Helmet>
+        <title>Legal Services in Karachi - Comprehensive Legal Solutions</title>
+        <meta name="description" content="Comprehensive legal services in Karachi. Expert lawyers providing family law, criminal defense, property law, corporate legal support, and immigration services. Get trusted legal representation today." />
+        <meta name="keywords" content="Legal Services Karachi, Lawyers in Karachi, Family Law, Criminal Law, Property Law, Corporate Legal Support, Immigration Services, Legal Solutions" />
+        <link rel="canonical" href="https://karachilawfirms.pk/service" />
+      </Helmet>
+      
       <Breadcrumb title="Our Legal Services" bgUrl="/images/OurCoreServices.jpg" />
 
       <Section pt="140" ptLg="80" pb="115" pbLg="55">
@@ -281,18 +119,18 @@ export default function ServicesPage() {
                 <h6 className="cs_fs_14 cs_fw_600 cs_primary_color cs_mb_15">
                   Comprehensive Legal Solutions
                 </h6>
-                <h2 className="cs_fs_48 cs_fw_700 cs_mb_20">
-                  Expert Legal Services <br />For Every Need
-                </h2>
+                <h1 className="cs_fs_48 cs_fw_700 cs_mb_20">
+                  Find the Best Lawyers & Legal Services in Karachi
+                </h1>
                 <p className="cs_fs_18 cs_mb_0">
-                  From constitutional advocacy to family law, corporate matters to criminal defense, we provide comprehensive legal solutions with transparency, expertise, and dedication to justice.
+                  Karachi Law Firms connects you with the best lawyers in Karachi. Expert legal services in Karachi for all your needs. Get trusted representation today.
                 </p>
               </div>
             </div>
           </div>
           
           <div className="row">
-            {displayedServices.map((item, index) => (
+            {serviceData.map((item, index) => (
               <div className="col-xl-3 col-md-6" key={index}>
                 <div className="cs_service cs_style_1 cs_pt_30 cs_pl_30 cs_pr_30 cs_pb_30 bg-white cs_transition_4 shadow-lg cs_mb_25 position-relative overflow-hidden">
                   <div className="cs_service_iconbox d-flex align-items-center cs_mb_25">
@@ -368,52 +206,7 @@ export default function ServicesPage() {
               </div>
             ))}
           </div>
-          
-          {/* Load More Button */}
-          {hasMoreServices && (
-            <div className="row">
-              <div className="col-lg-12 text-center">
-                <button
-                  onClick={handleLoadMore}
-                  disabled={isLoading}
-                  className="btn btn-primary btn-lg"
-                  style={{
-                    background: 'linear-gradient(135deg, #1B365D 0%, #E6CFB8 100%)',
-                    border: 'none',
-                    padding: '15px 40px',
-                    borderRadius: '50px',
-                    fontSize: '18px',
-                    fontWeight: '600',
-                    color: 'white',
-                    transition: 'all 0.3s ease',
-                    boxShadow: '0 8px 25px rgba(27, 54, 93, 0.3)'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.transform = 'translateY(-2px)';
-                    e.target.style.boxShadow = '0 12px 35px rgba(27, 54, 93, 0.4)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.transform = 'translateY(0)';
-                    e.target.style.boxShadow = '0 8px 25px rgba(27, 54, 93, 0.3)';
-                  }}
-                >
-                  {isLoading ? (
-                    <>
-                      <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                      Loading...
-                    </>
-                  ) : (
-                    `Load More Services (${visibleServices}/${serviceData.length})`
-                  )}
-                </button>
-              </div>
-            </div>
-          )}
         </div>
-      </Section>
-
-      <Section pt="110" ptLg="80" pb="110" pbLg="80" className="bg-gray">
-        <BrandSection data={brandData} />
       </Section>
 
       <Section

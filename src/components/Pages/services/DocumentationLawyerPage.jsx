@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -9,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -66,7 +67,6 @@ const faqData = [
 ];
 
 export default function DocumentationLawyerPage() {
-  pageTitle('Documentation Lawyer - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -74,6 +74,14 @@ export default function DocumentationLawyerPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Legal Documentation Lawyer in Karachi | Drafting & Review</title>
+        <meta
+          name="description"
+          content="Hire a documentation lawyer in Karachi for drafting, reviewing and verifying legal documents, agreements and contracts with full legal compliance."
+        />
+        <link rel="canonical" href="https://karachilawfirms.pk/service/documentation-lawyer" />
+      </Helmet>
       <Breadcrumb title="Documentation Lawyer" bgUrl="/images/Documentation%20Lawyer.jpg" />
 
 
@@ -84,9 +92,9 @@ export default function DocumentationLawyerPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -138,7 +146,7 @@ export default function DocumentationLawyerPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Legal Documentation?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Legal Documentation?</div>
                 <p className="text-white cs_mb_25">
                   Get expert legal document preparation and authentication services.
                 </p>
@@ -149,13 +157,13 @@ export default function DocumentationLawyerPage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Documentation Lawyer.jpg"
+                    src="/images/Documentation%20Lawyer.jpg"
                     alt="Documentation Lawyer"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Documentation Lawyer</h2>
+                  <h1 className="cs_mb_30">Legal Documentation Lawyer in Karachi for Drafting & Review</h1>
                   <h4 className="text-accent cs_mb_20">Comprehensive Legal Documentation Services</h4>
                   <p className="cs_mb_30">
                     Legal documentation is the foundation of any legal process. We provide comprehensive 
@@ -231,6 +239,21 @@ export default function DocumentationLawyerPage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

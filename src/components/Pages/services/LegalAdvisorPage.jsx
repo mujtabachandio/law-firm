@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -8,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -65,7 +66,6 @@ const faqData = [
 ];
 
 export default function LegalAdvisorPage() {
-  pageTitle('Legal Advisor - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -73,6 +73,11 @@ export default function LegalAdvisorPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Legal Consultation & Advisory Services in Karachi Today</title>
+        <meta name="description" content="Get legal consultation, case analysis, document review and strategy planning to understand your rights and make informed decisions." />
+        <meta name="keywords" content="Legal Consultation, Case Analysis, Document Review, Strategy Planning, Rights Explanation" />
+      </Helmet>
       <Breadcrumb title="Legal Advisor" bgUrl="/images/Legal%20Advisor.jpg" />
 
 
@@ -83,9 +88,9 @@ export default function LegalAdvisorPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -137,7 +142,7 @@ export default function LegalAdvisorPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Legal Advice?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Legal Advice?</div>
                 <p className="text-white cs_mb_25">
                   Get expert legal consultation and strategic guidance.
                 </p>
@@ -148,13 +153,13 @@ export default function LegalAdvisorPage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Legal Advisor.jpg"
+                    src="/images/Legal%20Advisor.jpg"
                     alt="Legal Advisor"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Legal Advisor</h2>
+                  <h1 className="cs_mb_30">Comprehensive Legal Consultation Services</h1>
                   <h4 className="text-accent cs_mb_20">Comprehensive Legal Consultation Services</h4>
                   <p className="cs_mb_30">
                     Legal advice is crucial for making informed decisions and protecting your rights. 
@@ -229,6 +234,21 @@ export default function LegalAdvisorPage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -9,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -66,7 +67,6 @@ const faqData = [
 ];
 
 export default function CompanyRegistrationPage() {
-  pageTitle('Company Registration - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -74,6 +74,12 @@ export default function CompanyRegistrationPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Company Registration in Karachi | SECP Business Setup</title>
+        <meta name="description" content="Get company registration in Karachi with expert SECP compliance. We handle incorporation, partnerships, documents and post-setup support." />
+        <meta name="keywords" content="company registration in Karachi, SECP company registration, business registration Pakistan, company incorporation Karachi, private limited company registration, single member company registration, partnership registration Pakistan, foreign company registration, SECP compliance services, business setup lawyer Karachi, company registration services" />
+        <link rel="canonical" href="https://karachilawfirms.pk/service/company-registration" />
+      </Helmet>
       <Breadcrumb title="Company Registration" bgUrl="/images/Company%20Registration.jpg" />
 
 
@@ -84,9 +90,9 @@ export default function CompanyRegistrationPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -138,7 +144,7 @@ export default function CompanyRegistrationPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Company Registration?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Company Registration?</div>
                 <p className="text-white cs_mb_25">
                   Get expert company registration services and business setup guidance.
                 </p>
@@ -149,63 +155,153 @@ export default function CompanyRegistrationPage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Company Registration.jpg"
+                    src="/images/Company%20Registration.jpg"
                     alt="Company Registration"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Company Registration</h2>
-                  <h4 className="text-accent cs_mb_20">Professional Business Setup Services</h4>
-                  <p className="cs_mb_30">
-                    Starting a business requires proper legal foundation. We provide comprehensive 
-                    company registration services for all types of businesses, from startups to 
-                    established enterprises. Our experienced team guides you through the entire 
-                    registration process, ensuring compliance with all legal requirements and 
-                    setting your business up for success.
+                  <h1 className="cs_mb_30">Company Registration in Karachi for SECP-Compliant Business Setup</h1>
+                  <h4 className="text-accent cs_mb_20">Professional Business Setup & SECP Compliance</h4>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    Starting a business requires proper legal foundation. Among the many Karachi law firms, Karachi 
+                    Law Firm distinguishes itself by offering tailored services in company incorporation, partnership 
+                    drafting, and SECP compliance. The basis for long-term success is selecting the appropriate 
+                    corporate structure.
+                  </p>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    We provide comprehensive company registration services for all types of businesses, from startups 
+                    to established enterprises. In order to ensure that your business is set up for expansion and legal 
+                    stability, we assist you with company incorporation, partnership formation, shareholder agreements, 
+                    governance frameworks, and SECP compliance. By choosing one of the best law firms in Karachi, you 
+                    ensure that your business structure is bulletproof from day one, protecting your intellectual 
+                    property and minimizing liability.
                   </p>
                   
-                  <div className="row cs_mb_40">
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Registration Services Include</h3>
-                        <ul>
-                          <li>Private Limited Companies</li>
-                          <li>Public Limited Companies</li>
-                          <li>Single Member Companies</li>
-                          <li>Partnership Registration</li>
-                          <li>Foreign Company Registration</li>
-                          <li>Post-Registration Services</li>
-                        </ul>
+                  <div className="cs_mb_40">
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Comprehensive Registration Services</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We handle all types of company registrations and provide complete setup support:
+                    </p>
+                    
+                    <div className="row cs_mb_30">
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Company Types</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Private Limited Companies</li>
+                            <li>Public Limited Companies</li>
+                            <li>Single Member Companies</li>
+                            <li>Partnership Registration</li>
+                            <li>Foreign Company Registration</li>
+                            <li>Sole Proprietorships</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Registration Process</h3>
-                        <ul>
-                          <li>Initial Consultation</li>
-                          <li>Name Availability Check</li>
-                          <li>Document Preparation</li>
-                          <li>Government Filing</li>
-                          <li>Registration Certificate</li>
-                          <li>Post-Setup Support</li>
-                        </ul>
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Registration Support</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Company Incorporation</li>
+                            <li>Shareholder Agreements</li>
+                            <li>Governance Frameworks</li>
+                            <li>SECP Compliance</li>
+                            <li>Post-Registration Services</li>
+                            <li>Ongoing Compliance Support</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="cs_mb_40">
-                    <h3 className="cs_mb_20">Why Choose Our Company Registration Services?</h3>
-                    <p className="cs_mb_20">
-                      Our company registration experts bring deep understanding of corporate law and 
-                      registration procedures. We ensure smooth registration process while providing 
-                      comprehensive post-registration support to get your business operational quickly.
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Our Registration Process</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We follow a systematic approach to ensure smooth and compliant company registration:
                     </p>
-                    <p className="cs_mb_20">
-                      We believe that proper business setup is crucial for long-term success. Our 
-                      approach combines legal expertise with practical business understanding to help 
-                      entrepreneurs establish their businesses correctly from the start.
-                    </p>
+                    
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>1</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Initial Consultation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We assess your business needs and recommend the most suitable corporate structure for your goals.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>2</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Name Availability Check</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We check name availability with SECP and reserve your preferred company name.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>3</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Document Preparation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We prepare all required documents including memorandum, articles of association, and shareholder agreements.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>4</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Government Filing</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We file all documents with SECP and handle all government requirements for company registration.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>5</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Registration Certificate</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We obtain your company registration certificate and ensure all legal formalities are completed.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>6</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Post-Setup Support</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We provide post-registration support including tax registration, bank account setup, and ongoing compliance.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="cs_mb_40" style={{ background: '#f8f9fa', padding: '30px', borderRadius: '10px' }}>
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Why Choose KLF for Company Registration?</h3>
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Expert SECP Knowledge:</strong> We have deep understanding of SECP requirements and ensure your company registration meets all compliance standards.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Efficient Process:</strong> We expedite the registration process by ensuring all documents are properly prepared and submitted correctly.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Complete Setup:</strong> From incorporation to governance frameworks, we provide comprehensive setup services for your business.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Ongoing Support:</strong> We provide post-registration support to ensure your company remains compliant and operational.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -230,6 +326,21 @@ export default function CompanyRegistrationPage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

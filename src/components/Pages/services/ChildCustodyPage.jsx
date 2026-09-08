@@ -1,4 +1,5 @@
     import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -9,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -66,7 +67,6 @@ const faqData = [
 ];
 
 export default function ChildCustodyPage() {
-  pageTitle('Child Custody - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -74,6 +74,18 @@ export default function ChildCustodyPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Child Custody Lawyer in Karachi | Protect Your Child Rights</title>
+        <meta
+          name="description"
+          content="Need a child custody lawyer in Karachi? We handle guardianship, visitation rights, custody disputes and child welfare under Pakistani family law."
+        />
+        <meta
+          name="keywords"
+          content="child custody lawyer in Karachi, guardianship lawyer Karachi, child custody cases Pakistan, family court custody lawyer, visitation rights lawyer Karachi, guardian and wards act lawyer, child custody law Pakistan, parental rights lawyer Karachi, custody dispute lawyer, child support lawyer Karachi, family law firm Karachi"
+        />
+        <link rel="canonical" href="https://karachilawfirms.pk/service/child-custody" />
+      </Helmet>
       <Breadcrumb title="Child Custody" bgUrl="/images/Child%20Custody.jpg" />
 
 
@@ -84,9 +96,9 @@ export default function ChildCustodyPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -138,7 +150,7 @@ export default function ChildCustodyPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Custody Help?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Custody Help?</div>
                 <p className="text-white cs_mb_25">
                   Get expert child custody representation and family law guidance.
                 </p>
@@ -149,62 +161,155 @@ export default function ChildCustodyPage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Child Custody.jpg"
+                    src="/images/Child%20Custody.jpg"
                     alt="Child Custody"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Child Custody</h2>
+                  <h1 className="cs_mb_30">Child Custody Lawyer in Karachi for Guardianship & Visitation Rights</h1>
                   <h4 className="text-accent cs_mb_20">Protecting Your Child's Best Interests</h4>
-                  <p className="cs_mb_30">
-                    Child custody cases require sensitive handling and deep understanding of family dynamics. 
-                    We advocate for the child's best interests while ensuring your parental rights are 
-                    protected. Our experienced family law attorneys understand the emotional complexities 
-                    of custody disputes and work to achieve outcomes that serve the child's welfare.
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    Perhaps the most contentious aspect of family law is the custody of children. The courts in 
+                    Karachi prioritize the "welfare of the minor" above all else. However, determining what 
+                    constitutes "welfare" requires expert legal advocacy. Strong legal arguments and an emphasis 
+                    on the child's best interests are necessary in child custody cases.
+                  </p>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    In Pakistan, there is a distinction between Hizanat (physical custody) and Wilayat (guardianship). 
+                    While a mother may have physical custody of young children, the father is often recognized as the 
+                    natural guardian. Our attorneys ensure that your parental rights are completely upheld by 
+                    representing clients in Guardian & Wards Act custody and visitation proceedings. Whether you are 
+                    seeking a visitation schedule or contesting for full guardianship, our guardianship attorney 
+                    ensures that the child's best interests are represented in court, preventing the child from 
+                    becoming a pawn in parental disputes.
                   </p>
                   
-                  <div className="row cs_mb_40">
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Custody Services Include</h3>
-                        <ul>
-                          <li>Custody Dispute Resolution</li>
-                          <li>Visitation Rights</li>
-                          <li>Parental Rights Protection</li>
-                          <li>International Custody Cases</li>
-                          <li>Custody Modification</li>
-                          <li>Child Support Coordination</li>
-                        </ul>
+                  <div className="cs_mb_40">
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Comprehensive Child Custody Services</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      Our child custody services are designed to protect children's best interests while ensuring 
+                      fair and just custody arrangements:
+                    </p>
+                    
+                    <div className="row cs_mb_30">
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Custody Services</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Custody Dispute Resolution</li>
+                            <li>Guardian & Wards Act Proceedings</li>
+                            <li>Visitation Rights Arrangements</li>
+                            <li>Parental Rights Protection</li>
+                            <li>Custody Modification Petitions</li>
+                            <li>Emergency Custody Orders</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Custody Process</h3>
-                        <ul>
-                          <li>Initial Case Assessment</li>
-                          <li>Child's Best Interest Analysis</li>
-                          <li>Mediation Attempt</li>
-                          <li>Court Representation</li>
-                          <li>Custody Order Enforcement</li>
-                          <li>Ongoing Support</li>
-                        </ul>
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Related Legal Matters</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Child Support Coordination</li>
+                            <li>International Custody Cases</li>
+                            <li>Custody Order Enforcement</li>
+                            <li>Parental Alienation Cases</li>
+                            <li>Relocation Disputes</li>
+                            <li>Grandparent Visitation Rights</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="cs_mb_40">
-                    <h3 className="cs_mb_20">Why Choose Our Child Custody Services?</h3>
-                    <p className="cs_mb_20">
-                      Our child custody lawyers bring years of experience in family law and understand the 
-                      emotional complexities of custody cases. We prioritize the child's best interests while 
-                      ensuring your parental rights are protected and advocated for effectively.
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Our Custody Process</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We follow a comprehensive process to ensure the best outcome for your child:
                     </p>
-                    <p className="cs_mb_20">
-                      We believe that children deserve stability and love from both parents when possible. 
-                      Our approach combines legal expertise with emotional sensitivity to help you achieve 
-                      the best possible outcome for your child's future.
-                    </p>
+                    
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>1</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Case Assessment</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We start with a thorough assessment of your child's needs, living conditions, and family dynamics.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>2</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Best Interest Analysis</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We analyze factors like parental capability, child's age, living environment, and emotional bonds.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>3</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Mediation Attempt</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We try to assist peaceful solutions through mediation, prioritizing the child's stability and well-being.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>4</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Court Representation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We represent you in family courts, presenting strong legal arguments focused on the child's best interests.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>5</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Order Enforcement</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We help enforce custody orders and protect your rights if the other parent violates arrangements.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>6</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Ongoing Support</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We provide ongoing support for custody modifications and any future legal needs related to your child.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="cs_mb_40" style={{ background: '#f8f9fa', padding: '30px', borderRadius: '10px' }}>
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Why Choose KLF for Child Custody?</h3>
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Child-Focused Approach:</strong> We prioritize the child's best interests, considering their age, needs, and emotional well-being in every decision.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Experienced in Guardian & Wards Act:</strong> Our attorneys are well-versed in Pakistani custody laws and family court procedures.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Compassionate Representation:</strong> We understand the emotional toll of custody disputes and provide sensitive, respectful legal support.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Strong Legal Advocacy:</strong> We build compelling cases that demonstrate your capability as a parent and your commitment to your child's welfare.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -232,7 +337,11 @@ export default function ChildCustodyPage() {
 
       
     
-      {/* Contact Section Bottom */}
+      {/* Google Reviews Section */}
+      
+      <GoogleReviews />
+      
+{/* Contact Section Bottom */}
       <Section
         pt="50"
         ptLg="30"

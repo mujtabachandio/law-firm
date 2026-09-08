@@ -69,8 +69,8 @@ export default function Header({ variant }) {
                   <div className="cs_header_contact_right">
                     <button 
                       onClick={() => {
-                        // Simple and reliable: open WhatsApp directly
-                        window.open('https://wa.me/923000927678', '_blank');
+                        // Open Calendly booking page
+                        window.open('https://calendly.com/karachilawfirms-info/30min', '_blank');
                       }}
                       className="btn book-now-btn"
                       style={{
@@ -95,7 +95,7 @@ export default function Header({ variant }) {
                         e.target.style.transform = 'translateY(0)';
                         e.target.style.boxShadow = '0 2px 8px rgba(218, 165, 32, 0.3)';
                       }}
-                      title="Book a consultation now"
+                      title="Book a consultation via Calendly"
                     >
                       Book a Call Now
                     </button>

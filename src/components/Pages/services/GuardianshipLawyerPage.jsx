@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -8,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -65,7 +66,6 @@ const faqData = [
 ];
 
 export default function GuardianshipLawyerPage() {
-  pageTitle('Guardianship Lawyer - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -73,6 +73,18 @@ export default function GuardianshipLawyerPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Guardianship Lawyer in Karachi | Legal Protection Experts</title>
+        <meta
+          name="description"
+          content="Hire a guardianship lawyer in Karachi for minors, elderly and disability cases. We handle guardianship certificates, courts and inheritance matters."
+        />
+        <meta
+          name="keywords"
+          content="guardianship lawyer in Karachi, legal guardian lawyer Pakistan, minor guardianship lawyer, guardianship certificate Karachi, guardian court lawyer, inheritance guardianship lawyer, family law guardian Karachi, elderly guardianship lawyer, disability guardianship Pakistan, legal adoption lawyer Karachi, financial guardianship lawyer"
+        />
+        <link rel="canonical" href="https://karachilawfirms.pk/service/guardianship-lawyer" />
+      </Helmet>
       <Breadcrumb title="Guardianship Lawyer" bgUrl="/images/Guardianship%20Lawyer.jpg" />
 
 
@@ -83,9 +95,9 @@ export default function GuardianshipLawyerPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -137,7 +149,7 @@ export default function GuardianshipLawyerPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Guardianship Help?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Guardianship Help?</div>
                 <p className="text-white cs_mb_25">
                   Get expert guardianship legal representation and family law guidance.
                 </p>
@@ -148,62 +160,154 @@ export default function GuardianshipLawyerPage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Guardianship Lawyer.jpg"
+                    src="/images/Guardianship%20Lawyer.jpg"
                     alt="Guardianship Lawyer"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Guardianship Lawyer</h2>
-                  <h4 className="text-accent cs_mb_20">Protecting Vulnerable Individuals</h4>
-                  <p className="cs_mb_30">
-                    Guardianship cases involve protecting the rights and interests of vulnerable individuals 
-                    who cannot care for themselves. We help families navigate the complex legal process of 
-                    establishing guardianship for minors, adults with disabilities, or elderly family members. 
-                    Our compassionate approach ensures the best interests of the ward are always prioritized.
+                  <h1 className="cs_mb_30">Guardianship Lawyer in Karachi for Minors & Family Protection</h1>
+                  <h4 className="text-accent cs_mb_20">Protecting Vulnerable Individuals & Family Rights</h4>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    For families and business owners, ensuring the long-term security of minors and the proper 
+                    management of estates is a common concern. Legal battles over the custody of children or the 
+                    management of a deceased person's estate can last for years if not handled correctly at the 
+                    outset. Consulting a guardianship attorney is the most effective way to prevent these issues.
+                  </p>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    A guardianship attorney helps in the legal appointment of guardians and the creation of trusts 
+                    or legal frameworks that protect the interests of those who cannot protect themselves. We represent 
+                    clients in guardianship courts around Karachi and deal with guardianship certificates, legal 
+                    adoption procedures, and guardianship matters related to inheritance. For business owners, our 
+                    guardianship attorneys assist in drafting legal frameworks that protect their children's interests 
+                    and ensure that business leadership transitions smoothly in unforeseen circumstances. This service 
+                    is a cornerstone of legacy protection and the seamless transition of authority and assets.
                   </p>
                   
-                  <div className="row cs_mb_40">
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Guardianship Services Include</h3>
-                        <ul>
-                          <li>Guardianship Petitions</li>
-                          <li>Guardian Appointment</li>
-                          <li>Guardianship Contests</li>
-                          <li>Financial Guardianship</li>
-                          <li>Guardianship Modifications</li>
-                          <li>Guardianship Termination</li>
-                        </ul>
+                  <div className="cs_mb_40">
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Comprehensive Guardianship Services</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      Our guardianship services cover all aspects of protecting vulnerable individuals:
+                    </p>
+                    
+                    <div className="row cs_mb_30">
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Guardianship Services</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Guardianship Petitions</li>
+                            <li>Guardian Appointment Proceedings</li>
+                            <li>Guardianship Certificates</li>
+                            <li>Guardianship Contests</li>
+                            <li>Guardianship Modifications</li>
+                            <li>Guardianship Termination</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our Guardianship Process</h3>
-                        <ul>
-                          <li>Initial Assessment</li>
-                          <li>Petition Preparation</li>
-                          <li>Court Filing</li>
-                          <li>Guardian Evaluation</li>
-                          <li>Court Representation</li>
-                          <li>Ongoing Support</li>
-                        </ul>
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Related Legal Matters</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Financial Guardianship</li>
+                            <li>Legal Adoption Procedures</li>
+                            <li>Inheritance-Related Guardianship</li>
+                            <li>Minor Guardianship</li>
+                            <li>Elderly Guardianship</li>
+                            <li>Disability Guardianship</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="cs_mb_40">
-                    <h3 className="cs_mb_20">Why Choose Our Guardianship Services?</h3>
-                    <p className="cs_mb_20">
-                      Our guardianship lawyers bring deep understanding of family law and the sensitive 
-                      nature of guardianship cases. We work to protect vulnerable individuals while ensuring 
-                      the legal process is handled with care and compassion.
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Our Guardianship Process</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We follow a systematic approach to establish and manage guardianship:
                     </p>
-                    <p className="cs_mb_20">
-                      We believe that every individual deserves protection and care. Our approach combines 
-                      legal expertise with emotional sensitivity to help families navigate guardianship 
-                      proceedings and ensure the best possible outcome for all involved.
-                    </p>
+                    
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>1</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Initial Assessment</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We assess the ward's needs, evaluate potential guardians, and determine the type of guardianship required.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>2</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Petition Preparation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We prepare comprehensive guardianship petitions with all required documentation and evidence.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>3</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Court Filing</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We file petitions in guardianship courts around Karachi and ensure all legal requirements are met.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>4</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Guardian Evaluation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We help demonstrate your suitability as a guardian through financial stability and capability assessments.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>5</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Court Representation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We represent you in guardianship court proceedings, advocating for the ward's best interests.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>6</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Ongoing Support</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We provide ongoing support for guardianship modifications, financial management, and compliance.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="cs_mb_40" style={{ background: '#f8f9fa', padding: '30px', borderRadius: '10px' }}>
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Why Choose KLF for Guardianship Services?</h3>
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Experienced in Guardianship Courts:</strong> We represent clients in guardianship courts around Karachi with deep knowledge of local procedures.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Compassionate Approach:</strong> We understand the sensitive nature of guardianship and handle each case with care and respect.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Comprehensive Services:</strong> From guardianship certificates to inheritance-related matters, we handle all aspects of guardianship.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Ward-Focused:</strong> The ward's best interests are always our top priority in every guardianship decision and proceeding.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -228,6 +332,21 @@ export default function GuardianshipLawyerPage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

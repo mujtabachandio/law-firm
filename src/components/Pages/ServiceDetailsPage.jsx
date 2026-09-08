@@ -8,7 +8,6 @@ import IconboxStyle5 from '../Iconbox/IconboxStyle5';
 import { NavLink } from 'react-router-dom';
 import FormStyle6 from '../Form/FormStyle6';
 import Button from '../Button';
-import { pageTitle } from '../../helpers/PageTitle';
 
 // Comprehensive service data with unique content for each service
 const serviceData = {
@@ -513,7 +512,6 @@ export default function ServiceDetailsPage() {
   console.log('Current service data:', currentService);
   console.log('Service image URL:', currentService.imageUrl);
 
-  pageTitle(`${currentService.title} - Karachi Law Firms`);
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -528,9 +526,9 @@ export default function ServiceDetailsPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -582,7 +580,7 @@ export default function ServiceDetailsPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need Legal Help?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need Legal Help?</div>
                 <p className="text-white cs_mb_25">
                   Get expert legal advice and representation for all your legal needs.
                 </p>
@@ -599,7 +597,7 @@ export default function ServiceDetailsPage() {
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">{currentService.title}</h2>
+                  <h1 className="cs_mb_30">{currentService.title}</h1>
                   <h4 className="text-accent cs_mb_20">{currentService.subtitle}</h4>
                   <p className="cs_mb_30">
                     {currentService.description}
@@ -682,9 +680,9 @@ export default function ServiceDetailsPage() {
                 />
                 <IconboxStyle5
                   iconUrl="/pak-flag.png"
-                  title="Visit Office"
-                  titleUp="Our Location"
-                  desc="Office 104, 1st Floor, Fareed Chambers, Abdullah Haroon Rd, Saddar Karachi, 74400"
+                  title="Visit Our Offices"
+                  titleUp="Our Locations"
+                  desc="Head Office: 104, 1st Floor, Fareed Chambers, Abdullah Haroon Road, Saddar, Karachi 74400 | Islamabad Office: No. 02, Block No. 02, Street No. 31, G-8/4, Pervaiz market Near Rescue 15, Islamabad 44000"
                 />
               </div>
             </div>

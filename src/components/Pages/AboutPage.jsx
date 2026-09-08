@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../Breadcrumb';
 import Section from '../Section';
 import AboutUsSection from '../Section/AboutSection';
@@ -6,7 +7,6 @@ import ServiceSection from '../Section/ServiceSection';
 import TeamSection from '../Section/TeamSection';
 import TestimonialSection from '../Section/TestimonialSection';
 import ContactSectionBottom from '../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../helpers/PageTitle';
 
 const serviceData = [
   {
@@ -64,6 +64,7 @@ const teamData = [
     designation: 'Associate',
     srcUrl: '/team/mansoor-ahmed',
     initials: 'MA',
+    linkedIn: 'https://www.linkedin.com/in/mansoor-ahmed-b5bbb4b3/',
   },
 ];
 
@@ -101,12 +102,19 @@ const testimonialData = [
 ];
 
 export default function AboutPage() {
-  pageTitle('About Karachi Law Firms');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
+      <Helmet>
+        <title>About Karachi Law Firms, Trusted Legal Team in Karachi</title>
+        <meta
+          name="description"
+          content="Learn about Karachi Law Firms, a team providing expert legal services across family, criminal, property, corporate and constitutional law in Karachi."
+        />
+        <link rel="canonical" href="https://karachilawfirms.pk/about" />
+      </Helmet>
       <Breadcrumb title="About Karachi Law Firms" bgUrl="/images/attorney-page.jpg" />
       {/* Pakistani flag indicator near location context */}
       <div className="text-center cs_pt_10" title="Pakistan" aria-label="Pakistan">
@@ -120,6 +128,9 @@ export default function AboutPage() {
         pbLg="80"
         className="position-relative"
       >
+        <div className="container">
+          <h1 className="cs_fs_48 cs_fw_700 cs_mb_40 text-center">About Karachi Law Firms</h1>
+        </div>
         <AboutUsSection
           thumbUrl="/images/about2.jpg"
           experienceBgUrl=""

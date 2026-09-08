@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
@@ -8,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
-import { pageTitle } from '../../../helpers/PageTitle';
+import GoogleReviews from '../../GoogleReviews';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -65,7 +66,6 @@ const faqData = [
 ];
 
 export default function FoundationTrustNgoPage() {
-  pageTitle('Foundation Trust NGO - Karachi Law Firms');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -73,7 +73,13 @@ export default function FoundationTrustNgoPage() {
 
   return (
     <>
-      <Breadcrumb title="Foundation Trust NGO" bgUrl="/images/Foundation%20Trust%20NGO.jpg" />
+      <Helmet>
+        <title>Foundation Trust NGO Registration in Karachi | Expert Help</title>
+        <meta name="description" content="Get expert foundation, trust and NGO registration in Karachi. Full setup, government filing, tax exemption, compliance and charitable mission support." />
+        <meta name="keywords" content="foundation trust registration Karachi, NGO registration Karachi, charitable trust registration, NGO setup Pakistan, trust deed preparation Karachi, memorandum of association NGO, government NGO registration, tax exemption NGO Pakistan, foreign NGO registration, compliance support NGO, non-profit registration Karachi" />
+        <link rel="canonical" href="https://karachilawfirms.pk/service/foundation-trust-ngo" />
+      </Helmet>
+      <Breadcrumb title="Foundation Trust NGO" bgUrl="/images/Foundation Trust%20NGO.jpg" />
 
 
 
@@ -83,9 +89,9 @@ export default function FoundationTrustNgoPage() {
           <div className="row">
             <div className="col-xl-4 col-lg-5 cs_mb_lg_60">
               <div className="cs_service_list cs_mb_40">
-                <h2 className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
+                <div className="cs_fs_20 text-white text-uppercase bg-accent cs_pl_30 cs_pr_30 cs_pt_23 cs_pb_23 m-0">
                   All Legal Services
-                </h2>
+                </div>
                 <ul className="m-0 cs_pl_30 cs_pr_30 cs_pt_30 cs_pb_30">
                   {serviceList?.map((item, index) => (
                     <li key={index}>
@@ -137,7 +143,7 @@ export default function FoundationTrustNgoPage() {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-white cs_mb_15">Need NGO Registration?</h3>
+                <div className="text-white cs_mb_15 cs_fs_24 cs_fw_600">Need NGO Registration?</div>
                 <p className="text-white cs_mb_25">
                   Get expert NGO and foundation registration services and compliance guidance.
                 </p>
@@ -148,64 +154,153 @@ export default function FoundationTrustNgoPage() {
               <div className="cs_service_details">
                 <div className="cs_service_details_thumb cs_mb_40">
                   <img
-                    src="/images/Foundation Trust NGO.jpg"
+                    src="/images/Foundation Trust%20NGO.jpg"
                     alt="Foundation Trust NGO"
                     className="w-100 cs_rounded_10"
                   />
                 </div>
                 <div className="cs_service_details_content">
-                  <h2 className="cs_mb_30">Foundation Trust NGO</h2>
-                  <h4 className="text-accent cs_mb_20">Comprehensive NGO Registration Services</h4>
-                  <p className="cs_mb_30">
+                  <h1 className="cs_mb_30">Foundation Trust & NGO Registration in Karachi for Charitable Organizations</h1>
+                  <h4 className="text-accent cs_mb_20">Comprehensive NGO & Foundation Registration Services</h4>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
                     Establishing a non-governmental organization requires careful legal planning and 
-                    compliance with regulatory requirements. We provide comprehensive NGO registration 
-                    services for foundations, trusts, and charitable organizations. Our experienced 
-                    team guides you through the entire registration process, ensuring your organization 
-                    is properly established and compliant with all legal requirements.
+                    compliance with regulatory requirements. Whether you're setting up a charitable foundation, 
+                    educational trust, or social welfare organization, proper registration is essential for 
+                    legal recognition and tax benefits.
+                  </p>
+                  <p className="cs_mb_30" style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+                    We provide comprehensive NGO registration services for foundations, trusts, and charitable 
+                    organizations. Our experienced team guides you through the entire registration process, 
+                    ensuring your organization is properly established, compliant with all legal requirements, 
+                    and set up to achieve its charitable mission effectively. We handle trust deed preparation, 
+                    memorandum of association, government registration, and tax exemption applications, making 
+                    the process seamless and efficient.
                   </p>
                   
-                  <div className="row cs_mb_40">
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our NGO Registration Services Include</h3>
-                        <ul>
-                          <li>Charitable Foundations</li>
-                          <li>Educational Trusts</li>
-                          <li>Healthcare Organizations</li>
-                          <li>Social Welfare Societies</li>
-                          <li>Religious Institutions</li>
-                          <li>Foreign NGO Registration</li>
-                        </ul>
+                  <div className="cs_mb_40">
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Comprehensive NGO Registration Services</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We handle registration for all types of non-profit organizations and provide complete setup support:
+                    </p>
+                    
+                    <div className="row cs_mb_30">
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Organization Types</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Charitable Foundations</li>
+                            <li>Educational Trusts</li>
+                            <li>Healthcare Organizations</li>
+                            <li>Social Welfare Societies</li>
+                            <li>Religious Institutions</li>
+                            <li>Community Development Organizations</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="cs_service_details_list">
-                        <h3 className="cs_mb_20">Our NGO Registration Process</h3>
-                        <ul>
-                          <li>Initial Consultation</li>
-                          <li>Document Preparation</li>
-                          <li>Government Filing</li>
-                          <li>Registration Certificate</li>
-                          <li>Tax Exemption Applications</li>
-                          <li>Ongoing Compliance Support</li>
-                        </ul>
+                      <div className="col-lg-6">
+                        <div className="cs_service_details_list">
+                          <h4 className="cs_mb_15" style={{ color: '#1B365D', fontSize: '18px' }}>Registration Support</h4>
+                          <ul style={{ lineHeight: '2' }}>
+                            <li>Trust Deed Preparation</li>
+                            <li>Memorandum of Association</li>
+                            <li>Government Registration</li>
+                            <li>Tax Exemption Applications</li>
+                            <li>Foreign NGO Registration</li>
+                            <li>Ongoing Compliance Support</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="cs_mb_40">
-                    <h3 className="cs_mb_20">Why Choose Our NGO Registration Services?</h3>
-                    <p className="cs_mb_20">
-                      Our NGO registration experts bring deep understanding of charitable organization 
-                      law and regulatory requirements. We ensure smooth registration process while 
-                      providing comprehensive post-registration support to help your organization 
-                      achieve its mission effectively.
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Our NGO Registration Process</h3>
+                    <p className="cs_mb_25" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                      We follow a systematic approach to ensure proper NGO establishment and compliance:
                     </p>
-                    <p className="cs_mb_20">
-                      We believe that proper NGO setup is crucial for social impact. Our approach 
-                      combines legal expertise with understanding of the non-profit sector to help 
-                      organizations establish themselves correctly and focus on their charitable mission.
-                    </p>
+                    
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>1</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Initial Consultation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We assess your organization's purpose and recommend the most suitable legal structure for your charitable mission.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>2</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Document Preparation</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We prepare trust deeds, memorandums of association, and all required documentation for NGO registration.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>3</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Government Filing</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We file all documents with relevant government authorities and handle all registration requirements.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>4</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Registration Certificate</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We obtain your NGO registration certificate and ensure all legal formalities are completed.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>5</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Tax Exemption Applications</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We assist with tax exemption applications and ensure your organization qualifies for charitable tax benefits.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <div className="d-flex align-items-start">
+                          <div className="cs_mr_15" style={{ minWidth: '40px', height: '40px', background: '#DAA520', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>6</div>
+                          <div>
+                            <h5 className="cs_mb_10" style={{ color: '#1B365D', fontSize: '18px' }}>Ongoing Compliance Support</h5>
+                            <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.7' }}>We provide ongoing compliance support including annual filings, audit requirements, and regulatory updates.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="cs_mb_40" style={{ background: '#f8f9fa', padding: '30px', borderRadius: '10px' }}>
+                    <h3 className="cs_mb_25" style={{ color: '#1B365D', fontSize: '24px' }}>Why Choose KLF for NGO Registration?</h3>
+                    <div className="row">
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Expert Knowledge:</strong> Our NGO registration experts bring deep understanding of charitable organization law and regulatory requirements.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Mission-Focused:</strong> We understand the non-profit sector and help organizations establish themselves correctly to focus on their charitable mission.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Complete Setup:</strong> From trust deed preparation to tax exemption, we provide comprehensive setup services for your NGO.
+                        </p>
+                      </div>
+                      <div className="col-lg-6 cs_mb_20">
+                        <p className="cs_mb_15" style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
+                          <strong style={{ color: '#1B365D' }}>Ongoing Support:</strong> We provide continuous compliance support to ensure your NGO operates within legal boundaries and maintains its charitable status.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -230,6 +325,21 @@ export default function FoundationTrustNgoPage() {
           </div>
         </div>
       </Section>
+
+      
+    
+      {/* Google Reviews Section */}
+
+
+      
+    
+      <GoogleReviews />
+
+
+      
+    
+      
+
 
       
     

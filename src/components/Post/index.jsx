@@ -1,17 +1,7 @@
-import { Icon } from '@iconify/react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Post({
-  imgUrl,
-  title,
-  desc,
-  postUrl,
-  postedBy,
-  adminUrl,
-  numberOfComment,
-  commentUrl,
-}) {
+export default function Post({ imgUrl, title, desc, postUrl }) {
   return (
     <div className="cs_post cs_style_1 bg-white shadow-sm cs_mb_30">
       <Link
@@ -25,20 +15,6 @@ export default function Post({
       </Link>
       <div className="cs_post_in">
         <div className="cs_post_info cs_pl_33 cs_pr_33 cs_pt_40 cs_pb_40">
-          <ul className="cs_post_meta d-flex flex-wrap cs_fs_12 p-0 cs_mb_16">
-            <li>
-              <span>
-                <Icon icon="fa:user" /> By{' '}
-              </span>
-              <Link to={adminUrl}>{postedBy}</Link>
-            </li>
-            <li>
-              <span>
-                <Icon icon="fa:commenting" />
-              </span>
-              <Link to={commentUrl}>{numberOfComment} comments</Link>
-            </li>
-          </ul>
           <h2 className="cs_post_title cs_lh_base cs_fs_20 cs_fs_lg_18 cs_mb_10">
             <Link to={postUrl}>{title}</Link>
           </h2>

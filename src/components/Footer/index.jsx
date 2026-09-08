@@ -59,7 +59,7 @@ export default function Footer() {
             <div className="col-lg-5">
               <div className="d-flex flex-column h-100">
                 <div className="d-flex align-items-center" style={{ marginBottom: 8 }}>
-                  <img src="/images/main-logo.png" alt="Karachi Law Firms" style={{ height: 36, width: 'auto' }} />
+                  <img src="/images/main-logo.png" alt="Karachi Law Firms" width={120} height={36} style={{ height: 36, width: 'auto' }} />
                 </div>
                 <p style={{ lineHeight: '1.5', color: '#d7e3e3', fontSize: 14, marginBottom: 12 }}>
                   Reimagining legal practice for the 21st century with digital transparency and
@@ -76,7 +76,7 @@ export default function Footer() {
             <div className="col-lg-4">
               <div className="row">
                 <div className="col-12">
-                  <h5 className="text-white" style={{ fontWeight: 600, marginBottom: 8 }}>Site Map</h5>
+                  <h3 className="text-white" style={{ fontWeight: 600, marginBottom: 8, fontSize: '18px' }}>Site Map</h3>
                   <ul className="list-unstyled cs_footer_list two-col">
                     {siteMapLinks.map((item) => (
                       <li key={item.href} className="cs_mb_5">
@@ -91,7 +91,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="col-lg-3">
-              <h5 className="text-white" style={{ fontWeight: 600, marginBottom: 8 }}>Legal</h5>
+              <h3 className="text-white" style={{ fontWeight: 600, marginBottom: 8, fontSize: '18px' }}>Legal</h3>
               <ul className="list-unstyled cs_footer_list">
                 {legalLinks.map((item) => (
                   <li key={item.href} className="cs_mb_5">
@@ -107,6 +107,28 @@ export default function Footer() {
                 <div className="cs_footer_contact_info mt-2">
                   <div className="mb-1" style={{ color: '#9bc0c0', fontSize: 12 }}>Email</div>
                   <a href="mailto:info@karachilawfirms.pk" style={{ color: 'white', textDecoration: 'none' }}>info@karachilawfirms.pk</a>
+                </div>
+                <div className="cs_footer_contact_info mt-2">
+                  <a 
+                    href="https://maps.app.goo.gl/8XPrxhUbbA5rHHAr5" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{ 
+                      color: 'white', 
+                      textDecoration: 'none',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      fontSize: '14px',
+                      transition: 'opacity 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.target.style.opacity = '0.8'}
+                    onMouseLeave={(e) => e.target.style.opacity = '1'}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ marginRight: '6px' }}>
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    View on Google Maps
+                  </a>
                 </div>
               </div>
             </div>
@@ -125,15 +147,25 @@ export default function Footer() {
           userSelect: 'text'
         }}
       >
-        <div className="container d-flex justify-content-center align-items-center" style={{ gap: 8 }}>
-          <img src="/pak-flag.png" alt="Pakistan" title="Pakistan" style={{ height: '20px', width: 'auto' }} />
+        <div className="container">
+          <div className="d-flex align-items-center justify-content-center" style={{ gap: 8 }}>
+            <div className="d-flex flex-column" style={{ gap: 8 }}>
+              <span style={{
+                fontSize: 14,
+                color: 'rgba(255,255,255,0.85)',
+                textShadow: '0 1px 2px rgba(0,0,0,0.25)'
+              }}>
+                <strong>Head Office:</strong> 104, 1st Floor, Fareed Chambers, Abdullah Haroon Road, Saddar, Karachi 74400
+              </span>
           <span style={{
             fontSize: 14,
             color: 'rgba(255,255,255,0.85)',
             textShadow: '0 1px 2px rgba(0,0,0,0.25)'
           }}>
-            Office 104, 1st Floor, Fareed Chambers, Abdullah Haroon Road, Saddar, Karachi 74400
+                <strong>Islamabad Office:</strong> No. 02, Block No. 02, Street No. 31, G-8/4, Pervaiz market Near Rescue 15, Islamabad 44000
           </span>
+            </div>
+          </div>
         </div>
       </div>
 
