@@ -770,7 +770,7 @@ const FamilyLawPage = () => {
         pbLg="30"
         className="background-filled overflow-hidden position-relative"
         style={{ 
-          backgroundImage: 'url("/images/Family%20Law.jpg")',
+          backgroundImage: 'url("/images/Family-Law-Services.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'

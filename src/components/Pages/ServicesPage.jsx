@@ -11,7 +11,7 @@ const serviceData = [
     title: 'Family Law',
     subTitle:
       'Expert family law services including divorce, child custody, guardianship, and domestic violence cases with compassionate legal guidance.',
-    imgUrl: '/images/Family Law.jpg',
+    imgUrl: '/images/Family-Law-Services.jpg',
     href: '/service/family-law',
   },
   {
