@@ -87,11 +87,14 @@ function App() {
         <Route path="/service/asylum-lawyer" element={<AsylumLawyerPage />} />
         <Route path="/service/private-investigator" element={<PrivateInvestigatorPage />} />
         <Route path="/service/legal-advisor" element={<LegalAdvisorPage />} />
-        {/* Legacy capitalised alias -> redirect, so only one URL is indexable. */}
-        <Route
-          path="/service/Family-Law"
-          element={<Navigate to="/service/family-law" replace />}
-        />
+        {/*
+          The capitalised /service/Family-Law is redirected by .htaccess, not here.
+          React Router matches paths case-insensitively, so a <Navigate> route for
+          the capitalised spelling also matched its own lowercase target and the
+          two bounced off each other forever, leaving the page blank. A server 301
+          is also the right answer for SEO: one indexable URL, resolved before the
+          app ever loads.
+        */}
         
         {/* Main Service Category Pages */}
         <Route path="/service/family-law" element={<FamilyLawPage />} />
