@@ -79,7 +79,6 @@ const DocumentationPage = () => {
         <title>Documentation & Process Services in Karachi</title>
         <meta name="description" content="Professional documentation and process services in Karachi. Expert legal documentation, notarization, and process services for all your legal needs." />
         <meta name="keywords" content="Documentation Services, Process Services, Legal Documentation, Notarization Services, Legal Forms" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/documentation-process" />
       </Helmet>
       
       <Breadcrumb title="Documentation & Process Services" bgUrl="/images/Documentation%20Lawyer.jpg" />

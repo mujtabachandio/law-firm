@@ -1,6 +1,8 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
+// Not lazy: this only redirects, so it should not wait on a chunk download.
+import StudioRedirect from './components/Pages/StudioRedirect';
 const Home2 = lazy(() => import('./components/Pages/Home2'));
 const ServicesPage = lazy(() => import('./components/Pages/ServicesPage'));
 const ServiceDetailsPage = lazy(() => import('./components/Pages/ServiceDetailsPage'));
@@ -49,6 +51,9 @@ function App() {
   return (
     <Suspense fallback={<div className="container py-5">Loading...</div>}>
       <Routes>
+        {/* Sanity Studio runs as its own app; /studio forwards to it. */}
+        <Route path="/studio" element={<StudioRedirect />} />
+
         <Route path="/" element={<Layout />}>
           <Route index element={<Home2 />} />
 
@@ -82,7 +87,11 @@ function App() {
         <Route path="/service/asylum-lawyer" element={<AsylumLawyerPage />} />
         <Route path="/service/private-investigator" element={<PrivateInvestigatorPage />} />
         <Route path="/service/legal-advisor" element={<LegalAdvisorPage />} />
-        <Route path="/service/Family-Law" element={<FamilyLawPage />} />
+        {/* Legacy capitalised alias -> redirect, so only one URL is indexable. */}
+        <Route
+          path="/service/Family-Law"
+          element={<Navigate to="/service/family-law" replace />}
+        />
         
         {/* Main Service Category Pages */}
         <Route path="/service/family-law" element={<FamilyLawPage />} />
@@ -99,7 +108,8 @@ function App() {
         <Route path="/blog/:blogId" element={<BlogDetailsPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/lawcademics" element={<LawcademicsHubPage />} />
-        <Route path="/lawcademics-hub" element={<LawcademicsHubPage />} />
+        {/* Duplicate of /lawcademics -> redirect rather than canonicalise. */}
+        <Route path="/lawcademics-hub" element={<Navigate to="/lawcademics" replace />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

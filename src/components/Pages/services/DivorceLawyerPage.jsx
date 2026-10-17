@@ -76,9 +76,7 @@ export default function DivorceLawyerPage() {
       <Helmet>
         <title>Divorce Lawyer in Karachi | Expert Family Law Services</title>
         <meta name="description" content="Looking for a trusted divorce lawyer in Karachi? Get expert legal help for Talaq, Khula, child custody, maintenance, and family law matters." />
-        <meta name="keywords" content="Divorce lawyer in Karachi, family lawyer Karachi, khula lawyer Karachi, talaq lawyer Pakistan, child custody lawyer Karachi, divorce law firm Karachi, family court lawyer, maintenance lawyer Karachi, alimony lawyer Pakistan, legal divorce services." />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/divorce-lawyer" />
-      </Helmet>
+        <meta name="keywords" content="Divorce lawyer in Karachi, family lawyer Karachi, khula lawyer Karachi, talaq lawyer Pakistan, child custody lawyer Karachi, divorce law firm Karachi, family court lawyer, maintenance lawyer Karachi, alimony lawyer Pakistan, legal divorce services." />      </Helmet>
       
       <Breadcrumb title="Divorce Lawyer" bgUrl="/images/Divorce%20Lawyer.jpg" />
 

@@ -64,7 +64,6 @@ export default function ContactPage() {
           name="description"
           content="Contact Karachi Law Firms for expert legal consultation and representation. Reach our team today to discuss your case."
         />
-        <link rel="canonical" href="https://karachilawfirms.pk/contact" />
       </Helmet>
       <Breadcrumb title="Contact Us" bgUrl="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&h=400&fit=crop" />
       

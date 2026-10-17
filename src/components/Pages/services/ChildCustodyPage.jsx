@@ -83,9 +83,7 @@ export default function ChildCustodyPage() {
         <meta
           name="keywords"
           content="child custody lawyer in Karachi, guardianship lawyer Karachi, child custody cases Pakistan, family court custody lawyer, visitation rights lawyer Karachi, guardian and wards act lawyer, child custody law Pakistan, parental rights lawyer Karachi, custody dispute lawyer, child support lawyer Karachi, family law firm Karachi"
-        />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/child-custody" />
-      </Helmet>
+        />      </Helmet>
       <Breadcrumb title="Child Custody" bgUrl="/images/Child%20Custody.jpg" />
 
 

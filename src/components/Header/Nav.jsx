@@ -102,7 +102,7 @@ export default function Nav({ setMobileToggle }) {
             </li>
             <li className="sub-service">
               <Link to="/service/criminal-lawyer" onClick={() => setMobileToggle(false)}>
-              Criminal & Civil Law
+              Criminal Law
               </Link>
             </li>
             <li className="sub-service">

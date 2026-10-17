@@ -106,7 +106,6 @@ export default function ServicesPage() {
         <title>Legal Services in Karachi - Comprehensive Legal Solutions</title>
         <meta name="description" content="Comprehensive legal services in Karachi. Expert lawyers providing family law, criminal defense, property law, corporate legal support, and immigration services. Get trusted legal representation today." />
         <meta name="keywords" content="Legal Services Karachi, Lawyers in Karachi, Family Law, Criminal Law, Property Law, Corporate Legal Support, Immigration Services, Legal Solutions" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service" />
       </Helmet>
       
       <Breadcrumb title="Our Legal Services" bgUrl="/images/OurCoreServices.jpg" />

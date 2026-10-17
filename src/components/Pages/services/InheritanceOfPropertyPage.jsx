@@ -82,9 +82,7 @@ export default function InheritanceOfPropertyPage() {
         <meta
           name="keywords"
           content="inheritance of property Karachi, property inheritance Pakistan, Sharia inheritance law, succession certificate Karachi, Islamic inheritance law Pakistan, property distribution lawyer, heir identification, property transfer legal support, inheritance dispute resolution, property documentation lawyer, asset succession lawyer, inheritance legal advice"
-        />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/inheritance-of-property" />
-      </Helmet>
+        />      </Helmet>
       <Breadcrumb title="Inheritance of Property" bgUrl="/images/Inheritance of%20Property.jpg" />
 
 

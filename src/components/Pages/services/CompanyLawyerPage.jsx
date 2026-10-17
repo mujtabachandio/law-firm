@@ -77,9 +77,7 @@ export default function CompanyLawyerPage() {
       <Helmet>
         <title>Company Lawyer in Karachi | Corporate Legal Services</title>
         <meta name="description" content="Looking for a company lawyer in Karachi? Get expert corporate legal services for SECP compliance, contracts, governance and business protection." />
-        <meta name="keywords" content="company lawyer in Karachi, corporate lawyer Karachi, business lawyer Pakistan, SECP compliance lawyer, corporate legal services Karachi, contract drafting lawyer, company formation lawyer Pakistan, corporate governance lawyer, employment law lawyer Karachi, intellectual property lawyer Pakistan, corporate litigation lawyer" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/company-lawyer" />
-      </Helmet>
+        <meta name="keywords" content="company lawyer in Karachi, corporate lawyer Karachi, business lawyer Pakistan, SECP compliance lawyer, corporate legal services Karachi, contract drafting lawyer, company formation lawyer Pakistan, corporate governance lawyer, employment law lawyer Karachi, intellectual property lawyer Pakistan, corporate litigation lawyer" />      </Helmet>
       <Breadcrumb title="Company Lawyer" bgUrl="/images/Company%20Lawyer.jpg" />
 
 

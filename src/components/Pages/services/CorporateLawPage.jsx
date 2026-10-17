@@ -88,7 +88,6 @@ const CorporateLawPage = () => {
         <title>Corporate Law Service in Karachi | Expert Lawyers</title>
         <meta name="description" content="Professional Corporate Law Service in Karachi for company registration, compliance, contracts, and legal advisory. Trusted corporate lawyers." />
         <meta name="keywords" content="Corporate Law Service, Corporate Lawyers in Karachi, Company Registration Karachi, Business Legal Services Pakistan, Corporate Legal Advisory" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/corporate-law" />
       </Helmet>
       
       <Breadcrumb title="Corporate Legal Services" bgUrl="/images/CorporateLegalSupport.jpg" />

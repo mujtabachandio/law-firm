@@ -82,9 +82,7 @@ export default function GuardianshipLawyerPage() {
         <meta
           name="keywords"
           content="guardianship lawyer in Karachi, legal guardian lawyer Pakistan, minor guardianship lawyer, guardianship certificate Karachi, guardian court lawyer, inheritance guardianship lawyer, family law guardian Karachi, elderly guardianship lawyer, disability guardianship Pakistan, legal adoption lawyer Karachi, financial guardianship lawyer"
-        />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/guardianship-lawyer" />
-      </Helmet>
+        />      </Helmet>
       <Breadcrumb title="Guardianship Lawyer" bgUrl="/images/Guardianship%20Lawyer.jpg" />
 
 

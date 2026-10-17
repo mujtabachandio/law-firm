@@ -76,9 +76,7 @@ export default function PropertyLawyerPage() {
       <Helmet>
         <title>Property Lawyer Karachi, Real Estate Law Services</title>
         <meta name="description" content="Need a Property Lawyer? Karachi Law Firms offers trusted property legal services and real estate law expertise in Karachi. Secure your property rights now." />
-        <meta name="keywords" content="Property Lawyer in Karachi, Property Legal Services, Real Estate Law Services, Property Lawyers" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/property-lawyer" />
-      </Helmet>
+        <meta name="keywords" content="Property Lawyer in Karachi, Property Legal Services, Real Estate Law Services, Property Lawyers" />      </Helmet>
       
       <Breadcrumb title="Property Lawyer" bgUrl="/images/Property%20Lawyer.jpg" />
 

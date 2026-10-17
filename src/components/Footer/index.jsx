@@ -20,7 +20,7 @@ export default function Footer() {
     { title: 'Reviews', href: '/reviews' },
     { title: 'Blog', href: '/blog' },
     { title: 'Contact Us', href: '/contact' },
-    { title: 'Lawcademics Hub', href: '/lawcademics-hub' },
+    { title: 'Lawcademics Hub', href: '/lawcademics' },
   ];
 
   const legalLinks = [

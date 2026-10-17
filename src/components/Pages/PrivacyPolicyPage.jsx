@@ -13,9 +13,7 @@ export default function PrivacyPolicyPage() {
         <meta
           name="description"
           content="Read the Karachi Law Firms privacy policy to understand how we collect, use, share and protect the personal information you provide to us."
-        />
-        <link rel="canonical" href="https://karachilawfirms.pk/privacy-policy" />
-      </Helmet>
+        />      </Helmet>
       <Breadcrumb title="Privacy Policy" bgUrl="/images/attorney-page.jpg" />
       <Section pt="80" ptLg="50" pb="80" pbLg="50">
         <div className="container">

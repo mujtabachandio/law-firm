@@ -1,29 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://karachilawfirms.pk/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://karachilawfirms.pk/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://karachilawfirms.pk/service</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://karachilawfirms.pk/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://karachilawfirms.pk/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-</urlset>
-
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://karachilawfirms.pk/sitemap-pages.xml</loc>
+    <lastmod>2026-10-17</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://karachilawfirms.pk/sitemap-posts.xml</loc>
+    <lastmod>2026-10-13</lastmod>
+  </sitemap>
+</sitemapindex>

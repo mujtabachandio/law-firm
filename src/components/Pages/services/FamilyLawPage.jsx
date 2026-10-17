@@ -95,7 +95,6 @@ const FamilyLawPage = () => {
         <title>Best Family Lawyer in Karachi, Family Law Services</title>
         <meta name="description" content="Professional family lawyer in Karachi providing complete family law services. Get expert legal assistance for divorce, child custody and family issues. Call now!" />
         <meta name="keywords" content="family lawyer in Karachi, Family lawyer, Family Law, Best family lawyer in Karachi, Family Law Services, Family Law Services in Karachi" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/family-law" />
       </Helmet>
       
       <Breadcrumb title="Family Law Services" bgUrl="/images/Family-Law-Services.jpg" />

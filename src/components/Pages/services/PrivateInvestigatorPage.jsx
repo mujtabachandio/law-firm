@@ -83,7 +83,6 @@ export default function PrivateInvestigatorPage() {
           name="keywords"
           content="Private Investigator Karachi, Private Detective Karachi, Corporate Investigation, Background Checks, Surveillance Services"
         />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/private-investigator" />
       </Helmet>
       <Breadcrumb title="Private Investigator" bgUrl="/images/Private%20Investigator.jpg" />
 

@@ -77,9 +77,7 @@ export default function CorporateLegalSupportPage() {
       <Helmet>
         <title>Corporate Legal Support in Karachi, Business Law Services</title>
         <meta name="description" content="Karachi Law Firms offers expert corporate legal support and business law services. Complete corporate services in Karachi for your business needs." />
-        <meta name="keywords" content="Corporate Legal Support in Karachi, Business Law, Business law Services in Karachi, Expert Corporate legal Support" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/corporate-legal-support" />
-      </Helmet>
+        <meta name="keywords" content="Corporate Legal Support in Karachi, Business Law, Business law Services in Karachi, Expert Corporate legal Support" />      </Helmet>
       
       <Breadcrumb title="Corporate Legal Support" bgUrl="/images/CorporateLegalSupport.jpg" />
 

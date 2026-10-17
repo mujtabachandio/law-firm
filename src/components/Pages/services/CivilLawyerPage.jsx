@@ -77,9 +77,7 @@ export default function CivilLawyerPage() {
       <Helmet>
         <title>Civil Lawyer Karachi | Expert Civil Litigation Services</title>
         <meta name="description" content="Hire top civil lawyers in Karachi for property, contract, personal injury and employment disputes. Expert civil litigation representation guaranteed." />
-        <meta name="keywords" content="civil lawyer Karachi, civil litigation Karachi, property dispute lawyer, contract dispute lawyer, personal injury lawyer, employment law lawyer, civil court representation, boundary disputes lawyer, tenancy lawyer Karachi, legal dispute resolution, civil rights lawyer, alternative dispute resolution Karachi" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/civil-lawyer" />
-      </Helmet>
+        <meta name="keywords" content="civil lawyer Karachi, civil litigation Karachi, property dispute lawyer, contract dispute lawyer, personal injury lawyer, employment law lawyer, civil court representation, boundary disputes lawyer, tenancy lawyer Karachi, legal dispute resolution, civil rights lawyer, alternative dispute resolution Karachi" />      </Helmet>
       <Breadcrumb title="Civil Lawyer" bgUrl="/images/Civil%20Lawyer.jpg" />
 
 

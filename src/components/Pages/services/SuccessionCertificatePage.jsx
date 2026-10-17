@@ -82,9 +82,7 @@ export default function SuccessionCertificatePage() {
         <meta
           name="keywords"
           content="succession certificate Karachi, succession certificate Pakistan, Islamic inheritance law, legal heir verification, asset transfer lawyer, inheritance documentation, court representation Karachi, property succession, succession certificate application, financial asset recovery, inheritance legal services, succession legal guidance"
-        />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/succession-certificate" />
-      </Helmet>
+        />      </Helmet>
       <Breadcrumb title="Succession Certificate" bgUrl="/images/Succession%20Certificate.jpg" />
 
       

@@ -81,7 +81,6 @@ const CriminalLawPage = () => {
         <title>Criminal Law Services in Karachi | Defense, Bail & FIR Support</title>
         <meta name="description" content="Get complete criminal law services in Karachi, including defense strategy, bail applications, FIR handling and court representation for all criminal cases." />
         <meta name="keywords" content="Criminal Lawyer, Criminal Lawyer in Karachi, Expert Criminal Defense Services, Bail Applications, Expert Criminal Lawyers" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/criminal-law" />
       </Helmet>
       
       <Breadcrumb title="Criminal Law Services" bgUrl="/images/Criminal%20Lawyer.jpg" />

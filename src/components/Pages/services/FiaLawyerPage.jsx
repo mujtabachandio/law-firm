@@ -76,9 +76,7 @@ export default function FiaLawyerPage() {
       <Helmet>
         <title>FIA Lawyer Karachi | Expert Federal Investigation Defense</title>
         <meta name="description" content="Hire top FIA lawyers in Karachi for cybercrime, financial corruption, and federal investigation defense. Expert legal support for FIA cases." />
-        <meta name="keywords" content="FIA lawyer Karachi, FIA defense lawyer, cybercrime lawyer Karachi, federal investigation lawyer, money laundering defense, financial corruption lawyer, immigration fraud lawyer, white-collar crime lawyer, FIA legal representation, FIA bail lawyer, human trafficking defense, federal court lawyer" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/fia-lawyer" />
-      </Helmet>
+        <meta name="keywords" content="FIA lawyer Karachi, FIA defense lawyer, cybercrime lawyer Karachi, federal investigation lawyer, money laundering defense, financial corruption lawyer, immigration fraud lawyer, white-collar crime lawyer, FIA legal representation, FIA bail lawyer, human trafficking defense, federal court lawyer" />      </Helmet>
       <Breadcrumb title="F.I.A Lawyer" bgUrl="/images/F.I.A%20Lawyer.jpg" />
 
 

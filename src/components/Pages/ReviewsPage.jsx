@@ -15,9 +15,7 @@ export default function ReviewsPage() {
         <meta
           name="description"
           content="Read client reviews of Karachi Law Firms and share your own experience of our legal services on Google and Facebook."
-        />
-        <link rel="canonical" href="https://karachilawfirms.pk/reviews" />
-      </Helmet>
+        />      </Helmet>
       <Breadcrumb title="Client Reviews" bgUrl="/images/attorney-page.jpg" />
       <Section pt="80" ptLg="50" pb="80" pbLg="50">
         <div className="container">

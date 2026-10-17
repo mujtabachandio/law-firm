@@ -77,9 +77,7 @@ export default function CompanyRegistrationPage() {
       <Helmet>
         <title>Company Registration in Karachi | SECP Business Setup</title>
         <meta name="description" content="Get company registration in Karachi with expert SECP compliance. We handle incorporation, partnerships, documents and post-setup support." />
-        <meta name="keywords" content="company registration in Karachi, SECP company registration, business registration Pakistan, company incorporation Karachi, private limited company registration, single member company registration, partnership registration Pakistan, foreign company registration, SECP compliance services, business setup lawyer Karachi, company registration services" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/company-registration" />
-      </Helmet>
+        <meta name="keywords" content="company registration in Karachi, SECP company registration, business registration Pakistan, company incorporation Karachi, private limited company registration, single member company registration, partnership registration Pakistan, foreign company registration, SECP compliance services, business setup lawyer Karachi, company registration services" />      </Helmet>
       <Breadcrumb title="Company Registration" bgUrl="/images/Company%20Registration.jpg" />
 
 

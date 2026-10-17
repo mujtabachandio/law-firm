@@ -76,9 +76,7 @@ export default function FoundationTrustNgoPage() {
       <Helmet>
         <title>Foundation Trust NGO Registration in Karachi | Expert Help</title>
         <meta name="description" content="Get expert foundation, trust and NGO registration in Karachi. Full setup, government filing, tax exemption, compliance and charitable mission support." />
-        <meta name="keywords" content="foundation trust registration Karachi, NGO registration Karachi, charitable trust registration, NGO setup Pakistan, trust deed preparation Karachi, memorandum of association NGO, government NGO registration, tax exemption NGO Pakistan, foreign NGO registration, compliance support NGO, non-profit registration Karachi" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/foundation-trust-ngo" />
-      </Helmet>
+        <meta name="keywords" content="foundation trust registration Karachi, NGO registration Karachi, charitable trust registration, NGO setup Pakistan, trust deed preparation Karachi, memorandum of association NGO, government NGO registration, tax exemption NGO Pakistan, foreign NGO registration, compliance support NGO, non-profit registration Karachi" />      </Helmet>
       <Breadcrumb title="Foundation Trust NGO" bgUrl="/images/Foundation Trust%20NGO.jpg" />
 
 

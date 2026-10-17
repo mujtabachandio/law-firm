@@ -1,0 +1,28 @@
+{
+  "name": "karachi-law-firms-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sanity Studio for the Karachi Law Firms blog",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "migrate:blog": "node scripts/migrateBlogPosts.js",
+    "migrate:blog:dry": "node scripts/migrateBlogPosts.js --dry-run"
+  },
+  "dependencies": {
+    "@sanity/vision": "^6.15.0",
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "sanity": "^6.15.0",
+    "styled-components": "^6.1.15"
+  },
+  "devDependencies": {
+    "@portabletext/block-tools": "^6.0.2",
+    "@sanity/client": "^8.6.2",
+    "@sanity/schema": "^6.15.0",
+    "jsdom": "^30.1.0"
+  }
+}

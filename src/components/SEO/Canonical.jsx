@@ -1,43 +1,32 @@
-import  { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
 
+import { SITE_URL } from '../../lib/sanity';
+
+/**
+ * The single source of truth for canonical tags.
+ *
+ * Rendered once in Layout, it emits exactly one self-referencing canonical on
+ * every page. No page should declare its own — react-helmet treats
+ * rel="canonical" as a deduplicating tag, so a second one would silently
+ * override this and reintroduce the ambiguity this component exists to remove.
+ *
+ * Previously this wrote to document.head directly, which put the tag outside
+ * Helmet's control: Helmet could neither dedupe nor clean it up on navigation,
+ * so pages ended up with two canonicals.
+ */
 export default function Canonical() {
-  const location = useLocation();
+  const { pathname } = useLocation();
 
-  useEffect(() => {
-    // Wait a bit for Helmet to potentially add canonical first
-    const timeoutId = setTimeout(() => {
-      const existingCanonical = document.querySelector("link[rel='canonical']");
-    const base = window.location.origin;
-    const cleanPath = location.pathname.replace(/\/+$|^\/+/g, '/');
-    const url = `${base}${cleanPath}${location.search}`;
+  // Normalise: collapse repeated slashes, drop any trailing slash (except
+  // for the homepage). Query strings and hashes are deliberately excluded —
+  // ?utm_source=... must not end up in a canonical URL.
+  const path = pathname.replace(/\/{2,}/g, '/').replace(/\/+$/, '');
+  const url = `${SITE_URL}${path}`;
 
-      // If Helmet already added a canonical link, remove duplicates and keep only one
-      const allCanonicals = document.querySelectorAll("link[rel='canonical']");
-      
-      if (allCanonicals.length > 1) {
-        // Keep the first one (likely from Helmet) and remove others
-        for (let i = 1; i < allCanonicals.length; i++) {
-          allCanonicals[i].remove();
-        }
-        // Update the remaining one
-        if (allCanonicals[0]) {
-          allCanonicals[0].setAttribute('href', url);
-        }
-      } else if (existingCanonical) {
-        // Update existing canonical
-        existingCanonical.setAttribute('href', url);
-    } else {
-        // No canonical exists, add one
-      const link = document.createElement('link');
-      link.setAttribute('rel', 'canonical');
-      link.setAttribute('href', url);
-      document.head.appendChild(link);
-    }
-    }, 100); // Small delay to let Helmet render first
-
-    return () => clearTimeout(timeoutId);
-  }, [location]);
-
-  return null;
+  return (
+    <Helmet>
+      <link rel="canonical" href={url} />
+    </Helmet>
+  );
 }

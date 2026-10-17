@@ -103,7 +103,6 @@ export default function LawcademicsHubPage() {
           name="description"
           content="Lawcademics is an upcoming legal learning platform by Karachi Law Firms, offering resources and guidance on Pakistani law. Coming soon."
         />
-        <link rel="canonical" href="https://karachilawfirms.pk/lawcademics" />
       </Helmet>
       <Breadcrumb title="Lawcademics Hub" bgUrl="/images/LawcademicsDivision.jpg" />
 

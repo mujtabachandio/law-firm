@@ -79,7 +79,6 @@ const ImmigrationPage = () => {
         <title>Immigration & Specialized Legal Services in Karachi</title>
         <meta name="description" content="Expert immigration and specialized legal services in Karachi. Professional assistance with visa applications, international law, and specialized legal matters." />
         <meta name="keywords" content="Immigration Services, International Law, Specialized Legal Services, Visa Applications, Work Permits" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/immigration-specialized" />
       </Helmet>
       
       <Breadcrumb title="Immigration & Specialized Services" bgUrl="/images/Asylum%20Lawyer.jpg" />

@@ -77,9 +77,7 @@ export default function CriminalLawyerPage() {
       <Helmet>
         <title>Criminal Lawyer Karachi | Expert Criminal Defense Services</title>
         <meta name="description" content="Hire expert criminal lawyers in Karachi for bail, defense, FIR issues, cybercrime and serious criminal cases. Protect your rights efficiently." />
-        <meta name="keywords" content="criminal lawyer Karachi, criminal defense Karachi, bail services Karachi, FIR lawyer Pakistan, cybercrime lawyer Karachi, white-collar crime lawyer, criminal court representation, murder defense lawyer, domestic violence lawyer, criminal case lawyer, legal defense Pakistan, emergency criminal lawyer" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/criminal-lawyer" />
-      </Helmet>
+        <meta name="keywords" content="criminal lawyer Karachi, criminal defense Karachi, bail services Karachi, FIR lawyer Pakistan, cybercrime lawyer Karachi, white-collar crime lawyer, criminal court representation, murder defense lawyer, domestic violence lawyer, criminal case lawyer, legal defense Pakistan, emergency criminal lawyer" />      </Helmet>
       
       <Breadcrumb title="Criminal Lawyer" bgUrl="/images/Criminal%20Lawyer.jpg" />
 

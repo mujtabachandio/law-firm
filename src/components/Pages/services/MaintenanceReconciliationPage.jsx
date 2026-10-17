@@ -84,7 +84,6 @@ export default function MaintenanceReconciliationPage() {
           name="keywords"
           content="maintenance services Pakistan, family maintenance lawyer, child maintenance support, spousal maintenance lawyer, maintenance order enforcement, reconciliation services family law, family mediation Pakistan, maintenance claims lawyer, financial support family law, reconciliation mediation services, maintenance modification lawyer"
         />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/maintenance-reconciliation" />
       </Helmet>
       <Breadcrumb title="Maintenance & Reconciliation" bgUrl="/images/Family-Law-Services.jpg" />
 

@@ -81,7 +81,6 @@ const PropertyLawPage = () => {
         <title>Professional Property Law Service for Secure Deals</title>
         <meta name="description" content="Get reliable Property Law Service in Karachi for buying, selling, disputes, and legal paperwork. Experienced property lawyers ready to help." />
         <meta name="keywords" content="Property Law Service, Karachi Property Lawyer, Property Dispute Legal Help, Real Estate Law Karachi, Property Transfer Lawyer" />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/property-law" />
       </Helmet>
       
       <Breadcrumb title="Property & Real Estate Services" bgUrl="/images/Property%20Lawyer.jpg" />

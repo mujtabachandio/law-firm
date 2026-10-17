@@ -234,7 +234,6 @@ export default function Home2() {
         <title>Karachi Law Firms, Best Lawyers & Legal Services Here</title>
         <meta name="description" content="Karachi Law Firms connects you with the best lawyers in Karachi. Expert legal services in Karachi for all your needs. Get trusted representation today." />
         <meta name="keywords" content="Karachi Law Firms, Best Lawyers in Karachi, Legal Services, Expert Legal Services, Expert Legal Services in Karachi" />
-        <link rel="canonical" href="https://karachilawfirms.pk/" />
       </Helmet>
       
       {/* Hero Section - Cinematic Full-Screen */}

@@ -80,7 +80,6 @@ export default function DocumentationLawyerPage() {
           name="description"
           content="Hire a documentation lawyer in Karachi for drafting, reviewing and verifying legal documents, agreements and contracts with full legal compliance."
         />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/documentation-lawyer" />
       </Helmet>
       <Breadcrumb title="Documentation Lawyer" bgUrl="/images/Documentation%20Lawyer.jpg" />
 

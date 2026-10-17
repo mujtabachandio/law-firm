@@ -13,9 +13,7 @@ export default function TermsPage() {
         <meta
           name="description"
           content="Review the terms and conditions that govern your use of the Karachi Law Firms website and our legal services in Pakistan."
-        />
-        <link rel="canonical" href="https://karachilawfirms.pk/terms" />
-      </Helmet>
+        />      </Helmet>
       <Breadcrumb title="Terms & Conditions" bgUrl="/images/attorney-page.jpg" />
       <Section pt="80" ptLg="50" pb="80" pbLg="50">
         <div className="container">

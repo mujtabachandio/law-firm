@@ -1,4 +1,8 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+# A sitemap index. The two child sitemaps, /sitemap-pages.xml and
+# /sitemap-posts.xml, are discovered through it, so only the index is listed
+# here. All three are generated live by sitemap.php.
 Sitemap: https://karachilawfirms.pk/sitemap.xml

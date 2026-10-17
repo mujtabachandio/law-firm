@@ -83,9 +83,7 @@ export default function DomesticViolenceLawyerPage() {
         <meta
           name="keywords"
           content="domestic violence lawyer in Karachi, protection order lawyer Pakistan, family violence lawyer Karachi, residence order lawyer, restraining order lawyer Karachi, domestic abuse legal help, child protection order lawyer, family court violence cases, harassment lawyer Karachi, criminal family law lawyer, domestic violence law Pakistan"
-        />
-        <link rel="canonical" href="https://karachilawfirms.pk/service/domestic-violence-lawyer" />
-      </Helmet>
+        />      </Helmet>
       <Breadcrumb title="Domestic Violence Lawyer" bgUrl="/images/Domestic Violence%20Lawyer.jpg" />
 
 

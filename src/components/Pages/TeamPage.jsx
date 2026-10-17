@@ -53,7 +53,6 @@ export default function TeamPage() {
           name="description"
           content="Meet the experienced lawyers and legal team at Karachi Law Firms, covering family, criminal, property, corporate and constitutional law in Karachi."
         />
-        <link rel="canonical" href="https://karachilawfirms.pk/team" />
       </Helmet>
       <Breadcrumb title="Our Attorneys" bgUrl="/images/attorney-page.jpg" />
       <Section pt="140" ptLg="80" pb="110" pbLg="55">

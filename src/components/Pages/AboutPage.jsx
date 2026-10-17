@@ -113,7 +113,6 @@ export default function AboutPage() {
           name="description"
           content="Learn about Karachi Law Firms, a team providing expert legal services across family, criminal, property, corporate and constitutional law in Karachi."
         />
-        <link rel="canonical" href="https://karachilawfirms.pk/about" />
       </Helmet>
       <Breadcrumb title="About Karachi Law Firms" bgUrl="/images/attorney-page.jpg" />
       {/* Pakistani flag indicator near location context */}

@@ -1,1 +1,16 @@
 /node_modules
+
+# Production build output
+/build
+
+# Local environment overrides (never commit tokens)
+.env
+.env.local
+.env.*.local
+
+# Sanity Studio
+/studio/node_modules
+/studio/dist
+/studio/.sanity
+/studio/migration-preview.json
+deploy.zip
