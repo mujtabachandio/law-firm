@@ -62,6 +62,9 @@ Sanity's CDN, not from your server.
 - Open a post, then **hard-refresh (Ctrl+F5)** — this is the real test that
   `.htaccess` is working. Without it a direct load of `/blog/<slug>` 404s.
 - <https://karachilawfirms.pk/studio> redirects to the Studio
+- <https://karachilawfirms.pk/api/views?slugs=how-to-hire-a-lawyer-in-karachi>
+  returns a JSON count. A blog card showing a date but no view count means
+  this endpoint is down, not that the post has no readers.
 - <https://karachilawfirms.pk/sitemap.xml> is a **sitemap index** naming two
   child sitemaps. Open both: `/sitemap-pages.xml` should list the static
   pages and `/sitemap-posts.xml` the blog posts.
@@ -105,6 +108,58 @@ degrades gracefully instead of causing a 500.
 1. Open <https://karachi-law-firms.sanity.studio> and publish the post.
 2. It appears on the live site **and in `sitemap.xml`** immediately. No
    rebuild, no re-upload.
+
+## How the view counter works
+
+Blog cards and post pages show how many times a post has been read.
+`.htaccess` serves **`views.php`** at `/api/views`:
+
+| Request | Does |
+|---|---|
+| `GET /api/views?slugs=a,b,c` | Returns `{"views":{"a":12,...}}`, changes nothing |
+| `POST /api/views` with `slug=a` | Adds one view, returns the new total |
+
+The listing asks for every count in one request rather than one per card,
+and both requests happen after the page has painted, so the counter never
+delays anything a reader is waiting for.
+
+**Crawlers do not count.** `views.php` filters by user agent, which also
+covers the social preview fetchers — otherwise every time someone shared a
+link on WhatsApp the post would gain a view. A repeat visit inside one
+browser session is suppressed in the browser with `sessionStorage`.
+
+### Where the counts live
+
+```
+~/klf-data/klf-views.sqlite
+```
+
+**Not** in `public_html`, and that matters twice over: anything in there is
+a URL someone can fetch, and a deploy extracts `deploy.zip` over that
+directory, so counts kept there would be both public and wiped on release.
+Nothing in the deploy touches `~/klf-data`, so the numbers survive.
+
+SQLite rather than a JSON file because two readers opening the same post at
+the same moment would otherwise read, increment and write over each other.
+
+To read or reset the counts over SSH:
+
+```bash
+# current counts
+php -r '$d=new PDO("sqlite:".getenv("HOME")."/klf-data/klf-views.sqlite");
+  foreach($d->query("SELECT slug,count FROM views") as $r)
+    echo $r["slug"]," = ",$r["count"],PHP_EOL;'
+
+# start again from zero
+php -r '$d=new PDO("sqlite:".getenv("HOME")."/klf-data/klf-views.sqlite");
+  $d->exec("DELETE FROM views");'
+```
+
+If the database cannot be opened at all, `views.php` returns zeroes with
+HTTP 200 and the counter simply hides itself. A broken counter must never
+be able to take the blog down with it.
+
+---
 
 ## How the sitemap works
 
