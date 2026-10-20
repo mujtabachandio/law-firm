@@ -1,7 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Icon } from '@iconify/react';
 
-export default function Post({ imgUrl, title, desc, postUrl }) {
+import { formatViews } from '../../hooks/useViews';
+
+/**
+ * A blog listing card.
+ *
+ * `date` and `views` are both optional. The meta line renders only the parts
+ * it was given, so a card with no view count yet (the request is still in
+ * flight, or it failed) simply shows the date, and the layout does not jump
+ * when the number arrives.
+ */
+export default function Post({ imgUrl, title, desc, postUrl, date, views }) {
+  const viewLabel = formatViews(views);
+  const hasMeta = Boolean(date) || Boolean(viewLabel);
+
   return (
     <div className="cs_post cs_style_1 bg-white shadow-sm cs_mb_30">
       <Link
@@ -15,6 +29,25 @@ export default function Post({ imgUrl, title, desc, postUrl }) {
       </Link>
       <div className="cs_post_in">
         <div className="cs_post_info cs_pl_33 cs_pr_33 cs_pt_40 cs_pb_40">
+          {hasMeta && (
+            <div
+              className="cs_post_meta cs_fs_14 cs_mb_10 d-flex align-items-center flex-wrap"
+              style={{ opacity: 0.7, gap: '14px' }}
+            >
+              {date && (
+                <span className="d-inline-flex align-items-center" style={{ gap: '6px' }}>
+                  <Icon icon="fa6-solid:calendar-days" />
+                  <time dateTime={date}>{date}</time>
+                </span>
+              )}
+              {viewLabel && (
+                <span className="d-inline-flex align-items-center" style={{ gap: '6px' }}>
+                  <Icon icon="fa6-solid:eye" />
+                  {viewLabel}
+                </span>
+              )}
+            </div>
+          )}
           <h2 className="cs_post_title cs_lh_base cs_fs_20 cs_fs_lg_18 cs_mb_10">
             <Link to={postUrl}>{title}</Link>
           </h2>

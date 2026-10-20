@@ -82,17 +82,24 @@ const SINGLE_QUERY = `*[_type == "post" && slug.current == $slug && publishedAt 
  * ------------------------------------------------------------------ */
 
 const MONTHS = [
-  'January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December',
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
 ];
 
-/** Render an ISO date as "03 March, 2026" to match the site's existing style. */
+/**
+ * Render an ISO date as "08 Oct 2026".
+ *
+ * Read in UTC on purpose. The date shown has to be the one the post was
+ * published on, not the one in the reader's timezone, or a post published late
+ * in the evening in Karachi would appear a day early to a reader in London and
+ * disagree with the datePublished in its own Article schema.
+ */
 export function formatDisplayDate(iso) {
   if (!iso) return '';
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) return '';
   const day = String(date.getUTCDate()).padStart(2, '0');
-  return `${day} ${MONTHS[date.getUTCMonth()]}, ${date.getUTCFullYear()}`;
+  return `${day} ${MONTHS[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
 }
 
 function normalizeSanityPost(doc) {

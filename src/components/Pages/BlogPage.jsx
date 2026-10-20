@@ -7,6 +7,7 @@ import RecentPostWidget from '../Widget/RecentPostWidget';
 import ProjectSliderWidget from '../Widget/ProjectSliderWidget';
 import ContactSectionBottom from '../Section/ContactSection/ContactSectionBottom';
 import { useBlogPosts } from '../../hooks/useBlogPosts';
+import { useViewCounts } from '../../hooks/useViews';
 import { SITE_URL } from '../../lib/sanity';
 
 const projectData = [
@@ -39,6 +40,9 @@ const projectData = [
 
 export default function BlogPage() {
   const { posts } = useBlogPosts();
+
+  // One request for the whole listing rather than one per card.
+  const viewCounts = useViewCounts(posts.map((post) => post.slug));
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -103,6 +107,8 @@ export default function BlogPage() {
                       title={post.title}
                       desc={post.excerpt}
                       postUrl={`/blog/${post.slug}`}
+                      date={post.date}
+                      views={viewCounts[post.slug]}
                     />
                   </div>
                 ))}

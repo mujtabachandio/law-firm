@@ -9,7 +9,8 @@ import RecentPostWidget from '../Widget/RecentPostWidget';
 import ContactSectionBottom from '../Section/ContactSection/ContactSectionBottom';
 import PortableTextBody from '../Blog/PortableTextBody';
 import { useBlogPost, useBlogPosts } from '../../hooks/useBlogPosts';
-import { SITE_URL } from '../../lib/sanity';
+import { formatViews, usePostViews } from '../../hooks/useViews';
+import { SITE_URL, formatDisplayDate } from '../../lib/sanity';
 
 const projectData = [
   {
@@ -42,6 +43,11 @@ const projectData = [
 export default function BlogDetailsPage() {
   const { blogId } = useParams();
   const { post, loading, notFound } = useBlogPost(blogId);
+
+  // Passing null until the post has loaded keeps a 404 from creating a
+  // counter row for a slug that does not exist.
+  const views = usePostViews(post ? blogId : null);
+  const viewLabel = formatViews(views);
   const { posts } = useBlogPosts();
 
   useEffect(() => {
@@ -202,8 +208,9 @@ export default function BlogDetailsPage() {
                     <span>By {post.author.name}</span>
                     {post.author.role && <span> · {post.author.role}</span>}
                     <span> · {post.date}</span>
+                    {viewLabel && <span> · {viewLabel}</span>}
                     {post.updatedAt && (
-                      <span> · Updated {post.updatedAt.slice(0, 10)}</span>
+                      <span> · Updated {formatDisplayDate(post.updatedAt)}</span>
                     )}
                   </div>
 

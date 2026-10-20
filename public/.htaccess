@@ -1,12 +1,13 @@
 # Karachi Law Firms — Apache/LiteSpeed config for Hostinger shared hosting.
 #
 # This file is copied into build/ by the React build and must end up in
-# public_html/.htaccess. It does five things:
+# public_html/.htaccess. It does six things:
 #   1. Canonicalises the host (https, no www)
-#   2. Serves the three sitemap URLs from sitemap.php, generated live
-#   3. Routes every non-file URL to index.html so React Router works
-#   4. Compresses text responses
-#   5. Sets long cache lifetimes for hashed assets, none for index.html
+#   2. Serves /api/views from views.php for the blog view counter
+#   3. Serves the three sitemap URLs from sitemap.php, generated live
+#   4. Routes every non-file URL to index.html so React Router works
+#   5. Compresses text responses
+#   6. Sets long cache lifetimes for hashed assets, none for index.html
 
 Options -MultiViews
 
@@ -43,7 +44,18 @@ Options -MultiViews
   RewriteRule ^(.+)/$ /$1 [R=301,L]
 
   # ---------------------------------------------------------------
-  # 2. Dynamic sitemap
+  # 2. Blog view counter
+  # ---------------------------------------------------------------
+  # /api/views is served by views.php: GET reads counts for a list of
+  # slugs, POST adds one view. Like the sitemap rules this MUST stay above
+  # the "serve real files" rule below.
+  #
+  # The SQLite file it writes lives outside public_html, so there is no URL
+  # for it and a deploy cannot overwrite it.
+  RewriteRule ^api/views/?$ /views.php [L,QSA]
+
+  # ---------------------------------------------------------------
+  # 3. Dynamic sitemap
   # ---------------------------------------------------------------
   # /sitemap.xml is a sitemap index pointing at two child sitemaps. All three
   # are produced by sitemap.php. Only the posts sitemap queries Sanity, so a
@@ -61,7 +73,7 @@ Options -MultiViews
   RewriteRule ^sitemap-posts\.xml$  /sitemap.php?type=posts [L]
 
   # ---------------------------------------------------------------
-  # 3. SPA routing
+  # 4. SPA routing
   # ---------------------------------------------------------------
   # Real files and directories are served as-is...
   RewriteCond %{REQUEST_FILENAME} -f [OR]
@@ -73,7 +85,7 @@ Options -MultiViews
 </IfModule>
 
 # -----------------------------------------------------------------
-# 4. Compression
+# 5. Compression
 # -----------------------------------------------------------------
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
@@ -85,7 +97,7 @@ Options -MultiViews
 </IfModule>
 
 # -----------------------------------------------------------------
-# 5. Caching
+# 6. Caching
 # -----------------------------------------------------------------
 <IfModule mod_expires.c>
   ExpiresActive On
