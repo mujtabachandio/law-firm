@@ -36,6 +36,13 @@ const CorporateLawPage = () => {
       subTitle: 'Legal services for NGO registration, trust formation, and compliance with regulatory requirements.',
       imgUrl: '/images/Foundation%20Trust%20NGO.jpg',
       href: '/service/foundation-trust-ngo',
+    },
+    {
+      iconUrl: '/images/icons/service_icon_4.svg',
+      title: 'FBR Tax Lawyer',
+      subTitle: 'FBR notices, audits, appeals and refunds, alongside NTN and sales tax registration and income tax return filing.',
+      imgUrl: '/images/CorporateLegalSupport.jpg',
+      href: '/service/fbr-lawyer',
     }
   ];
 

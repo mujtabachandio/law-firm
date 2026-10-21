@@ -147,6 +147,11 @@
       "priority": "0.8"
     },
     {
+      "loc": "/service/fbr-lawyer",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
       "loc": "/service/family-law",
       "changefreq": "monthly",
       "priority": "0.8"

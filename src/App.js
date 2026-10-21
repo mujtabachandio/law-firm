@@ -35,6 +35,7 @@ const FamilyLawPage = lazy(() => import('./components/Pages/services/FamilyLawPa
 const PropertyLawPage = lazy(() => import('./components/Pages/services/PropertyLawPage'));
 const CriminalLawPage = lazy(() => import('./components/Pages/services/CriminalLawPage'));
 const CorporateLawPage = lazy(() => import('./components/Pages/services/CorporateLawPage'));
+const FbrLawyerPage = lazy(() => import('./components/Pages/services/FbrLawyerPage'));
 const DocumentationPage = lazy(() => import('./components/Pages/services/DocumentationPage'));
 const ImmigrationPage = lazy(() => import('./components/Pages/services/ImmigrationPage'));
 const BlogPage = lazy(() => import('./components/Pages/BlogPage'));
@@ -88,6 +89,7 @@ function App() {
         <Route path="/service/asylum-lawyer" element={<AsylumLawyerPage />} />
         <Route path="/service/private-investigator" element={<PrivateInvestigatorPage />} />
         <Route path="/service/legal-advisor" element={<LegalAdvisorPage />} />
+        <Route path="/service/fbr-lawyer" element={<FbrLawyerPage />} />
         {/*
           The capitalised /service/Family-Law is redirected by .htaccess, not here.
           React Router matches paths case-insensitively, so a <Navigate> route for

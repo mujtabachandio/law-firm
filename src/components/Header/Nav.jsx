@@ -142,6 +142,11 @@ export default function Nav({ setMobileToggle }) {
                 Foundation Trust NGO
               </Link>
             </li>
+            <li className="sub-service">
+              <Link to="/service/fbr-lawyer" onClick={() => setMobileToggle(false)}>
+                FBR Tax Lawyer
+              </Link>
+            </li>
             
             {/* Documentation & Process Services */}
             <li className="main-category">

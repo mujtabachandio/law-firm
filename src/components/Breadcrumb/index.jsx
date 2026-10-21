@@ -1,7 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Breadcrumb({ bgUrl, title }) {
+/**
+ * The page header, with the breadcrumb trail above the title.
+ *
+ * By default the trail is derived from the URL, which reads acceptably for
+ * most pages. Where the URL does not match how the page is actually filed —
+ * /service/fbr-lawyer belongs under Corporate Law, not under a segment called
+ * "service" — pass `trail` to state it explicitly:
+ *
+ *   trail={[{ label: 'Corporate Law', to: '/service/corporate-law' },
+ *           { label: 'FBR Tax Lawyer' }]}
+ *
+ * "Home" is always first and is not part of `trail`. The last entry renders as
+ * plain text whether or not it carries a `to`, since it is the current page.
+ */
+export default function Breadcrumb({ bgUrl, title, trail }) {
   const [urlSegments, setUrlSegments] = useState([]);
   useEffect(() => {
     const pathSegments = window.location.pathname
@@ -9,6 +23,15 @@ export default function Breadcrumb({ bgUrl, title }) {
       .filter(segment => segment !== '');
     setUrlSegments(pathSegments);
   }, []);
+
+  const items =
+    Array.isArray(trail) && trail.length > 0
+      ? trail
+      : urlSegments.map((segment, index) => ({
+          label: segment,
+          to: `/${urlSegments.slice(0, index + 1).join('/')}`,
+          capitalize: true,
+        }));
   return (
     <section
       className="cs_page_header position-relative background-filled d-flex align-items-center justify-content-between"
@@ -26,14 +49,15 @@ export default function Breadcrumb({ bgUrl, title }) {
             <li className="breadcrumb-item">
               <Link to="/">Home</Link>
             </li>
-            {urlSegments.map((segment, index) => (
-              <li key={index} className="breadcrumb-item text-capitalize">
-                {index < urlSegments.length - 1 ? (
-                  <Link to={`/${urlSegments.slice(0, index + 1).join('/')}`}>
-                    {segment}
-                  </Link>
+            {items.map((item, index) => (
+              <li
+                key={`${item.label}-${index}`}
+                className={`breadcrumb-item${item.capitalize ? ' text-capitalize' : ''}`}
+              >
+                {index < items.length - 1 && item.to ? (
+                  <Link to={item.to}>{item.label}</Link>
                 ) : (
-                  <span>{segment}</span>
+                  <span>{item.label}</span>
                 )}
               </li>
             ))}
