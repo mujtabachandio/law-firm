@@ -38,8 +38,14 @@ const SITE_URL = 'https://karachilawfirms.pk';
 const PROJECT_ID = process.env.REACT_APP_SANITY_PROJECT_ID || '91ufe034';
 const DATASET = process.env.REACT_APP_SANITY_DATASET || 'production';
 
-/** Paths that exist as routes but must never be indexed. */
-const EXCLUDED = new Set(['/studio']);
+/**
+ * Paths that exist as routes but must never be indexed.
+ *
+ * /thank-you confirms a form submission and is noindex. Listing it would
+ * invite Google to crawl a page that turns every visitor away, and a
+ * confirmation page in the results is a meaningless place to land.
+ */
+const EXCLUDED = new Set(['/studio', '/thank-you']);
 
 /** Per-path overrides; anything unlisted falls back to the rules below. */
 const PRIORITY = {

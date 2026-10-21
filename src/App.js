@@ -46,6 +46,7 @@ const TeamPage = lazy(() => import('./components/Pages/TeamPage'));
 const ReviewsPage = lazy(() => import('./components/Pages/ReviewsPage'));
 const PrivacyPolicyPage = lazy(() => import('./components/Pages/PrivacyPolicyPage'));
 const TermsPage = lazy(() => import('./components/Pages/TermsPage'));
+const ThankYouPage = lazy(() => import('./components/Pages/ThankYouPage'));
 
 function App() {
   return (
@@ -117,6 +118,12 @@ function App() {
         <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/terms" element={<TermsPage />} />
+        {/*
+          Reachable only by submitting a form — the page itself turns away
+          anyone arriving without one. Kept out of the sitemap by EXCLUDED
+          in scripts/generateSitemap.mjs and noindex in its own head.
+        */}
+        <Route path="/thank-you" element={<ThankYouPage />} />
         </Route>
       </Routes>
     </Suspense>

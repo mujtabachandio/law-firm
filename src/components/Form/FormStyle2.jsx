@@ -1,9 +1,13 @@
 import React, { useState, useRef } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../../config/emailjs';
+import { markFormSubmitted } from '../../lib/formSubmission';
 
 export default function FormStyle2() {
   const form = useRef();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -37,7 +41,6 @@ export default function FormStyle2() {
       );
 
       if (result.status === 200) {
-        setSubmitStatus('success');
         setFormData({
           name: '',
           email: '',
@@ -45,6 +48,12 @@ export default function FormStyle2() {
           subject: '',
           message: ''
         });
+
+        // The confirmation now lives on /thank-you, which also reports
+        // the conversion to GTM. It refuses to render without this note,
+        // so record the submission before navigating to it.
+        markFormSubmitted('contact-page-form', location.pathname);
+        navigate('/thank-you');
       }
     } catch (error) {
       console.error('Email sending failed:', error);
