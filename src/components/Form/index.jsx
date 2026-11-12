@@ -1,9 +1,13 @@
 import React, { useState, useRef } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../../config/emailjs';
+import { markFormSubmitted } from '../../lib/formSubmission';
 
 export default function ContactForm({ variant }) {
   const form = useRef();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -37,7 +41,6 @@ export default function ContactForm({ variant }) {
       );
 
       if (result.status === 200) {
-        setSubmitStatus('success');
         setFormData({
           name: '',
           email: '',
@@ -45,6 +48,13 @@ export default function ContactForm({ variant }) {
           subject: '',
           message: ''
         });
+
+        // Same handshake as the /contact form: record the submission, then
+        // hand over to /thank-you, which confirms it and reports the
+        // conversion. form_location carries the page the visitor was on,
+        // which for this form is any of the pages that end in Contact With Us.
+        markFormSubmitted('contact-section-form', location.pathname);
+        navigate('/thank-you');
       }
     } catch (error) {
       console.error('Email sending failed:', error);
