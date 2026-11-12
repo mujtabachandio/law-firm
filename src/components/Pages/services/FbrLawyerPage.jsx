@@ -8,15 +8,17 @@ import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
 import Accordion from '../../Accordion';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import { SITE_URL } from '../../../lib/sanity';
+import { renderInlineLinks } from '../../../lib/inlineLinks';
 
 const PAGE_PATH = '/service/fbr-lawyer';
 
 /**
  * The services on offer, in the order the content brief gives them.
  *
- * `link` is set only where an existing page genuinely covers the ground the
- * paragraph describes, so the internal links point somewhere useful rather
- * than being added for their own sake.
+ * Internal links sit on the keyword inside the sentence, written as
+ * [anchor](/path). Two only, both to siblings under Corporate Law, matching
+ * the SEO team's convention of at most two contextual links per page within
+ * the same silo. The parent Corporate Law page is linked by the breadcrumb.
  */
 const FBR_SERVICES = [
   {
@@ -29,13 +31,11 @@ const FBR_SERVICES = [
   },
   {
     title: 'NTN, STRN and ATL Registration',
-    body: 'We assist individuals, Associations of Persons (AOPs) and companies with National Tax Number (NTN) registration and eligible businesses with Sales Tax Registration Number (STRN) applications. We also support Active Taxpayer List (ATL) inclusion requirements, WeBOC registration for importers and exporters, and NTN cancellation or business closure procedures. NTN registration alone does not establish active taxpayer status.',
-    link: { to: '/service/company-registration', label: 'Company registration services' },
+    body: 'We assist individuals, [Associations of Persons (AOPs) and companies](/service/company-registration) with National Tax Number (NTN) registration and eligible businesses with Sales Tax Registration Number (STRN) applications. We also support Active Taxpayer List (ATL) inclusion requirements, WeBOC registration for importers and exporters, and NTN cancellation or business closure procedures. NTN registration alone does not establish active taxpayer status.',
   },
   {
     title: 'FBR Appeals (CIR Appeals, ATIR, High Court)',
     body: 'We assess disputed orders and prepare appeals before the Commissioner Inland Revenue (Appeals) or Appellate Tribunal Inland Revenue (ATIR), according to the applicable jurisdiction. Services also include High Court references in tax matters and eligible Alternative Dispute Resolution Committee (ADRC) cases. Each matter requires a review of legal grounds, evidence, deadlines and available remedies.',
-    link: { to: '/service/civil-lawyer', label: 'Civil litigation services' },
   },
   {
     title: 'Tax Refunds and Recovery Relief',
@@ -47,8 +47,7 @@ const FBR_SERVICES = [
   },
   {
     title: 'Tax Advisory and Certificates',
-    body: 'We provide tax planning and compliance advice for individuals and businesses, including guidance on Federal Excise Duty (FED) registration and obligations. Services also cover applications for exemption certificates, lower withholding rate certificates and tax clearance documentation where applicable. Advice reflects your circumstances and the legal requirements governing the relevant application.',
-    link: { to: '/service/corporate-legal-support', label: 'Corporate legal support' },
+    body: 'We provide tax planning and [compliance advice for individuals and businesses](/service/corporate-legal-support), including guidance on Federal Excise Duty (FED) registration and obligations. Services also cover applications for exemption certificates, lower withholding rate certificates and tax clearance documentation where applicable. Advice reflects your circumstances and the legal requirements governing the relevant application.',
   },
 ];
 
@@ -257,15 +256,8 @@ const FbrLawyerPage = () => {
                     className="cs_fs_17 cs_fs_lg_16 cs_mb_0"
                     style={{ color: '#555', lineHeight: '1.8' }}
                   >
-                    {service.body}
+                    {renderInlineLinks(service.body, { linkStyle: { fontWeight: 600 } })}
                   </p>
-                  {service.link && (
-                    <p className="cs_fs_16 cs_mb_0 cs_mt_15">
-                      <Link to={service.link.to} style={{ fontWeight: 600 }}>
-                        {service.link.label}
-                      </Link>
-                    </p>
-                  )}
                 </div>
               </div>
             ))}
