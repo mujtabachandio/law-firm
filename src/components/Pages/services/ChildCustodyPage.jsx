@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
@@ -11,6 +10,7 @@ import { NavLink } from 'react-router-dom';
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -39,32 +39,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'How is child custody determined in Pakistan?',
-    desc: 'Child custody in Pakistan is determined based on the child\'s best interests, considering factors like parental capability, child\'s age and preference, living conditions, and financial stability. The court prioritizes the child\'s welfare above all other considerations.',
-  },
-  {
-    title: 'What factors do courts consider for custody decisions?',
-    desc: 'Courts consider multiple factors including the child\'s age and preference, each parent\'s financial stability, living environment, emotional bond with the child, ability to provide education and healthcare, and the child\'s overall well-being.',
-  },
-  {
-    title: 'Can custody arrangements be modified?',
-    desc: 'Yes, custody arrangements can be modified if there\'s a significant change in circumstances that affects the child\'s best interests. This requires filing a petition with the family court and demonstrating the need for modification.',
-  },
-  {
-    title: 'What about visitation rights?',
-    desc: 'Visitation rights are typically granted to the non-custodial parent to maintain the child-parent relationship. The court establishes a visitation schedule that works for both parents and serves the child\'s best interests.',
-  },
-  {
-    title: 'How do you handle international custody cases?',
-    desc: 'International custody cases involve complex legal issues including jurisdiction, international treaties, and enforcement of foreign court orders. We have expertise in handling cross-border custody disputes and international family law.',
-  },
-  {
-    title: 'What if one parent violates custody orders?',
-    desc: 'Violation of custody orders can result in legal consequences including contempt of court, modification of custody arrangements, or even criminal charges in severe cases. We help enforce custody orders and protect your parental rights.',
-  },
-];
 
 export default function ChildCustodyPage() {
   
@@ -327,7 +301,7 @@ export default function ChildCustodyPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/child-custody" />
             </div>
           </div>
         </div>

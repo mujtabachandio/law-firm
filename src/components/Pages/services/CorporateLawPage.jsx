@@ -5,7 +5,7 @@ import Section from '../../Section';
 import TestimonialSection from '../../Section/TestimonialSection';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
+import PageFaqs from '../../PageFaqs';
 
 const CorporateLawPage = () => {
   const corporateLawServices = [
@@ -686,38 +686,13 @@ const CorporateLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <SectionHeadingStyle2
-            title="Frequently Asked Questions"
-            subTitle="Get answers to common questions about our corporate legal services"
+            sectionTitle="Frequently Asked Questions"
+            sectionSubTitle="Get answers to common questions about our corporate legal services"
           />
           
           <div className="row">
             <div className="col-lg-8 offset-lg-2">
-              <Accordion data={[
-                {
-                  title: 'What corporate legal services do you offer?',
-                  desc: 'We offer comprehensive corporate legal services including company formation & management, contract drafting & negotiation, regulatory compliance, intellectual property protection, mergers & acquisitions, and employment law services.'
-                },
-                {
-                  title: 'How long does company registration take?',
-                  desc: 'Company registration typically takes 2-4 weeks depending on the type of entity, SECP requirements, and completeness of documentation. We expedite the process by ensuring all requirements are met upfront.'
-                },
-                {
-                  title: 'Do you help with SECP compliance?',
-                  desc: 'Yes, we provide comprehensive SECP compliance services including company registration, annual filings, corporate governance, shareholder agreements, and ongoing regulatory compliance support.'
-                },
-                {
-                  title: 'What types of contracts do you draft?',
-                  desc: 'We draft and review various business contracts including NDAs, MoUs, vendor contracts, partnership agreements, commercial agreements, service-level agreements, employment contracts, and licensing agreements.'
-                },
-                {
-                  title: 'How do you protect intellectual property?',
-                  desc: 'We handle trademark registrations, copyright protection, patent applications, license contracts, infringement lawsuits, and IP portfolio management to fully protect your creative assets and brand identity.'
-                },
-                {
-                  title: 'Do you provide ongoing legal support?',
-                  desc: 'Yes, we offer ongoing legal counsel to assist your business in overcoming obstacles as it expands. This includes regular compliance reviews, contract updates, risk assessments, and strategic legal advice.'
-                }
-              ]} />
+              <PageFaqs path="/service/corporate-law" />
             </div>
           </div>
         </div>

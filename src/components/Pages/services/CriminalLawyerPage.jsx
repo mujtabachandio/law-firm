@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
@@ -11,6 +10,7 @@ import { NavLink } from 'react-router-dom';
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -39,32 +39,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What types of criminal cases do you handle?',
-    desc: 'We handle all types of criminal cases including theft, assault, fraud, drug offenses, white-collar crimes, cybercrimes, and serious felonies. Our criminal defense team has experience in both trial and appellate courts.',
-  },
-  {
-    title: 'What should I do if I\'m arrested?',
-    desc: 'If arrested, remain silent and request legal representation immediately. Contact us as soon as possible so we can begin building your defense strategy and ensure your rights are protected throughout the legal process.',
-  },
-  {
-    title: 'How do you approach criminal defense cases?',
-    desc: 'We conduct thorough investigations, analyze evidence, interview witnesses, and develop strong defense strategies. We challenge evidence, question witnesses, and ensure your constitutional rights are protected throughout the process.',
-  },
-  {
-    title: 'What about bail and pre-trial release?',
-    desc: 'We help clients obtain bail and pre-trial release when possible. We argue for reasonable bail conditions and work to ensure you can maintain your freedom while your case is pending.',
-  },
-  {
-    title: 'Do you handle appeals and post-conviction relief?',
-    desc: 'Yes, we handle appeals and post-conviction relief including sentence modifications, appeals to higher courts, and other post-conviction remedies. We fight to overturn wrongful convictions and reduce sentences.',
-  },
-  {
-    title: 'How much do criminal defense services cost?',
-    desc: 'Our fees vary based on case complexity and the charges involved. We offer flexible payment plans and provide transparent pricing. We believe everyone deserves quality legal representation regardless of financial circumstances.',
-  },
-];
 
 export default function CriminalLawyerPage() {
   
@@ -319,7 +293,7 @@ export default function CriminalLawyerPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/criminal-lawyer" />
             </div>
           </div>
         </div>

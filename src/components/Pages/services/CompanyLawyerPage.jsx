@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
@@ -11,6 +10,7 @@ import { NavLink } from 'react-router-dom';
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -39,32 +39,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What types of company legal services do you provide?',
-    desc: 'We provide comprehensive company legal services including corporate governance, contract drafting and review, employment law, intellectual property protection, regulatory compliance, mergers and acquisitions, and corporate litigation. We serve businesses of all sizes.',
-  },
-  {
-    title: 'How do you help with corporate governance?',
-    desc: 'We help companies establish proper corporate governance structures, draft bylaws and policies, ensure regulatory compliance, and provide guidance on board matters, shareholder rights, and corporate decision-making processes.',
-  },
-  {
-    title: 'What about contract drafting and review?',
-    desc: 'We draft and review all types of business contracts including employment agreements, vendor contracts, partnership agreements, licensing agreements, and commercial leases. We ensure contracts protect your interests and comply with applicable laws.',
-  },
-  {
-    title: 'Do you handle employment law matters?',
-    desc: 'Yes, we handle employment law matters including employee contracts, workplace policies, discrimination claims, wrongful termination cases, and compliance with labor laws. We help companies maintain legally compliant workplaces.',
-  },
-  {
-    title: 'What about intellectual property protection?',
-    desc: 'We help companies protect their intellectual property through trademark registration, copyright protection, trade secret protection, and IP litigation. We ensure your company\'s valuable assets are properly protected.',
-  },
-  {
-    title: 'How much do company legal services cost?',
-    desc: 'Our fees vary based on service complexity and company size. We offer flexible fee arrangements including hourly rates, retainer agreements, and project-based pricing. We provide transparent pricing and value-based services.',
-  },
-];
 
 export default function CompanyLawyerPage() {
   
@@ -322,7 +296,7 @@ export default function CompanyLawyerPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/company-lawyer" />
             </div>
           </div>
         </div>

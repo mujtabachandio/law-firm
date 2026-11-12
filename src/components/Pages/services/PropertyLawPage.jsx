@@ -5,7 +5,7 @@ import Section from '../../Section';
 import TestimonialSection from '../../Section/TestimonialSection';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
+import PageFaqs from '../../PageFaqs';
 
 const PropertyLawPage = () => {
   const propertyLawServices = [
@@ -601,38 +601,13 @@ const PropertyLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <SectionHeadingStyle2
-            title="Frequently Asked Questions"
-            subTitle="Get answers to common questions about our property and real estate legal services"
+            sectionTitle="Frequently Asked Questions"
+            sectionSubTitle="Get answers to common questions about our property and real estate legal services"
           />
           
           <div className="row">
             <div className="col-lg-8 offset-lg-2">
-              <Accordion data={[
-                {
-                  title: 'What kinds of property issues do you resolve?',
-                  desc: 'KLF handles any ownership disputes, fraud transfers, property disputes, illegal possession, inheritance claims, and real estate paperwork issues for residential, commercial, and agricultural properties. We provide comprehensive legal assistance for all property-related matters.'
-                },
-                {
-                  title: 'How do you deal with cases of property fraud?',
-                  desc: 'We make sure to verify original land records, obtaining evidence of fraud, filing civil and criminal complaints, obtaining the revocation of fraudulent documents, and attempting to regain possession or ownership through proper legal actions. Our team pursues both criminal and civil actions to retrieve your property.'
-                },
-                {
-                  title: 'Do you offer services to Pakistanis living abroad?',
-                  desc: 'Yes, we help foreign clients with verification, paperwork, unlawful occupation, conflict settlement, and court representation through legitimate power of attorney. Our area of expertise is helping Pakistanis living abroad who are dealing with fraud, illegal possession, or family property disputes.'
-                },
-                {
-                  title: 'What is property ownership verification?',
-                  desc: 'Verifying ownership is essential before purchasing or investing in any real estate. We check title documents, mutation records, tax receipts, and registry information to make sure the property is free from legal risk. This helps prevent future disputes and protects your investment.'
-                },
-                {
-                  title: 'How do you handle tenant-landlord disputes?',
-                  desc: 'We provide both landlords and tenants with legally sound remedies and court representation under Pakistani rent laws. We handle rent default, illegal eviction attempts, tenancy agreement violations, and all other tenant-landlord conflicts with expertise and fairness.'
-                },
-                {
-                  title: 'What documents are needed for property transactions?',
-                  desc: 'We help with lease agreements, succession certificates, power of attorney, register, mutation (fard), and joint ownership paperwork. We oversee transfer procedures, perform due research, design and review agreements, and ensure your sales, purchases, or leases comply with all legal requirements.'
-                }
-              ]} />
+              <PageFaqs path="/service/property-law" />
             </div>
           </div>
         </div>

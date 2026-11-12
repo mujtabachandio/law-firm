@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -38,32 +38,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What is guardianship and when is it needed?',
-    desc: 'Guardianship is a legal relationship where a court appoints someone to care for and make decisions for a person who cannot care for themselves. This is needed for minors without parents, adults with disabilities, or elderly individuals who cannot manage their affairs.',
-  },
-  {
-    title: 'How do I become a legal guardian?',
-    desc: 'To become a legal guardian, you must file a petition with the family court, provide evidence of the person\'s incapacity or need for protection, and demonstrate your suitability as a guardian. The court will evaluate your relationship, financial stability, and ability to provide care.',
-  },
-  {
-    title: 'What are the responsibilities of a guardian?',
-    desc: 'Guardians are responsible for the ward\'s personal care, medical decisions, education (for minors), financial management, and ensuring their safety and well-being. Guardians must act in the ward\'s best interests and provide regular reports to the court.',
-  },
-  {
-    title: 'Can guardianship be contested?',
-    desc: 'Yes, guardianship can be contested by family members or other interested parties who believe they would be better guardians or that guardianship is unnecessary. The court will hear all parties and make a decision based on the ward\'s best interests.',
-  },
-  {
-    title: 'How long does guardianship last?',
-    desc: 'Guardianship can be temporary or permanent. For minors, it typically lasts until they reach adulthood. For adults, it can be modified or terminated if the ward\'s condition improves or if the guardian is no longer suitable.',
-  },
-  {
-    title: 'What about financial guardianship?',
-    desc: 'Financial guardianship involves managing the ward\'s financial affairs, including assets, income, and expenses. Guardians must provide detailed accounting to the court and ensure the ward\'s financial resources are used for their benefit.',
-  },
-];
 
 export default function GuardianshipLawyerPage() {
   
@@ -325,7 +299,7 @@ export default function GuardianshipLawyerPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/guardianship-lawyer" />
             </div>
           </div>
         </div>

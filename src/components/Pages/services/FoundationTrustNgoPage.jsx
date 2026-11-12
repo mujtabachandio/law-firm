@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -38,32 +38,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What types of NGOs and foundations can you help register?',
-    desc: 'We help register all types of NGOs including charitable foundations, educational trusts, healthcare organizations, social welfare societies, and religious institutions. We handle both local and international NGO registrations.',
-  },
-  {
-    title: 'How long does NGO registration take?',
-    desc: 'NGO registration typically takes 30-60 days depending on the type of organization and completeness of documentation. We expedite the process by ensuring all documents meet regulatory requirements.',
-  },
-  {
-    title: 'What documents do I need for NGO registration?',
-    desc: 'Required documents include trust deed or memorandum of association, list of trustees/members, registered office address, financial statements, and purpose of establishment. We help you prepare all necessary documentation.',
-  },
-  {
-    title: 'Do you handle post-registration compliance?',
-    desc: 'Yes, we provide comprehensive post-registration services including tax exemption applications, annual compliance filings, audit requirements, and ongoing legal support to ensure your NGO operates within legal boundaries.',
-  },
-  {
-    title: 'What about foreign NGO registration?',
-    desc: 'We handle foreign NGO registration including branch offices, liaison offices, and representative offices. We guide international organizations through the registration process and ensure compliance with Pakistani regulations.',
-  },
-  {
-    title: 'How much do NGO registration services cost?',
-    desc: 'Our fees vary based on organization type and services required. We provide transparent pricing including government fees and our professional charges. We offer special rates for charitable organizations.',
-  },
-];
 
 export default function FoundationTrustNgoPage() {
   
@@ -318,7 +292,7 @@ export default function FoundationTrustNgoPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/foundation-trust-ngo" />
             </div>
           </div>
         </div>

@@ -3,11 +3,11 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 import { NavLink } from 'react-router-dom';
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -36,32 +36,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What is asylum and who qualifies for it?',
-    desc: 'Asylum is protection granted to foreign nationals who have fled their country due to persecution or fear of persecution based on race, religion, nationality, political opinion, or membership in a particular social group. We help assess eligibility and guide applicants through the process.',
-  },
-  {
-    title: 'How do you help with asylum applications?',
-    desc: 'We help with asylum applications by conducting thorough case analysis, gathering supporting evidence, preparing detailed affidavits, representing clients in interviews and hearings, and ensuring all documentation meets legal requirements for a strong asylum case.',
-  },
-  {
-    title: 'What evidence do I need for my asylum case?',
-    desc: 'Evidence may include personal affidavits, country condition reports, medical records, police reports, witness statements, and documentation of persecution. We help you gather and organize all relevant evidence to strengthen your case.',
-  },
-  {
-    title: 'How long does the asylum process take?',
-    desc: 'The asylum process can take several months to years depending on case complexity, court backlog, and whether you apply affirmatively or defensively. We work to expedite your case while ensuring thorough preparation.',
-  },
-  {
-    title: 'What if my asylum application is denied?',
-    desc: 'If your asylum application is denied, we can help you appeal the decision, file for reconsideration, or explore other legal options. We provide representation throughout the appeals process.',
-  },
-  {
-    title: 'How much do asylum legal services cost?',
-    desc: 'Our fees vary based on case complexity and services required. We offer flexible payment arrangements and provide transparent pricing. We believe everyone deserves quality legal representation in asylum cases.',
-  },
-];
 
 export default function AsylumLawyerPage() {
   
@@ -221,7 +195,7 @@ export default function AsylumLawyerPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/asylum-lawyer" />
             </div>
           </div>
         </div>

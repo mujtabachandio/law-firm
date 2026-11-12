@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -38,32 +38,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What is a succession certificate and why do I need it?',
-    desc: 'A succession certificate is a legal document that establishes the rightful heirs of a deceased person and their shares in the deceased\'s assets. It\'s required to transfer bank accounts, insurance policies, and other assets to the legal heirs.',
-  },
-  {
-    title: 'How long does it take to get a succession certificate?',
-    desc: 'Succession certificate applications typically take 3-12 months depending on court workload and case complexity. We help expedite the process by ensuring all documentation is complete and properly filed.',
-  },
-  {
-    title: 'What documents do I need for a succession certificate?',
-    desc: 'Required documents include death certificate, family tree, property documents, bank statements, insurance policies, and identification documents of all heirs. We help you gather and organize all necessary documentation.',
-  },
-  {
-    title: 'Can I apply for a succession certificate if there\'s a will?',
-    desc: 'Yes, you can still apply for a succession certificate even if there\'s a will. The certificate helps establish the legal heirs and their shares, which is often required by banks and insurance companies.',
-  },
-  {
-    title: 'What if there are disputes among heirs?',
-    desc: 'We help resolve disputes through mediation or court proceedings. We represent your interests while working toward fair distribution according to Islamic inheritance laws and Pakistani succession law.',
-  },
-  {
-    title: 'How much do succession certificate services cost?',
-    desc: 'Our fees vary based on case complexity and the number of heirs involved. We provide transparent pricing and help you understand all costs involved in the succession certificate process.',
-  },
-];
 
 export default function SuccessionCertificatePage() {
   
@@ -324,7 +298,7 @@ export default function SuccessionCertificatePage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/succession-certificate" />
             </div>
           </div>
         </div>

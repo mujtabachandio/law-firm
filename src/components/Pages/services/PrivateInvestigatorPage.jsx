@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -38,32 +38,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What types of investigations do you handle?',
-    desc: 'We handle various types of investigations including background checks, surveillance, asset searches, fraud investigations, missing person cases, corporate investigations, and legal case support. We provide comprehensive investigative services for legal cases.',
-  },
-  {
-    title: 'How do you ensure legal compliance in investigations?',
-    desc: 'We conduct all investigations in strict compliance with local laws and regulations. We obtain necessary permissions, respect privacy rights, and ensure all evidence gathered is admissible in court. We work closely with legal professionals.',
-  },
-  {
-    title: 'What about surveillance and monitoring?',
-    desc: 'We provide professional surveillance services including physical surveillance, digital monitoring, and evidence gathering. We use advanced techniques and equipment while ensuring all activities are legal and properly documented.',
-  },
-  {
-    title: 'Do you handle background checks?',
-    desc: 'Yes, we conduct comprehensive background checks including criminal records, employment history, financial records, and personal references. We provide detailed reports that can be used in legal proceedings.',
-  },
-  {
-    title: 'What about asset searches and financial investigations?',
-    desc: 'We conduct thorough asset searches and financial investigations to locate hidden assets, trace financial transactions, and gather evidence for legal cases. We use various databases and investigative techniques.',
-  },
-  {
-    title: 'How much do private investigation services cost?',
-    desc: 'Our fees vary based on case complexity, duration, and services required. We provide transparent pricing and detailed estimates upfront. We offer flexible payment arrangements for ongoing investigations.',
-  },
-];
 
 export default function PrivateInvestigatorPage() {
   
@@ -243,7 +217,7 @@ export default function PrivateInvestigatorPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/private-investigator" />
             </div>
           </div>
         </div>

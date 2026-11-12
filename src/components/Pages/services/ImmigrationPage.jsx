@@ -4,6 +4,8 @@ import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import TestimonialSection from '../../Section/TestimonialSection';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
+import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
+import PageFaqs from '../../PageFaqs';
 
 const ImmigrationPage = () => {
   const immigrationServices = [
@@ -303,6 +305,21 @@ const ImmigrationPage = () => {
           sectionSubTitle="Real stories from individuals and businesses who have experienced the KLF difference in their legal journey."
           data={testimonialData}
         />
+      </Section>
+
+      {/* FAQs Section */}
+      <Section pt="100" ptLg="60" pb="100" pbLg="60" style={{ backgroundColor: '#f8f9fa' }}>
+        <div className="container">
+          <SectionHeadingStyle2
+            sectionTitle="Frequently Asked Questions"
+            sectionSubTitle="Answers to common questions about immigration and specialised legal services"
+          />
+          <div className="row">
+            <div className="col-lg-8 offset-lg-2">
+              <PageFaqs path="/service/immigration-specialized" />
+            </div>
+          </div>
+        </div>
       </Section>
 
       {/* Contact Section Bottom */}

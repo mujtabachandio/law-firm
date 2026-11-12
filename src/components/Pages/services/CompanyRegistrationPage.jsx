@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
@@ -11,6 +10,7 @@ import { NavLink } from 'react-router-dom';
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -39,32 +39,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What types of companies can you register?',
-    desc: 'We can register all types of companies including private limited companies, public limited companies, single member companies, partnerships, and sole proprietorships. We also handle registration for foreign companies and joint ventures.',
-  },
-  {
-    title: 'How long does company registration take?',
-    desc: 'Company registration typically takes 15-30 days depending on the type of company and completeness of documentation. We expedite the process by ensuring all documents are properly prepared and submitted correctly.',
-  },
-  {
-    title: 'What documents do I need for company registration?',
-    desc: 'Required documents include CNIC copies of directors/partners, company name availability certificate, registered office address, memorandum and articles of association, and director information. We help you gather and prepare all necessary documentation.',
-  },
-  {
-    title: 'Do you handle post-registration services?',
-    desc: 'Yes, we provide comprehensive post-registration services including tax registration, opening bank accounts, obtaining business licenses, and ongoing compliance support. We ensure your company is fully operational after registration.',
-  },
-  {
-    title: 'What about foreign company registration?',
-    desc: 'We handle foreign company registration including branch offices, liaison offices, and representative offices. We guide foreign investors through the registration process and ensure compliance with Pakistani regulations.',
-  },
-  {
-    title: 'How much do company registration services cost?',
-    desc: 'Our fees vary based on company type and services required. We provide transparent pricing including government fees and our professional charges. We offer package deals for comprehensive registration services.',
-  },
-];
 
 export default function CompanyRegistrationPage() {
   
@@ -319,7 +293,7 @@ export default function CompanyRegistrationPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/company-registration" />
             </div>
           </div>
         </div>

@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
@@ -11,6 +10,7 @@ import { NavLink } from 'react-router-dom';
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -39,32 +39,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What types of civil cases do you handle?',
-    desc: 'We handle a wide range of civil cases including contract disputes, property disputes, personal injury claims, employment law matters, consumer protection cases, and civil rights violations. Our civil litigation team has experience in both trial and appellate courts.',
-  },
-  {
-    title: 'How do you approach civil litigation cases?',
-    desc: 'We conduct thorough case analysis, gather evidence, interview witnesses, and develop strong legal strategies. We focus on achieving favorable settlements when possible, but are prepared to take cases to trial when necessary to protect your interests.',
-  },
-  {
-    title: 'What about alternative dispute resolution?',
-    desc: 'We often recommend mediation or arbitration as cost-effective alternatives to traditional litigation. We help clients explore all options for resolving disputes efficiently while protecting their legal rights and interests.',
-  },
-  {
-    title: 'How long do civil cases typically take?',
-    desc: 'Civil case duration varies widely depending on complexity, court workload, and whether the case settles or goes to trial. Simple cases may resolve in months, while complex litigation can take years. We work to expedite resolution when possible.',
-  },
-  {
-    title: 'Do you handle appeals in civil cases?',
-    desc: 'Yes, we handle civil appeals when clients need to challenge unfavorable trial court decisions. We analyze trial records, identify legal errors, and present strong arguments to appellate courts to seek reversal or modification of judgments.',
-  },
-  {
-    title: 'How much do civil litigation services cost?',
-    desc: 'Our fees vary based on case complexity and the amount in controversy. We offer flexible fee arrangements including hourly rates, contingency fees for certain cases, and flat fees for specific services. We provide transparent pricing upfront.',
-  },
-];
 
 export default function CivilLawyerPage() {
   
@@ -319,7 +293,7 @@ export default function CivilLawyerPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/civil-lawyer" />
             </div>
           </div>
         </div>

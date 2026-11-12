@@ -5,7 +5,7 @@ import Section from '../../Section';
 import TestimonialSection from '../../Section/TestimonialSection';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
+import PageFaqs from '../../PageFaqs';
 
 const CriminalLawPage = () => {
   const criminalLawServices = [
@@ -666,38 +666,13 @@ const CriminalLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <SectionHeadingStyle2
-            title="Frequently Asked Questions"
-            subTitle="Get answers to common questions about our criminal defense services"
+            sectionTitle="Frequently Asked Questions"
+            sectionSubTitle="Get answers to common questions about our criminal defense services"
           />
           
           <div className="row">
             <div className="col-lg-8 offset-lg-2">
-              <Accordion data={[
-                {
-                  title: 'What types of criminal cases do you handle?',
-                  desc: 'We handle all types of criminal cases including bail applications, criminal trials, false allegations, NAB/FIA cases, cybercrime, domestic violence, harassment, serious crimes like murder, and police station representation. We represent clients in police stations, trial courts, sessions courts, and high courts.'
-                },
-                {
-                  title: 'How quickly can you help with bail applications?',
-                  desc: 'Bail is often the most urgent requirement in criminal cases. We prioritize urgent bail requirements and handle pre-arrest, post-arrest, interim, and protected bail applications. We are available 24/7 for emergency legal assistance and urgent police station visits.'
-                },
-                {
-                  title: 'What should I do if I\'m falsely accused?',
-                  desc: 'If you\'re facing false allegations due to personal disagreements, property disputes, or other issues, we assist in filing counter-complaints, quashing fraudulent FIRs, and preventing criminal law abuse. Contact us immediately to protect your rights.'
-                },
-                {
-                  title: 'Do you handle NAB, FIA, and cybercrime cases?',
-                  desc: 'Yes, we defend people charged with financial corruption, money laundering, defamation, cyber fraud, white-collar crimes, and federal investigations. These cases require advanced legal knowledge, documentary evaluation, and technical defense tactics which our team provides.'
-                },
-                {
-                  title: 'What about serious crimes like murder?',
-                  desc: 'We represent clients charged with serious crimes including murder, murder attempts, guns, violence, or crimes that may risk their lives. These cases require strong evidence evaluation, forensic analysis, witness review, and tactical courtroom advocacy which our experienced team provides.'
-                },
-                {
-                  title: 'Do you provide 24/7 emergency assistance?',
-                  desc: 'Yes, criminal issues can arise unexpectedly. Our attorneys are accessible for emergency legal action, late-night advice, and urgent police station visits. We provide 24/7 emergency legal assistance to protect your rights when you need it most.'
-                }
-              ]} />
+              <PageFaqs path="/service/criminal-law" />
             </div>
           </div>
         </div>

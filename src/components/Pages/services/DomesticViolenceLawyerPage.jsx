@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
@@ -11,6 +10,7 @@ import { NavLink } from 'react-router-dom';
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -39,32 +39,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What constitutes domestic violence under Pakistani law?',
-    desc: 'Domestic violence includes physical abuse, emotional abuse, financial abuse, sexual abuse, and psychological manipulation. The Domestic Violence (Prevention and Protection) Act provides comprehensive protection for victims of domestic violence.',
-  },
-  {
-    title: 'How can I get immediate protection from domestic violence?',
-    desc: 'You can file for a protection order with the family court, which can provide immediate relief including restraining orders, temporary custody, and financial support. We can help you file emergency petitions for immediate protection.',
-  },
-  {
-    title: 'What evidence do I need for a domestic violence case?',
-    desc: 'Evidence can include medical reports, police reports, photographs, witness statements, text messages, emails, and any documentation of the abuse. We help you gather and present evidence effectively in court.',
-  },
-  {
-    title: 'Can I get financial support during the case?',
-    desc: 'Yes, you can seek maintenance and financial support from the abuser during the legal proceedings. The court can order temporary financial support to help you maintain your independence and safety.',
-  },
-  {
-    title: 'What about child custody in domestic violence cases?',
-    desc: 'In domestic violence cases, the court prioritizes the safety of children and the victim. We advocate for protective custody arrangements that ensure the children\'s safety while maintaining their relationship with the non-abusive parent.',
-  },
-  {
-    title: 'How long do domestic violence cases take?',
-    desc: 'Domestic violence cases can be expedited for urgent protection orders. The timeline varies based on case complexity, but we work to resolve cases as quickly as possible while ensuring your safety and rights are protected.',
-  },
-];
 
 export default function DomesticViolenceLawyerPage() {
   
@@ -325,7 +299,7 @@ export default function DomesticViolenceLawyerPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/domestic-violence-lawyer" />
             </div>
           </div>
         </div>

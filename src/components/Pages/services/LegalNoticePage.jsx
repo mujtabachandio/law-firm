@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -38,32 +38,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What is a legal notice and when do I need one?',
-    desc: 'A legal notice is a formal written communication sent to another party to inform them of your legal rights and intentions. You may need one for contract breaches, property disputes, employment issues, consumer complaints, or to demand compliance with legal obligations.',
-  },
-  {
-    title: 'How do you draft a legal notice?',
-    desc: 'We draft legal notices by clearly stating the facts, legal basis for your claim, specific demands, and consequences of non-compliance. We ensure the notice is legally sound, properly served, and creates a strong foundation for any subsequent legal action.',
-  },
-  {
-    title: 'What should be included in a legal notice?',
-    desc: 'A legal notice should include the sender\'s details, recipient\'s information, clear statement of facts, legal basis for the claim, specific demands or actions required, timeline for compliance, and consequences of non-compliance. We ensure all essential elements are properly addressed.',
-  },
-  {
-    title: 'How do you serve a legal notice?',
-    desc: 'Legal notices can be served through registered post, personal delivery, or through a process server. We help you choose the appropriate method and ensure proper documentation of service to establish legal proof of delivery.',
-  },
-  {
-    title: 'What happens after sending a legal notice?',
-    desc: 'After sending a legal notice, the recipient typically has a specified time to respond or comply. If they don\'t respond or comply, you may proceed with legal action. We guide you through the next steps based on the response received.',
-  },
-  {
-    title: 'How much do legal notice services cost?',
-    desc: 'Our fees vary based on the complexity of the case and type of notice required. We provide transparent pricing and ensure the notice is comprehensive and legally effective. We offer both drafting and serving services.',
-  },
-];
 
 export default function LegalNoticePage() {
   
@@ -229,7 +203,7 @@ export default function LegalNoticePage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/legal-notice" />
             </div>
           </div>
         </div>

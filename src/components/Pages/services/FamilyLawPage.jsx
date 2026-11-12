@@ -5,7 +5,7 @@ import Section from '../../Section';
 import TestimonialSection from '../../Section/TestimonialSection';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
+import PageFaqs from '../../PageFaqs';
 
 const FamilyLawPage = () => {
   const familyLawServices = [
@@ -722,26 +722,13 @@ const FamilyLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <SectionHeadingStyle2
-            title="Frequently Asked Questions"
-            subTitle="Get answers to common questions about our family law services"
+            sectionTitle="Frequently Asked Questions"
+            sectionSubTitle="Get answers to common questions about our family law services"
           />
           
           <div className="row">
             <div className="col-lg-8 offset-lg-2">
-              <Accordion data={[
-                {
-                  title: 'What kinds of family cases do you deal with?',
-                  desc: 'We take care of divorce, khula, child custody, child maintenance, guardianship, adoption, nikahnama, dowry, and inheritance disputes.'
-                },
-                {
-                  title: 'What is the duration of a divorce or khula lawsuit in Karachi?',
-                  desc: 'Mubarat, or mutual divorce, can be finalized in a few weeks. Khula cases often take three to six months, depending on the amount of paperwork and court activity.'
-                },
-                {
-                  title: 'What paperwork is needed in family law cases?',
-                  desc: 'Nikahnama, CNIC, child B-Forms, financial evidence, letters, affidavits, marriage licenses, and any other supporting documentation.'
-                }
-              ]} />
+              <PageFaqs path="/service/family-law" />
             </div>
           </div>
         </div>

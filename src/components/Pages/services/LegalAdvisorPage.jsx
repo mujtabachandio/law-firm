@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -38,32 +38,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor', active: true },
 ];
 
-const faqData = [
-  {
-    title: 'What types of legal advice do you provide?',
-    desc: 'We provide comprehensive legal advice across all areas of law including family law, criminal law, civil law, corporate law, property law, immigration law, and more. We offer both general legal guidance and specialized advice for specific legal issues.',
-  },
-  {
-    title: 'How do you approach legal consultation?',
-    desc: 'We approach legal consultation by first understanding your specific situation, analyzing the legal issues involved, explaining your rights and options, and providing practical advice on the best course of action. We ensure you understand all legal implications.',
-  },
-  {
-    title: 'Do you provide ongoing legal support?',
-    desc: 'Yes, we provide ongoing legal support and consultation throughout your legal matter. We maintain regular communication, provide updates on case progress, and are available to answer questions and provide guidance as your situation evolves.',
-  },
-  {
-    title: 'What about legal document review?',
-    desc: 'We provide thorough legal document review services including contracts, agreements, legal notices, and other legal documents. We identify potential issues, suggest improvements, and ensure documents protect your interests and comply with applicable laws.',
-  },
-  {
-    title: 'Do you handle legal strategy planning?',
-    desc: 'Yes, we help develop comprehensive legal strategies for complex legal matters. We analyze all aspects of your case, identify potential challenges, and create strategic plans to achieve the best possible outcomes.',
-  },
-  {
-    title: 'How much do legal advisory services cost?',
-    desc: 'Our fees vary based on the complexity of the legal matter and services required. We offer flexible fee arrangements including hourly consultation, retainer agreements, and project-based pricing. We provide transparent pricing upfront.',
-  },
-];
 
 export default function LegalAdvisorPage() {
   
@@ -229,7 +203,7 @@ export default function LegalAdvisorPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/legal-advisor" />
             </div>
           </div>
         </div>

@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -38,32 +38,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What is a process server and what do they do?',
-    desc: 'A process server is a professional who delivers legal documents to parties involved in legal proceedings. They serve court documents, legal notices, summons, and other legal papers to ensure proper notification and maintain the legal validity of court proceedings.',
-  },
-  {
-    title: 'When do I need a process server?',
-    desc: 'You need a process server when you need to serve legal documents like court summons, legal notices, divorce papers, eviction notices, or any other legal documents that require formal delivery to another party. This ensures proper legal notification.',
-  },
-  {
-    title: 'How do you ensure proper service of documents?',
-    desc: 'We ensure proper service by following legal procedures, documenting all attempts at service, providing affidavits of service, and using multiple methods if necessary. We maintain detailed records to prove that service was properly completed.',
-  },
-  {
-    title: 'What if the person refuses to accept the documents?',
-    desc: 'If someone refuses to accept documents, we document the refusal and may use alternative service methods like posting on the door or serving at their workplace. We ensure all attempts are properly documented for legal purposes.',
-  },
-  {
-    title: 'Do you handle out-of-state or international service?',
-    desc: 'Yes, we handle service of documents across different states and internationally. We work with local process servers and follow the specific legal requirements for service in different jurisdictions.',
-  },
-  {
-    title: 'How much do process serving services cost?',
-    desc: 'Our fees vary based on location, type of document, and complexity of service. We provide transparent pricing and ensure all service attempts are properly documented and legally valid.',
-  },
-];
 
 export default function ProcessorServerPage() {
   
@@ -229,7 +203,7 @@ export default function ProcessorServerPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/processor-server" />
             </div>
           </div>
         </div>

@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -38,32 +38,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'How long does a divorce case typically take?',
-    desc: 'Divorce cases can take 3-12 months depending on complexity, cooperation between parties, and court schedules. We work to expedite the process while protecting your interests and ensuring fair outcomes.',
-  },
-  {
-    title: 'What documents do I need for divorce proceedings?',
-    desc: 'Required documents include marriage certificate, identification documents, financial records, and any relevant correspondence. We help gather and organize all necessary documentation for your case.',
-  },
-  {
-    title: 'How is property divided in divorce cases?',
-    desc: 'Property division follows Islamic law and Pakistani family law principles. We ensure fair distribution based on contributions, needs, and legal entitlements of both parties.',
-  },
-  {
-    title: 'What about child custody arrangements?',
-    desc: 'Child custody is determined based on the child\'s best interests, considering factors like parental capability, child\'s age and preference, and living conditions. We advocate for the child\'s welfare.',
-  },
-  {
-    title: 'Do you offer mediation services?',
-    desc: 'Yes, we offer mediation services to help couples reach amicable settlements. This can expedite the process and reduce costs while maintaining privacy and control over outcomes.',
-  },
-  {
-    title: 'How much do divorce services cost?',
-    desc: 'Our pricing is transparent and varies based on case complexity. We offer flexible payment plans and provide detailed cost estimates upfront to help you plan your legal expenses.',
-  },
-];
 
 export default function DivorceLawyerPage() {
   
@@ -333,7 +307,7 @@ export default function DivorceLawyerPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/divorce-lawyer" />
             </div>
           </div>
         </div>

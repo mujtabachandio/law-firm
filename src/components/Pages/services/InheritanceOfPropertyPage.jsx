@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -38,32 +38,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'How is property inheritance determined in Pakistan?',
-    desc: 'Property inheritance in Pakistan follows Islamic law (Sharia) and the Succession Act. The distribution depends on the relationship to the deceased, with specific shares allocated to spouses, children, parents, and other relatives according to Islamic inheritance rules.',
-  },
-  {
-    title: 'What documents do I need for inheritance proceedings?',
-    desc: 'Required documents include death certificate, family tree, property documents, will (if any), and identification documents of all heirs. We help you gather and organize all necessary documentation for inheritance proceedings.',
-  },
-  {
-    title: 'How long do inheritance cases take to resolve?',
-    desc: 'Inheritance cases typically take 6-24 months depending on complexity, number of heirs, and whether there are disputes. We work to expedite the process while ensuring all legal requirements are met.',
-  },
-  {
-    title: 'What if there\'s a dispute among heirs?',
-    desc: 'We help resolve disputes through mediation, negotiation, or court proceedings. We represent your interests while working toward fair distribution according to Islamic inheritance laws and Pakistani succession law.',
-  },
-  {
-    title: 'Can I challenge an inheritance distribution?',
-    desc: 'Yes, you can challenge inheritance distribution if you believe it violates Islamic law or if there are errors in the distribution. We help you file appropriate legal challenges and represent your interests in court.',
-  },
-  {
-    title: 'What about inheritance tax and legal fees?',
-    desc: 'Pakistan has specific inheritance tax laws and legal fees vary based on case complexity. We provide transparent information about all costs involved and help you understand the financial aspects of inheritance proceedings.',
-  },
-];
 
 export default function InheritanceOfPropertyPage() {
   
@@ -325,7 +299,7 @@ export default function InheritanceOfPropertyPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/inheritance-of-property" />
             </div>
           </div>
         </div>

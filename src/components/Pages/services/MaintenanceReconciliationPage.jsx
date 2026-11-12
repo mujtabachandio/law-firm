@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -39,32 +39,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What is maintenance and who is entitled to it?',
-    desc: 'Maintenance refers to financial support that one spouse must provide to the other. Under Pakistani law, wives are entitled to maintenance from their husbands, and children are entitled to maintenance from both parents. The amount depends on the payer\'s financial capacity and the recipient\'s needs.',
-  },
-  {
-    title: 'How is maintenance calculated?',
-    desc: 'Maintenance is calculated based on the payer\'s income, financial capacity, standard of living, and the recipient\'s needs. The court considers factors like housing, food, education, healthcare, and other essential expenses when determining the maintenance amount.',
-  },
-  {
-    title: 'What is reconciliation in family law?',
-    desc: 'Reconciliation is the process of helping estranged couples resolve their differences and reunite. We offer mediation services to help couples address their issues, improve communication, and work towards rebuilding their relationship before pursuing divorce.',
-  },
-  {
-    title: 'Can maintenance be modified?',
-    desc: 'Yes, maintenance orders can be modified if there\'s a significant change in circumstances, such as changes in income, employment status, or the needs of the recipient. We help file modification petitions when circumstances change.',
-  },
-  {
-    title: 'What happens if maintenance is not paid?',
-    desc: 'If maintenance is not paid as ordered, the court can take enforcement actions including attachment of property, garnishment of wages, or even imprisonment for contempt of court. We help enforce maintenance orders and protect your rights.',
-  },
-  {
-    title: 'How long does a reconciliation process take?',
-    desc: 'Reconciliation processes vary depending on the couple\'s willingness to work together and the complexity of their issues. Some couples may reconcile in a few sessions, while others may need several months of mediation and counseling.',
-  },
-];
 
 export default function MaintenanceReconciliationPage() {
   
@@ -323,7 +297,7 @@ export default function MaintenanceReconciliationPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/maintenance-reconciliation" />
             </div>
           </div>
         </div>

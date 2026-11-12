@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
@@ -11,6 +10,7 @@ import { NavLink } from 'react-router-dom';
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -39,32 +39,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What types of legal documents do you handle?',
-    desc: 'We handle all types of legal documents including contracts, agreements, deeds, affidavits, legal notices, power of attorney, wills, trust documents, corporate documents, and court filings. We ensure all documents are legally sound and properly executed.',
-  },
-  {
-    title: 'How do you ensure document legality?',
-    desc: 'We conduct thorough legal research, review applicable laws and regulations, ensure proper formatting and language, verify all required elements are included, and have documents reviewed by experienced lawyers to ensure they meet all legal requirements.',
-  },
-  {
-    title: 'Do you handle document notarization and attestation?',
-    desc: 'Yes, we provide comprehensive document services including notarization, attestation, apostille services, and legalization for international use. We guide you through the entire process to ensure documents are properly authenticated.',
-  },
-  {
-    title: 'What about document translation services?',
-    desc: 'We provide legal document translation services for documents that need to be in different languages. Our translations are certified and maintain the legal validity of the original documents.',
-  },
-  {
-    title: 'Do you handle document filing with authorities?',
-    desc: 'Yes, we handle document filing with various government authorities, courts, and regulatory bodies. We ensure proper filing procedures are followed and maintain records of all submissions.',
-  },
-  {
-    title: 'How much do documentation services cost?',
-    desc: 'Our fees vary based on document complexity, type, and services required. We provide transparent pricing and ensure all documents are professionally prepared and legally effective.',
-  },
-];
 
 export default function DocumentationLawyerPage() {
   
@@ -233,7 +207,7 @@ export default function DocumentationLawyerPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/documentation-lawyer" />
             </div>
           </div>
         </div>

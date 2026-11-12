@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -38,32 +38,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What types of property disputes do you handle?',
-    desc: 'We handle all types of property disputes including ownership disputes, boundary conflicts, tenancy issues, property fraud, illegal possession, and real estate transactions. Our expertise covers residential, commercial, and agricultural properties.',
-  },
-  {
-    title: 'How do you handle property fraud cases?',
-    desc: 'Property fraud cases require thorough investigation and evidence collection. We help clients gather documentation, verify property records, and pursue legal action against fraudulent parties. We also assist in recovering properties and financial losses.',
-  },
-  {
-    title: 'What about tenant-landlord disputes?',
-    desc: 'We handle tenant-landlord disputes including eviction cases, rent disputes, property damage claims, and lease agreement violations. We represent both tenants and landlords to ensure fair resolution of conflicts.',
-  },
-  {
-    title: 'How long do property cases typically take?',
-    desc: 'Property cases can take 6-18 months depending on complexity, evidence availability, and court schedules. We work to expedite cases while ensuring thorough preparation and strong legal representation.',
-  },
-  {
-    title: 'Do you handle international property cases?',
-    desc: 'Yes, we handle international property cases involving foreign investments, cross-border transactions, and property disputes with international elements. We coordinate with international legal partners when needed.',
-  },
-  {
-    title: 'What evidence do I need for a property case?',
-    desc: 'Evidence can include property documents, title deeds, survey reports, photographs, witness statements, financial records, and any correspondence related to the property. We help you gather and organize all necessary evidence.',
-  },
-];
 
 export default function PropertyLawyerPage() {
   
@@ -325,7 +299,7 @@ export default function PropertyLawyerPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/property-lawyer" />
             </div>
           </div>
         </div>

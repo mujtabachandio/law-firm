@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../Breadcrumb';
 import Section from '../../Section';
 import SectionHeadingStyle2 from '../../SectionHeading/SectionHeadingStyle2';
-import Accordion from '../../Accordion';
 
 import { NavLink } from 'react-router-dom';
 
 import Button from '../../Button';
 import ContactSectionBottom from '../../Section/ContactSection/ContactSectionBottom';
 import GoogleReviews from '../../GoogleReviews';
+import PageFaqs from '../../PageFaqs';
 
 const serviceList = [
   { title: 'Constitutional Advocacy', href: '/service/constitutional-advocacy' },
@@ -38,32 +38,6 @@ const serviceList = [
   { title: 'Legal Advisor', href: '/service/legal-advisor' },
 ];
 
-const faqData = [
-  {
-    title: 'What is FIA and what cases do you handle?',
-    desc: 'The Federal Investigation Agency (FIA) handles cybercrime, human trafficking, immigration fraud, and other federal offenses. We represent clients in FIA investigations and cases, providing legal defense for cybercrime charges, immigration violations, and other federal offenses.',
-  },
-  {
-    title: 'What should I do if FIA contacts me?',
-    desc: 'If FIA contacts you, remain calm and request legal representation immediately. Do not provide statements or sign documents without legal counsel. Contact us as soon as possible so we can protect your rights and guide you through the investigation process.',
-  },
-  {
-    title: 'How do you handle FIA investigations?',
-    desc: 'We help clients navigate FIA investigations by ensuring their rights are protected, preparing responses to inquiries, gathering evidence in your favor, and representing you in any legal proceedings that may arise from the investigation.',
-  },
-  {
-    title: 'What about cybercrime cases?',
-    desc: 'Cybercrime cases handled by FIA can be complex and technical. We work with digital forensics experts to analyze evidence, challenge digital evidence collection methods, and build strong defenses against cybercrime allegations.',
-  },
-  {
-    title: 'Do you handle immigration-related FIA cases?',
-    desc: 'Yes, we handle immigration-related FIA cases including visa fraud, document forgery, and other immigration violations. We help clients understand their rights and build strong defenses against immigration-related charges.',
-  },
-  {
-    title: 'How much do FIA legal services cost?',
-    desc: 'Our fees vary based on case complexity and the nature of the FIA investigation. We provide transparent pricing and flexible payment arrangements. We believe everyone deserves quality legal representation in federal investigations.',
-  },
-];
 
 export default function FiaLawyerPage() {
   
@@ -319,7 +293,7 @@ export default function FiaLawyerPage() {
               />
             </div>
             <div className="col-lg-6">
-              <Accordion data={faqData} />
+              <PageFaqs path="/service/fia-lawyer" />
             </div>
           </div>
         </div>
