@@ -210,6 +210,11 @@
       "loc": "/terms",
       "changefreq": "yearly",
       "priority": "0.3"
+    },
+    {
+      "loc": "/lawyer-fees-in-karachi",
+      "changefreq": "monthly",
+      "priority": "0.6"
     }
   ]
 }

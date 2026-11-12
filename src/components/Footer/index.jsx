@@ -16,6 +16,7 @@ export default function Footer() {
     { title: 'Homepage', href: '/' },
     { title: 'About', href: '/about' },
     { title: 'Services', href: '/service' },
+    { title: 'Lawyer Fees', href: '/lawyer-fees-in-karachi' },
     { title: 'Team', href: '/team' },
     { title: 'Reviews', href: '/reviews' },
     { title: 'Blog', href: '/blog' },
