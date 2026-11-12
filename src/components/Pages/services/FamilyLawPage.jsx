@@ -130,8 +130,8 @@ const FamilyLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <SectionHeadingStyle2
-            title="Comprehensive Family Law Services in Karachi"
-            subTitle="Karachi Law Firms offers comprehensive legal services for any family law issue. Our variety of services guarantees that each customer gets strong customized legal counsel and solutions."
+            sectionTitle="Comprehensive Family Law Services in Karachi"
+            sectionSubTitle="Karachi Law Firms offers comprehensive legal services for any family law issue. Our variety of services guarantees that each customer gets strong customized legal counsel and solutions."
           />
           
           <div className="row cs_mb_40">
@@ -254,8 +254,8 @@ const FamilyLawPage = () => {
       <Section pt="115" ptLg="55" pb="115" pbLg="55">
         <div className="container">
           <SectionHeadingStyle2
-            title="Our Procedure for Family Law"
-            subTitle="From beginning to end, our methodical legal procedure guarantees clarity, effectiveness, and solid representation."
+            sectionTitle="Our Procedure for Family Law"
+            sectionSubTitle="From beginning to end, our methodical legal procedure guarantees clarity, effectiveness, and solid representation."
           />
           
           <div className="row">
@@ -350,8 +350,8 @@ const FamilyLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <SectionHeadingStyle2
-            title="Why Choose KLF for Family Law?"
-            subTitle="We at Karachi Law Firms are dedicated to assisting people in overcoming challenging family situations with courage, clarity, and assurance."
+            sectionTitle="Why Choose KLF for Family Law?"
+            sectionSubTitle="We at Karachi Law Firms are dedicated to assisting people in overcoming challenging family situations with courage, clarity, and assurance."
           />
           
           <div className="row">
@@ -450,8 +450,8 @@ const FamilyLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55">
         <div className="container">
           <SectionHeadingStyle2
-            title="Comprehensive Family Law Support: Beyond the Courtroom"
-            subTitle="Family disputes can sometimes escalate beyond traditional family law matters. Karachi Law Firms provides comprehensive support by integrating specialized services when needed."
+            sectionTitle="Comprehensive Family Law Support: Beyond the Courtroom"
+            sectionSubTitle="Family disputes can sometimes escalate beyond traditional family law matters. Karachi Law Firms provides comprehensive support by integrating specialized services when needed."
           />
           
           <div className="row">

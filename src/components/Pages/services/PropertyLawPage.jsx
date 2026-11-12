@@ -121,8 +121,8 @@ const PropertyLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <SectionHeadingStyle2
-            title="Complete Legal Services for Real Estate"
-            subTitle="We provide comprehensive property and real estate legal assistance in Karachi to individuals, families, companies, and Pakistanis living abroad."
+            sectionTitle="Complete Legal Services for Real Estate"
+            sectionSubTitle="We provide comprehensive property and real estate legal assistance in Karachi to individuals, families, companies, and Pakistanis living abroad."
           />
           
           <div className="row cs_mb_40">
@@ -217,8 +217,8 @@ const PropertyLawPage = () => {
       <Section pt="115" ptLg="55" pb="115" pbLg="55">
         <div className="container">
           <SectionHeadingStyle2
-            title="Our Legal Process for Property Cases"
-            subTitle="Our every case is guaranteed to be transparent, professional, and have a solid legal framework."
+            sectionTitle="Our Legal Process for Property Cases"
+            sectionSubTitle="Our every case is guaranteed to be transparent, professional, and have a solid legal framework."
           />
           
           <div className="row">
@@ -313,8 +313,8 @@ const PropertyLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <SectionHeadingStyle2
-            title="Why Choose Karachi Law Firms for Property Matters?"
-            subTitle="Your long-term financial stability and peace of mind may be impacted by property disputes. That's why, at KLF your case is handled with dedication, diligence, and legal accuracy."
+            sectionTitle="Why Choose Karachi Law Firms for Property Matters?"
+            sectionSubTitle="Your long-term financial stability and peace of mind may be impacted by property disputes. That's why, at KLF your case is handled with dedication, diligence, and legal accuracy."
           />
           
           <div className="row">

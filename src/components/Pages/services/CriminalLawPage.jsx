@@ -129,8 +129,8 @@ const CriminalLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <SectionHeadingStyle2
-            title="Comprehensive Legal Services for Criminal Defense"
-            subTitle="We represent clients in police stations, trial courts, sessions courts, and high courts as part of our comprehensive criminal law services in Karachi."
+            sectionTitle="Comprehensive Legal Services for Criminal Defense"
+            sectionSubTitle="We represent clients in police stations, trial courts, sessions courts, and high courts as part of our comprehensive criminal law services in Karachi."
           />
           
           <div className="row cs_mb_40">
@@ -239,8 +239,8 @@ const CriminalLawPage = () => {
       <Section pt="115" ptLg="55" pb="115" pbLg="55">
         <div className="container">
           <SectionHeadingStyle2
-            title="Our Criminal Defense Process"
-            subTitle="To guarantee the best possible legal protection, our defense team follows a very well-planned and meticulous procedure."
+            sectionTitle="Our Criminal Defense Process"
+            sectionSubTitle="To guarantee the best possible legal protection, our defense team follows a very well-planned and meticulous procedure."
           />
           
           <div className="row">
@@ -321,8 +321,8 @@ const CriminalLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <SectionHeadingStyle2
-            title="Federal Investigations and Regulatory Compliance"
-            subTitle="One of the most pressing issues for businesses and high-net-worth individuals in Karachi is navigating the scrutiny of federal agencies."
+            sectionTitle="Federal Investigations and Regulatory Compliance"
+            sectionSubTitle="One of the most pressing issues for businesses and high-net-worth individuals in Karachi is navigating the scrutiny of federal agencies."
           />
           
           <div className="row">
@@ -375,8 +375,8 @@ const CriminalLawPage = () => {
       <Section pt="115" ptLg="55" pb="115" pbLg="55">
         <div className="container">
           <SectionHeadingStyle2
-            title="Why Choose KLF for Criminal Defense?"
-            subTitle="Everyone should have an equal opportunity to defend themselves. You get dependable legal protection from Karachi Law Firms, which is based on expertise, dedication, and professional competence."
+            sectionTitle="Why Choose KLF for Criminal Defense?"
+            sectionSubTitle="Everyone should have an equal opportunity to defend themselves. You get dependable legal protection from Karachi Law Firms, which is based on expertise, dedication, and professional competence."
           />
           
           <div className="row">

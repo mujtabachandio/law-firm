@@ -130,8 +130,8 @@ const CorporateLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <SectionHeadingStyle2
-            title="Our Corporate Services"
-            subTitle="Corporate Legal Support Designed for Modern Companies"
+            sectionTitle="Our Corporate Services"
+            sectionSubTitle="Corporate Legal Support Designed for Modern Companies"
           />
           
           <div className="row cs_mb_40">
@@ -226,8 +226,8 @@ const CorporateLawPage = () => {
       <Section pt="115" ptLg="55" pb="115" pbLg="55">
         <div className="container">
           <SectionHeadingStyle2
-            title="Our Corporate Process"
-            subTitle="Our systematic legal process provides security over time, compliance, and clarity"
+            sectionTitle="Our Corporate Process"
+            sectionSubTitle="Our systematic legal process provides security over time, compliance, and clarity"
           />
           
           <div className="row">
@@ -322,8 +322,8 @@ const CorporateLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55">
         <div className="container">
           <SectionHeadingStyle2
-            title="Corporate Intelligence and Integrated Legal Support"
-            subTitle="In the competitive market of Karachi, information is power. We provide comprehensive legal solutions that bridge corporate and personal legal needs."
+            sectionTitle="Corporate Intelligence and Integrated Legal Support"
+            sectionSubTitle="In the competitive market of Karachi, information is power. We provide comprehensive legal solutions that bridge corporate and personal legal needs."
           />
           
           <div className="row">
@@ -404,8 +404,8 @@ const CorporateLawPage = () => {
       <Section pt="0" ptLg="0" pb="115" pbLg="55" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <SectionHeadingStyle2
-            title="Why Choose Our Corporate Legal Services?"
-            subTitle="Selecting Karachi Law Firms involves collaborating with a committed group of professionals who are aware of both the particular requirements of contemporary businesses and Pakistan's legal system."
+            sectionTitle="Why Choose Our Corporate Legal Services?"
+            sectionSubTitle="Selecting Karachi Law Firms involves collaborating with a committed group of professionals who are aware of both the particular requirements of contemporary businesses and Pakistan's legal system."
           />
           
           <div className="row">
