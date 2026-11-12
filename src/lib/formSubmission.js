@@ -92,6 +92,40 @@ export function reportFormSubmission(submission) {
     return false;
   }
 
+  reportMetaLead(submission);
+
   safeSet(REPORTED_KEY, String(submission.at));
   return true;
+}
+
+/**
+ * The same conversion, for Meta: a standard Lead event on the pixel.
+ *
+ * Called only from reportFormSubmission, so it inherits its once-per-
+ * submission guard — a reload of /thank-you does not send a second Lead.
+ *
+ * The pixel snippet in index.html defines fbq synchronously as a queue, so
+ * this works even before fbevents.js has finished loading. If an ad blocker
+ * has removed fbq altogether, the call is skipped and the GTM event above is
+ * unaffected.
+ *
+ * eventID is unique per submission. It costs nothing now, and if the Meta
+ * Conversions API is added later, Meta uses it to recognise the browser and
+ * server copies of one lead as a single conversion rather than two.
+ */
+function reportMetaLead(submission) {
+  if (typeof window.fbq !== 'function') return;
+  try {
+    window.fbq(
+      'track',
+      'Lead',
+      {
+        content_name: submission.formName,
+        form_location: submission.fromPath,
+      },
+      { eventID: `lead-${submission.at}` },
+    );
+  } catch (error) {
+    /* never let analytics break the thank-you page */
+  }
 }
